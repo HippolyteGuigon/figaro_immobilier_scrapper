@@ -1,5 +1,5 @@
-# se_loger_scrapper
-Scrapper du site Internet Se Loger (https://www.seloger.com/) afin d'en tirer plus rapidement des informations
+# le_figaro_immobilier_scrapper
+Scrapper du site Internet Le figaro immobilier (https://immobilier.lefigaro.fr) afin d'en tirer plus rapidement des informations
 
 Le but de ce projet est de construire une application Streamlit qui sera constituée de 3 pages différentes: 
 
