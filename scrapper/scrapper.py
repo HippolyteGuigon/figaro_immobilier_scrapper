@@ -1,16 +1,12 @@
 from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.common.by import By
 import warnings 
 warnings.filterwarnings("ignore")
-import undetected_chromedriver as uc
 options = webdriver.ChromeOptions()
 options.add_argument('headless')
 options.add_argument("start-maximized")
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 import sys 
-sys.path.append("/Users/hippolyteguigon/se_loger_scrapper/logs")
 from logs import logs_config
 import logging
 
