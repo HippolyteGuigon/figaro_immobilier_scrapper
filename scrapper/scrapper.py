@@ -24,5 +24,6 @@ class Scrapper:
         driver.maximize_window()
         driver.get(url)
 
+        #Trouver un moyen plus élégant de vérifier la connexion 
         if driver.find_element_by_xpath('/html/body/div[1]/div/div/main/section[1]/div/div[2]/div/input').get_attribute('placeholder')=="Saisissez une ou plusieurs villes":
             logging.warning('La connexion a bien réussie')
