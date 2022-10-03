@@ -23,7 +23,7 @@ class Scrapper:
     def __init__(self):
         pass
 
-    def connect(self):
+    def check_connect(self):
 
         main()
 
@@ -32,7 +32,7 @@ class Scrapper:
             logging.info("La connexion à la page d'acceuil a bien réussie")
 
     def search_type(self, choice):
-        self.connect()
+        self.check_connect()
         choice = str(choice).lower()
         assert choice in [
             "acheter",
