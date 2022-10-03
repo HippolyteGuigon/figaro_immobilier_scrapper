@@ -13,24 +13,41 @@ from logs.logs_config import main
 import logging
 
 url = "https://immobilier.lefigaro.fr/"
-
+s = Service(ChromeDriverManager(log_level=3).install())
+driver = webdriver.Chrome(service=s, options=options)
+driver.maximize_window()
+driver.get(url)
 
 class Scrapper:
+
     def __init__(self):
         pass
+
     def connect(self):
-        url = "https://immobilier.lefigaro.fr/"
-        s = Service(ChromeDriverManager(log_level=3).install())
-        driver = webdriver.Chrome(service=s, options=options)
-        driver.maximize_window()
-        driver.get(url)
+        
         main()
 
         # Trouver un moyen plus élégant de vérifier la connexion
-        if (
-            driver.find_element_by_xpath(
-                "/html/body/div[1]/div/div/main/section[1]/div/div[2]/div/input"
-            ).get_attribute("placeholder")
-            == "Saisissez une ou plusieurs villes"
-        ):
-            logging.warning("La connexion a bien réussie")
+        if "Saisissez une ou plusieurs villes" in driver.page_source:
+            logging.info("La connexion à la page d'acceuil a bien réussie")
+
+    def search_type(self,choice):
+        choice = str(choice).lower()
+        assert choice in ["acheter","louer"], "L'utilisateur doit choisir entre acheter et louer un bien"
+        logging.info(f"L'utilisateur a choisi l'otion {choice}")
+
+        if choice=="acheter":
+            element = driver.find_element_by_xpath('//*[@id="homepage-v2"]/section[1]/div/div[1]/button[1]')
+            driver.execute_script("arguments[0].click();", element)
+        else:
+            element = driver.find_element_by_xpath('//*[@id="homepage-v2"]/section[1]/div/div[1]/button[2]')
+            driver.execute_script("arguments[0].click();", element)
+
+        search_button = driver.find_element_by_xpath('//*[@id="homepage-v2"]/section[1]/div/button[2]')
+        driver.execute_script("arguments[0].click();", search_button)
+
+        if "Enregistrer cette recherche" in driver.page_source:
+            logging.info("La recherche a bien aboutie")
+        else:
+            logging.info("La recherche n'a pas aboutie")
+        driver.save_screenshot('screenshot1.png')

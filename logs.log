@@ -1,1 +1,15 @@
-2022-10-03 08:37:41,376 | WARNING | La connexion a bien réussie
+2022-10-03 08:58:16,304 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-03 08:58:16,309 | INFO | L'utilisateur a choisi l'otion louer
+2022-10-03 08:58:16,473 | INFO | La recherche n'a pas aboutie
+2022-10-03 08:59:01,074 | INFO | 
+
+2022-10-03 08:59:01,091 | INFO | ====== WebDriver manager ======
+2022-10-03 08:59:01,248 | INFO | Current google-chrome version is 106.0.5249
+2022-10-03 08:59:01,259 | INFO | Get LATEST chromedriver version for 106.0.5249 google-chrome
+2022-10-03 08:59:01,456 | INFO | Driver [/Users/hippolyteguigon/.wdm/drivers/chromedriver/mac64/106.0.5249.61/chromedriver] found in cache
+2022-10-03 08:59:05,027 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-03 08:59:05,027 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-03 08:59:05,033 | INFO | L'utilisateur a choisi l'otion louer
+2022-10-03 08:59:05,033 | INFO | L'utilisateur a choisi l'otion louer
+2022-10-03 08:59:05,306 | INFO | La recherche n'a pas aboutie
+2022-10-03 08:59:05,306 | INFO | La recherche n'a pas aboutie
