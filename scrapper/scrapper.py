@@ -5,10 +5,11 @@ warnings.filterwarnings("ignore")
 options = webdriver.ChromeOptions()
 options.add_argument("headless")
 options.add_argument("start-maximized")
+options.add_argument("--log-level=3")
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 import sys
-from logs import logs_config
+from logs.logs_config import main
 import logging
 
 url = "https://immobilier.lefigaro.fr/"
@@ -16,14 +17,14 @@ url = "https://immobilier.lefigaro.fr/"
 
 class Scrapper:
     def __init__(self):
-        logs_config.main()
-
+        pass
     def connect(self):
         url = "https://immobilier.lefigaro.fr/"
-        s = Service(ChromeDriverManager(log_level=0).install())
+        s = Service(ChromeDriverManager(log_level=3).install())
         driver = webdriver.Chrome(service=s, options=options)
         driver.maximize_window()
         driver.get(url)
+        main()
 
         # Trouver un moyen plus élégant de vérifier la connexion
         if (
