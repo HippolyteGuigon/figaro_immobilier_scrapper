@@ -43,3 +43,53 @@
 2022-10-06 13:51:35,560 | INFO | La connexion à la page d'acceuil a bien réussie
 2022-10-06 13:51:35,791 | INFO | L'utilisateur a choisi l'otion louer
 2022-10-06 13:51:37,084 | INFO | La recherche a bien aboutie
+2022-10-06 18:23:49,245 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-06 18:23:49,501 | INFO | L'utilisateur a choisi l'otion louer
+2022-10-06 18:23:51,054 | INFO | La recherche a bien aboutie
+2022-10-06 18:25:26,412 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-06 18:25:26,646 | INFO | L'utilisateur a choisi l'otion louer
+2022-10-06 18:25:26,943 | INFO | BOUTON NON LOCALISE
+2022-10-06 18:25:28,751 | INFO | La recherche a bien aboutie
+2022-10-06 18:25:50,575 | INFO | L'utilisateur a choisi l'otion louer
+2022-10-06 18:25:53,433 | INFO | BOUTON NON LOCALISE
+2022-10-06 18:25:55,046 | INFO | La recherche a bien aboutie
+2022-10-06 18:37:12,401 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-06 18:37:12,718 | INFO | L'utilisateur a choisi l'otion louer
+2022-10-06 18:37:14,022 | INFO | La recherche a bien aboutie
+2022-10-06 18:39:37,354 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-06 18:39:37,772 | INFO | L'utilisateur a choisi l'otion louer
+2022-10-06 18:39:39,020 | INFO | La recherche a bien aboutie
+2022-10-06 18:39:39,407 | INFO | L'utilisateur a choisi la ville Paris
+2022-10-06 18:41:10,905 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-06 18:41:11,239 | INFO | L'utilisateur a choisi l'otion louer
+2022-10-06 18:41:12,542 | INFO | La recherche a bien aboutie
+2022-10-06 18:41:13,065 | INFO | L'utilisateur a choisi la ville Paris
+2022-10-06 18:43:59,198 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-06 18:43:59,516 | INFO | L'utilisateur a choisi l'otion louer
+2022-10-06 18:44:00,693 | INFO | La recherche a bien aboutie
+2022-10-06 18:44:00,825 | INFO | L'utilisateur a choisi la ville Paris
+2022-10-06 18:45:20,791 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-06 18:45:21,015 | INFO | L'utilisateur a choisi l'otion louer
+2022-10-06 18:45:22,269 | INFO | La recherche a bien aboutie
+2022-10-06 18:45:22,351 | INFO | L'utilisateur a choisi la ville Paris
+2022-10-06 18:47:27,612 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-06 18:47:27,924 | INFO | L'utilisateur a choisi l'otion louer
+2022-10-06 18:47:29,179 | INFO | La recherche a bien aboutie
+2022-10-06 18:47:29,276 | INFO | L'utilisateur a choisi la ville Paris
+2022-10-06 18:49:39,494 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-06 18:49:39,817 | INFO | L'utilisateur a choisi l'otion louer
+2022-10-06 18:49:41,131 | INFO | La recherche a bien aboutie
+2022-10-06 18:49:41,368 | INFO | L'utilisateur a choisi la ville Paris
+2022-10-06 18:50:52,596 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-06 18:50:52,802 | INFO | L'utilisateur a choisi l'otion louer
+2022-10-06 18:50:54,107 | INFO | La recherche a bien aboutie
+2022-10-06 18:50:54,167 | INFO | L'utilisateur a choisi la ville Paris
+2022-10-06 18:51:38,192 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-06 18:51:38,415 | INFO | L'utilisateur a choisi l'otion louer
+2022-10-06 18:51:39,665 | INFO | La recherche a bien aboutie
+2022-10-06 18:51:39,719 | INFO | L'utilisateur a choisi la ville Paris
+2022-10-06 18:54:09,383 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-06 18:54:09,619 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-06 18:54:10,900 | INFO | La recherche a bien aboutie
+2022-10-06 18:54:11,038 | WARNING | L'utilisateur a choisi la ville Paris
+2022-10-06 18:54:13,216 | INFO | Le filtrage opéré sur la ville de Paris a bien fonctionné

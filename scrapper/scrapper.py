@@ -21,6 +21,7 @@ driver.get(url)
 
 
 class Scrapper:
+
     def __init__(self):
         pass
 
@@ -55,7 +56,7 @@ class Scrapper:
             "acheter",
             "louer",
         ], "L'utilisateur doit choisir entre acheter et louer un bien"
-        logging.info(f"L'utilisateur a choisi l'otion {choice}")
+        logging.warning(f"L'utilisateur a choisi l'otion {choice}")
 
         if driver.current_url!=url:
             driver.get(url)
@@ -66,6 +67,7 @@ class Scrapper:
                 '//*[@id="homepage-v2"]/section[1]/div/div[1]/button[1]'
             )
             driver.execute_script("arguments[0].click();", element)
+
         else:
             
             element = driver.find_element("xpath",
@@ -78,11 +80,26 @@ class Scrapper:
         )
         driver.execute_script("arguments[0].click();", search_button)
         driver.implicitly_wait(1)
-
+        
         self.accept_cookie()
         driver.implicitly_wait(1)
-        driver.save_screenshot('screenshot2.png')
+        
         if "Créer une alerte" in driver.page_source:
             logging.info("La recherche a bien aboutie")
         else:
             logging.info("La recherche n'a pas aboutie")
+
+    def filter_search(self,ville):
+
+        logging.warning(f"L'utilisateur a choisi la ville {ville}")
+        localisation_button=driver.find_element("xpath",'//*[@id="search-engine"]/div/div[1]/div[2]/div/span/span')
+        driver.execute_script("arguments[0].click();", localisation_button)
+        driver.find_element("xpath","//*[@id='search-engine']/div/div[1]/div[2]/div[2]/div[2]/div/div/input").send_keys(ville)
+        driver.save_screenshot("screenshotville.png")
+        driver.implicitly_wait(2)
+        first_choice=driver.find_element("xpath","//*[@id='search-engine']/div/div[1]/div[2]/div[2]/div[2]/div/div[2]/div/div/div[1]/div/div[1]")
+        driver.execute_script("arguments[0].click();", first_choice)
+        result_filter=driver.find_element("xpath",'//*[@id="bloc-list-classifieds"]').text
+        
+        if ville.lower() in result_filter.lower():
+            logging.info(f"Le filtrage opéré sur la ville de {ville} a bien fonctionné") 
