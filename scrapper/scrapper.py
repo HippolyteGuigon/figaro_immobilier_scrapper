@@ -11,6 +11,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 import sys
 from logs.logs_config import main
 import logging
+from typing import List
 
 url = "https://immobilier.lefigaro.fr/"
 s = Service(ChromeDriverManager().install())
@@ -89,17 +90,28 @@ class Scrapper:
         else:
             logging.info("La recherche n'a pas aboutie")
 
-    def filter_search(self,ville):
+    def filter_search(self,ville:List):
+        #Faire en sorte que l'utilisateur puisse entrer une liste de ville
+        if len(ville)==1:
+            logging.warning(f"L'utilisateur a choisi la région {ville[0]}".replace("[","").replace("]",""))
+        else:
+            logging.warning(f"L'utilisateur a choisi les régions: {[v for v in ville]}".replace("[","").replace("]",""))
 
-        logging.warning(f"L'utilisateur a choisi la ville {ville}")
         localisation_button=driver.find_element("xpath",'//*[@id="search-engine"]/div/div[1]/div[2]/div/span/span')
         driver.execute_script("arguments[0].click();", localisation_button)
-        driver.find_element("xpath","//*[@id='search-engine']/div/div[1]/div[2]/div[2]/div[2]/div/div/input").send_keys(ville)
-        driver.save_screenshot("screenshotville.png")
-        driver.implicitly_wait(2)
-        first_choice=driver.find_element("xpath","//*[@id='search-engine']/div/div[1]/div[2]/div[2]/div[2]/div/div[2]/div/div/div[1]/div/div[1]")
-        driver.execute_script("arguments[0].click();", first_choice)
-        result_filter=driver.find_element("xpath",'//*[@id="bloc-list-classifieds"]').text
         
-        if ville.lower() in result_filter.lower():
-            logging.info(f"Le filtrage opéré sur la ville de {ville} a bien fonctionné") 
+        for choice_region in ville:
+
+            driver.find_element("xpath","//*[@id='search-engine']/div/div[1]/div[2]/div[2]/div[2]/div/div/input").send_keys(choice_region)
+            driver.implicitly_wait(3)
+            first_choice=driver.find_element("xpath","//*[@id='search-engine']/div/div[1]/div[2]/div[2]/div[2]/div/div[2]/div/div/div[1]/div/div[1]")
+            driver.execute_script("arguments[0].click();", first_choice)
+        result_filter=driver.find_element("xpath",'//*[@id="bloc-list-classifieds"]').text
+        print(result_filter)
+        if len(ville)==1:
+            if all([x.lower() in result_filter.lower() for x in ville]):
+                logging.info(f"Le filtrage opéré sur la région de {ville[0]} a bien fonctionné".replace("[","").replace("]","")) 
+        else:
+            if all([x.lower() in result_filter.lower() for x in ville]):
+                logging.info(f"Le filtrage opéré sur les régions de {[x for x in ville]} a bien fonctionné".replace("[","").replace("]","")) 
+        driver.save_screenshot("screenshot_ville.png")

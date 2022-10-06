@@ -93,3 +93,32 @@
 2022-10-06 18:54:10,900 | INFO | La recherche a bien aboutie
 2022-10-06 18:54:11,038 | WARNING | L'utilisateur a choisi la ville Paris
 2022-10-06 18:54:13,216 | INFO | Le filtrage opéré sur la ville de Paris a bien fonctionné
+2022-10-06 19:05:43,422 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-06 19:05:43,712 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-06 19:05:44,958 | INFO | La recherche a bien aboutie
+2022-10-06 19:05:45,181 | WARNING | L'utilisateur a choisi la région ['Paris']
+2022-10-06 19:18:32,291 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-06 19:18:32,536 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-06 19:18:33,778 | INFO | La recherche a bien aboutie
+2022-10-06 19:18:34,008 | WARNING | L'utilisateur a choisi la région ['Paris']
+2022-10-06 19:23:35,524 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-06 19:23:35,790 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-06 19:23:37,087 | INFO | La recherche a bien aboutie
+2022-10-06 19:23:37,302 | WARNING | L'utilisateur a choisi la région Paris
+2022-10-06 19:23:40,800 | INFO | Le filtrage opéré sur la région de Paris a bien fonctionné
+2022-10-06 19:23:49,514 | WARNING | L'utilisateur a choisi les régions: ['Paris', 'Lyon']
+2022-10-06 19:23:51,259 | INFO | Le filtrage opéré sur les régions de ['Paris', 'Lyon'] a bien fonctionné
+2022-10-06 19:26:28,115 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-06 19:26:28,472 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-06 19:26:29,716 | INFO | La recherche a bien aboutie
+2022-10-06 19:26:29,807 | WARNING | L'utilisateur a choisi les régions: 'Paris', 'Lyon'
+2022-10-06 19:27:24,649 | WARNING | L'utilisateur a choisi la région Paris
+2022-10-06 19:27:59,429 | WARNING | L'utilisateur a choisi la région Paris 15
+2022-10-06 19:28:41,852 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-06 19:28:41,852 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-06 19:28:46,317 | INFO | La recherche a bien aboutie
+2022-10-06 19:28:46,317 | INFO | La recherche a bien aboutie
+2022-10-06 19:29:03,667 | WARNING | L'utilisateur a choisi la région Paris 15
+2022-10-06 19:29:03,667 | WARNING | L'utilisateur a choisi la région Paris 15
+2022-10-06 19:29:13,264 | WARNING | L'utilisateur a choisi la région Paris 15eme
+2022-10-06 19:29:13,264 | WARNING | L'utilisateur a choisi la région Paris 15eme
