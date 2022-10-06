@@ -1,5 +1,6 @@
 import logging
 import sys
+import os
 
 
 def main():
@@ -12,7 +13,8 @@ def main():
     stdout_handler.setLevel(logging.DEBUG)
     stdout_handler.setFormatter(formatter)
 
-    file_handler = logging.FileHandler('/Users/hippolyteguigon/se_loger_scrapper/logs.log')
+    log_path=os.path.join(os.getcwd(),'logs.log')
+    file_handler = logging.FileHandler(log_path)
     file_handler.setLevel(logging.DEBUG)
     file_handler.setFormatter(formatter)
 
