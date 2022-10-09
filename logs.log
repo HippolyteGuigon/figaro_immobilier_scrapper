@@ -8,3 +8,31 @@
 2022-10-09 15:51:09,105 | INFO | La recherche a bien aboutie
 2022-10-09 15:51:12,867 | WARNING | L'utilisateur a choisi les régions: 'Paris 14eme', 'Lyon', 'Marseille'
 2022-10-09 15:51:36,143 | WARNING | Le filtrage a bien été opéré sur  Paris 14ème (75), Lyon (69) et Marseille (13) , il y a 740 annonces
+2022-10-09 15:58:30,537 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-09 15:58:30,612 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-09 15:58:36,822 | INFO | La recherche a bien aboutie
+2022-10-09 15:58:41,229 | WARNING | L'utilisateur a choisi les régions: 'Paris 14eme', 'Lyon', 'Marseille'
+2022-10-09 15:59:04,292 | WARNING | Le filtrage a bien été opéré sur  Paris 14ème (75), Lyon (69) et Marseille (13) , il y a 740 annonces
+2022-10-09 15:59:11,641 | INFO | L'utilisateur a filtré les prix entre 0€ et 2000€, il y a 623 annonces
+2022-10-09 15:59:20,828 | INFO | L'utilisateur a filtré les prix entre 50m2 et 500m2, il y a 249 annonces
+2022-10-09 16:06:28,559 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-09 16:06:28,636 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-09 16:06:34,447 | INFO | La recherche a bien aboutie
+2022-10-09 16:06:38,669 | WARNING | L'utilisateur a choisi les régions: 'Paris 14eme', 'Lyon', 'Marseille'
+2022-10-09 16:07:01,658 | WARNING | Le filtrage a bien été opéré sur  Paris 14ème (75), Lyon (69) et Marseille (13) , il y a 740 annonces
+2022-10-09 16:07:10,286 | INFO | L'utilisateur a filtré les prix entre 0€ et 2000€, il y a 623 annonces
+2022-10-09 16:07:18,794 | INFO | L'utilisateur a filtré les prix entre 50m2 et 500m2, il y a 249 annonces
+2022-10-09 16:17:25,631 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-09 16:17:25,697 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-09 16:17:31,347 | INFO | La recherche a bien aboutie
+2022-10-09 16:17:35,078 | WARNING | L'utilisateur a choisi les régions: 'Paris 14eme', 'Marseille'
+2022-10-09 16:17:52,096 | WARNING | Le filtrage a bien été opéré sur  Paris 14ème (75), Marseille (13) , il y a 578 annonces
+2022-10-09 16:17:59,685 | INFO | L'utilisateur a filtré les prix entre 0€ et 2000€, il y a 504 annonces
+2022-10-09 16:18:08,213 | INFO | L'utilisateur a filtré les prix entre 50m2 et 500m2, il y a 197 annonces
+2022-10-09 16:20:26,729 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-09 16:20:26,782 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-09 16:20:32,034 | INFO | La recherche a bien aboutie
+2022-10-09 16:20:35,549 | WARNING | L'utilisateur a choisi la région Paris 14eme
+2022-10-09 16:20:47,420 | WARNING | Le filtrage a bien été opéré sur  Paris 14ème (75) , il y a 141 annonces
+2022-10-09 16:20:55,288 | INFO | L'utilisateur a filtré les prix entre 0€ et 2000€, il y a 107 annonces
+2022-10-09 16:21:02,987 | INFO | L'utilisateur a filtré les prix entre 50m2 et 500m2, il y a 22 annonces

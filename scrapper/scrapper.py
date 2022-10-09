@@ -15,9 +15,12 @@ from selenium.common.exceptions import StaleElementReferenceException, NoSuchEle
 import sys
 from logs.logs_config import main
 import logging
+from pathlib import Path
 from selenium.webdriver.common.by import By
 from typing import List
 from time import sleep
+import json
+import os
 
 url = "https://immobilier.lefigaro.fr/"
 s = Service(ChromeDriverManager().install())
@@ -178,3 +181,20 @@ class Scrapper:
         self.filter_search(ville)
         self.filter_surface(surface_min,surface_max)
         self.filter_price(price_min,price_max)
+
+    def get_links(self):
+        elems=[x.get_attribute("href") for x in driver.find_elements("xpath","//a[@href]") if "/annonces/annonce" in x.get_attribute("href")]
+        while True:
+            try:
+                next_button=driver.find_element("xpath",'//*[@id="listAnnoncesBloc"]/section/div[40]/a[2]/div/span')
+                driver.execute_script("arguments[0].click();", next_button)
+                sleep(5)
+                new_elems=[x.get_attribute("href") for x in driver.find_elements("xpath","//a[@href]") if "/annonces/annonce" in x.get_attribute("href")]
+                elems+=new_elems
+            except:
+                break
+        json_path="/Users/hippodouche/se_loger_scrapping/figaro_immobilier_scrapper/data"
+        json_list=json.dumps(elems) 
+
+        with open(os.path.join(json_path, 'links.json'), 'w') as f:
+            json.dump(elems, f)
