@@ -93,3 +93,319 @@
 2022-10-06 18:54:10,900 | INFO | La recherche a bien aboutie
 2022-10-06 18:54:11,038 | WARNING | L'utilisateur a choisi la ville Paris
 2022-10-06 18:54:13,216 | INFO | Le filtrage opéré sur la ville de Paris a bien fonctionné
+2022-10-06 19:05:43,422 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-06 19:05:43,712 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-06 19:05:44,958 | INFO | La recherche a bien aboutie
+2022-10-06 19:05:45,181 | WARNING | L'utilisateur a choisi la région ['Paris']
+2022-10-06 19:18:32,291 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-06 19:18:32,536 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-06 19:18:33,778 | INFO | La recherche a bien aboutie
+2022-10-06 19:18:34,008 | WARNING | L'utilisateur a choisi la région ['Paris']
+2022-10-06 19:23:35,524 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-06 19:23:35,790 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-06 19:23:37,087 | INFO | La recherche a bien aboutie
+2022-10-06 19:23:37,302 | WARNING | L'utilisateur a choisi la région Paris
+2022-10-06 19:23:40,800 | INFO | Le filtrage opéré sur la région de Paris a bien fonctionné
+2022-10-06 19:23:49,514 | WARNING | L'utilisateur a choisi les régions: ['Paris', 'Lyon']
+2022-10-06 19:23:51,259 | INFO | Le filtrage opéré sur les régions de ['Paris', 'Lyon'] a bien fonctionné
+2022-10-06 19:26:28,115 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-06 19:26:28,472 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-06 19:26:29,716 | INFO | La recherche a bien aboutie
+2022-10-06 19:26:29,807 | WARNING | L'utilisateur a choisi les régions: 'Paris', 'Lyon'
+2022-10-06 19:27:24,649 | WARNING | L'utilisateur a choisi la région Paris
+2022-10-06 19:27:59,429 | WARNING | L'utilisateur a choisi la région Paris 15
+2022-10-06 19:28:41,852 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-06 19:28:41,852 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-06 19:28:46,317 | INFO | La recherche a bien aboutie
+2022-10-06 19:28:46,317 | INFO | La recherche a bien aboutie
+2022-10-06 19:29:03,667 | WARNING | L'utilisateur a choisi la région Paris 15
+2022-10-06 19:29:03,667 | WARNING | L'utilisateur a choisi la région Paris 15
+2022-10-06 19:29:13,264 | WARNING | L'utilisateur a choisi la région Paris 15eme
+2022-10-06 19:29:13,264 | WARNING | L'utilisateur a choisi la région Paris 15eme
+2022-10-07 14:40:10,352 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-07 14:40:10,723 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-07 14:40:11,961 | INFO | La recherche a bien aboutie
+2022-10-07 14:40:12,101 | WARNING | L'utilisateur a choisi les régions: 'Paris', 'Lyon'
+2022-10-07 14:46:01,018 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-07 14:46:01,811 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-07 14:46:04,021 | INFO | La recherche a bien aboutie
+2022-10-07 14:46:04,131 | WARNING | L'utilisateur a choisi les régions: 'Paris', 'Lyon'
+2022-10-07 14:46:09,035 | INFO | Le filtrage opéré sur les régions de 'Paris', 'Lyon' a bien fonctionné
+2022-10-07 14:46:19,744 | WARNING | L'utilisateur a choisi les régions: 'Paris', 'Lyon', 'Marseille'
+2022-10-07 14:53:33,918 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-07 14:53:35,634 | INFO | La recherche a bien aboutie
+2022-10-07 14:53:46,840 | INFO | La recherche a bien aboutie
+2022-10-07 14:53:46,846 | WARNING | L'utilisateur a choisi les régions: 'Paris', 'Lyon', 'Marseille'
+2022-10-07 14:54:45,403 | INFO | La recherche a bien aboutie
+2022-10-07 14:54:45,406 | WARNING | L'utilisateur a choisi les régions: 'Paris', 'Lyon'
+2022-10-07 14:54:47,884 | INFO | Le filtrage opéré sur les régions de 'Paris', 'Lyon' a bien fonctionné
+2022-10-07 14:55:50,226 | INFO | La recherche a bien aboutie
+2022-10-07 14:55:50,246 | WARNING | L'utilisateur a choisi les régions: 'Paris', 'Lyon', 'Marseille'
+2022-10-07 15:00:04,614 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-07 15:00:04,843 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-07 15:00:06,061 | INFO | La recherche a bien aboutie
+2022-10-07 15:00:07,259 | WARNING | L'utilisateur a choisi les régions: 'Paris', 'Lyon', 'Marseille'
+2022-10-07 15:00:22,599 | WARNING | L'utilisateur a choisi les régions: 'Paris', 'Lyon'
+2022-10-07 15:00:24,723 | INFO | Le filtrage opéré sur les régions de 'Paris', 'Lyon' a bien fonctionné
+2022-10-07 15:04:18,006 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-07 15:04:18,304 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-07 15:04:19,624 | INFO | La recherche a bien aboutie
+2022-10-07 15:04:21,478 | WARNING | L'utilisateur a choisi les régions: 'Paris', 'Lyon', 'Deauville'
+2022-10-07 15:04:42,479 | WARNING | L'utilisateur a choisi les régions: 'Paris', 'Lyon'
+2022-10-07 15:06:16,596 | WARNING | L'utilisateur a choisi les régions: 'Paris', 'Lyon'
+2022-10-07 15:06:18,880 | INFO | Le filtrage opéré sur les régions de 'Paris', 'Lyon' a bien fonctionné, il y a 2612 résultats
+2022-10-07 15:06:38,689 | WARNING | L'utilisateur a choisi la région Marseille
+2022-10-07 15:06:41,508 | INFO | Le filtrage opéré sur la région de Marseille a bien fonctionné, il y a 29100 résultats
+2022-10-07 15:09:03,823 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-07 15:09:04,082 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-07 15:09:05,312 | INFO | La recherche a bien aboutie
+2022-10-07 15:09:06,969 | WARNING | L'utilisateur a choisi la région Marseille
+2022-10-07 15:09:23,541 | WARNING | L'utilisateur a choisi la région Marseille
+2022-10-07 15:09:36,692 | WARNING | L'utilisateur a choisi la région Paris
+2022-10-07 15:09:40,641 | INFO | Le filtrage opéré sur la région de Paris a bien fonctionné, il y a 29 100 résultats
+2022-10-07 15:11:33,677 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-07 15:11:33,941 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-07 15:11:35,252 | INFO | La recherche a bien aboutie
+2022-10-07 15:11:37,225 | WARNING | L'utilisateur a choisi la région Paris
+2022-10-07 15:11:55,006 | WARNING | L'utilisateur a choisi la région Paris
+2022-10-07 15:12:00,190 | WARNING | L'utilisateur a choisi la région Paris
+2022-10-07 15:12:07,223 | WARNING | L'utilisateur a choisi la région Lyon
+2022-10-07 15:14:52,886 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-07 15:14:53,086 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-07 15:14:54,311 | INFO | La recherche a bien aboutie
+2022-10-07 15:14:56,143 | WARNING | L'utilisateur a choisi la région Lyon
+2022-10-07 15:15:41,633 | WARNING | L'utilisateur a choisi la région Paris
+2022-10-07 15:16:27,729 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-07 15:16:28,012 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-07 15:16:29,228 | INFO | La recherche a bien aboutie
+2022-10-07 15:16:29,566 | WARNING | L'utilisateur a choisi la région Paris
+2022-10-07 15:20:16,871 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-07 15:20:17,365 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-07 15:20:18,559 | INFO | La recherche a bien aboutie
+2022-10-07 15:20:20,753 | WARNING | L'utilisateur a choisi la région Paris
+2022-10-07 15:20:53,076 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-07 15:20:53,301 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-07 15:20:54,530 | INFO | La recherche a bien aboutie
+2022-10-07 15:20:56,035 | WARNING | L'utilisateur a choisi la région Paris
+2022-10-07 15:22:51,425 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-07 15:22:51,691 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-07 15:22:52,900 | INFO | La recherche a bien aboutie
+2022-10-07 15:22:54,396 | WARNING | L'utilisateur a choisi la région Paris
+2022-10-07 15:22:56,181 | INFO | Le filtrage opéré sur la région de Paris a bien fonctionné, il y a 29 103 résultats
+2022-10-07 15:23:07,631 | WARNING | L'utilisateur a choisi les régions: 'Paris', 'Lyon'
+2022-10-07 15:23:09,677 | INFO | Le filtrage opéré sur les régions de 'Paris', 'Lyon' a bien fonctionné, il y a 2 613 résultats
+2022-10-07 15:23:18,898 | WARNING | L'utilisateur a choisi les régions: 'Paris', 'Lyon', 'Marseille'
+2022-10-07 15:23:26,061 | WARNING | L'utilisateur a choisi les régions: 'Paris', 'Lyon', 'Marseille'
+2022-10-07 15:23:33,137 | WARNING | L'utilisateur a choisi les régions: 'Paris', 'Lyon', 'Marseille'
+2022-10-07 15:23:41,476 | WARNING | L'utilisateur a choisi les régions: 'Paris', 'Lyon'
+2022-10-07 15:24:43,044 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-07 15:24:43,327 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-07 15:24:44,564 | INFO | La recherche a bien aboutie
+2022-10-07 15:24:46,426 | WARNING | L'utilisateur a choisi les régions: 'Paris', 'Lyon'
+2022-10-07 15:26:19,535 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-07 15:26:19,740 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-07 15:26:20,955 | INFO | La recherche a bien aboutie
+2022-10-07 15:26:22,743 | WARNING | L'utilisateur a choisi les régions: 'Paris', 'Lyon'
+2022-10-07 15:27:00,282 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-07 15:27:00,531 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-07 15:27:01,766 | INFO | La recherche a bien aboutie
+2022-10-07 15:27:03,279 | WARNING | L'utilisateur a choisi les régions: 'Paris', 'Lyon'
+2022-10-07 22:18:23,287 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-07 22:18:23,674 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-07 22:18:26,373 | INFO | La recherche a bien aboutie
+2022-10-07 22:18:27,551 | WARNING | L'utilisateur a choisi les régions: 'Paris', 'Lyon'
+2022-10-07 22:19:03,384 | WARNING | L'utilisateur a choisi les régions: 'Paris', 'Lyon'
+2022-10-07 22:20:46,008 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-07 22:20:46,302 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-07 22:20:47,586 | INFO | La recherche a bien aboutie
+2022-10-07 22:20:50,120 | WARNING | L'utilisateur a choisi les régions: 'Paris', 'Lyon'
+2022-10-07 22:24:51,067 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-07 22:24:51,362 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-07 22:24:52,660 | INFO | La recherche a bien aboutie
+2022-10-07 22:24:55,043 | WARNING | L'utilisateur a choisi les régions: 'Paris', 'Lyon'
+2022-10-07 22:24:58,135 | INFO | Le filtrage opéré sur les régions de 'Paris', 'Lyon' a bien fonctionné, il y a 29 089 résultats
+2022-10-07 22:26:55,827 | INFO | ====== WebDriver manager ======
+2022-10-07 22:26:56,595 | INFO | Get LATEST chromedriver version for google-chrome 106.0.5249
+2022-10-07 22:26:57,038 | INFO | Driver [/Users/hippodouche/.wdm/drivers/chromedriver/mac64/106.0.5249/chromedriver] found in cache
+2022-10-07 22:31:40,699 | INFO | ====== WebDriver manager ======
+2022-10-07 22:31:41,263 | INFO | Get LATEST chromedriver version for google-chrome 106.0.5249
+2022-10-07 22:31:42,382 | INFO | Driver [/Users/hippodouche/.wdm/drivers/chromedriver/mac64/106.0.5249/chromedriver] found in cache
+2022-10-08 19:52:23,520 | INFO | ====== WebDriver manager ======
+2022-10-08 19:52:24,338 | INFO | Get LATEST chromedriver version for google-chrome 106.0.5249
+2022-10-08 19:52:25,352 | INFO | About to download new driver from https://chromedriver.storage.googleapis.com/106.0.5249.61/chromedriver_mac64.zip
+2022-10-08 19:52:30,733 | INFO | Driver has been saved in cache [/Users/hippodouche/.wdm/drivers/chromedriver/mac64/106.0.5249]
+2022-10-08 19:53:27,442 | INFO | ====== WebDriver manager ======
+2022-10-08 19:53:28,125 | INFO | Get LATEST chromedriver version for google-chrome 106.0.5249
+2022-10-08 19:53:28,698 | INFO | Driver [/Users/hippodouche/.wdm/drivers/chromedriver/mac64/106.0.5249/chromedriver] found in cache
+2022-10-08 19:59:45,275 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-08 19:59:45,529 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-08 19:59:46,765 | INFO | La recherche a bien aboutie
+2022-10-08 19:59:49,406 | WARNING | L'utilisateur a choisi les régions: 'Paris', 'Lyon'
+2022-10-08 20:01:26,370 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-08 20:01:26,727 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-08 20:01:27,983 | INFO | La recherche a bien aboutie
+2022-10-08 20:01:30,265 | WARNING | L'utilisateur a choisi les régions: 'Paris', 'Lyon'
+2022-10-08 20:04:22,815 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-08 20:04:23,214 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-08 20:04:24,578 | INFO | La recherche a bien aboutie
+2022-10-08 20:04:31,834 | WARNING | L'utilisateur a choisi les régions: 'Paris', 'Lyon'
+2022-10-08 20:05:33,188 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-08 20:05:33,553 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-08 20:05:34,777 | INFO | La recherche a bien aboutie
+2022-10-08 20:05:36,348 | WARNING | L'utilisateur a choisi les régions: 'Paris', 'Lyon'
+2022-10-08 20:07:07,773 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-08 20:07:08,091 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-08 20:07:09,344 | INFO | La recherche a bien aboutie
+2022-10-08 20:07:11,068 | WARNING | L'utilisateur a choisi les régions: 'Paris', 'Lyon'
+2022-10-08 20:10:14,904 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-08 20:10:15,155 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-08 20:10:16,341 | INFO | La recherche a bien aboutie
+2022-10-08 20:10:17,975 | WARNING | L'utilisateur a choisi les régions: 'Paris', 'Lyon'
+2022-10-08 20:12:04,317 | WARNING | L'utilisateur a choisi les régions: 'Paris', 'Lyon', 'Marseille'
+2022-10-08 20:12:56,294 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-08 20:12:56,651 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-08 20:12:57,902 | INFO | La recherche a bien aboutie
+2022-10-08 20:13:00,069 | WARNING | L'utilisateur a choisi les régions: 'Paris', 'Lyon', 'Marseille'
+2022-10-08 20:17:37,879 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-08 20:17:38,268 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-08 20:17:39,467 | INFO | La recherche a bien aboutie
+2022-10-08 20:17:39,878 | WARNING | L'utilisateur a choisi la région Paris
+2022-10-08 20:18:43,756 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-08 20:18:44,109 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-08 20:18:45,323 | INFO | La recherche a bien aboutie
+2022-10-08 20:18:47,573 | WARNING | L'utilisateur a choisi la région Paris
+2022-10-08 20:18:49,875 | INFO | Le filtrage opéré sur la région de Paris a bien fonctionné, il y a 29 138 résultats
+2022-10-08 20:19:58,019 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-08 20:19:58,302 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-08 20:19:59,517 | INFO | La recherche a bien aboutie
+2022-10-08 20:20:01,363 | WARNING | L'utilisateur a choisi la région Paris
+2022-10-08 20:20:02,993 | INFO | Le filtrage opéré sur la région de Paris a bien fonctionné, il y a 29 138 résultats
+2022-10-08 20:22:27,657 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-08 20:22:27,980 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-08 20:22:30,645 | INFO | La recherche a bien aboutie
+2022-10-08 20:22:31,621 | WARNING | L'utilisateur a choisi la région Lyon
+2022-10-08 20:24:07,855 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-08 20:24:08,128 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-08 20:24:09,432 | INFO | La recherche a bien aboutie
+2022-10-08 20:24:11,870 | WARNING | L'utilisateur a choisi la région Lyon
+2022-10-08 20:24:13,532 | INFO | Le filtrage opéré sur la région de Lyon a bien fonctionné, il y a 29 138 résultats
+2022-10-08 20:24:35,106 | WARNING | L'utilisateur a choisi la région Marseille
+2022-10-08 20:24:43,664 | WARNING | L'utilisateur a choisi la région Paris
+2022-10-08 20:24:44,845 | INFO | Le filtrage opéré sur la région de Paris a bien fonctionné, il y a aucune résultats
+2022-10-08 20:26:09,540 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-08 20:26:09,695 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-08 20:26:10,922 | INFO | La recherche a bien aboutie
+2022-10-08 20:26:12,456 | WARNING | L'utilisateur a choisi la région Paris
+2022-10-08 20:26:15,287 | INFO | Le filtrage opéré sur la région de Paris a bien fonctionné, il y a 29 138 résultats
+2022-10-08 20:26:20,477 | WARNING | L'utilisateur a choisi la région Lyon
+2022-10-08 20:26:21,557 | INFO | Le filtrage opéré sur la région de Lyon a bien fonctionné, il y a aucune résultats
+2022-10-09 01:52:38,632 | INFO | ====== WebDriver manager ======
+2022-10-09 01:52:39,275 | INFO | Get LATEST chromedriver version for google-chrome 106.0.5249
+2022-10-09 01:52:39,682 | INFO | About to download new driver from https://chromedriver.storage.googleapis.com/106.0.5249.61/chromedriver_mac64.zip
+2022-10-09 01:52:42,641 | INFO | Driver has been saved in cache [/Users/hippodouche/.wdm/drivers/chromedriver/mac64/106.0.5249]
+2022-10-09 01:53:27,315 | INFO | ====== WebDriver manager ======
+2022-10-09 01:53:28,308 | INFO | Get LATEST chromedriver version for google-chrome 106.0.5249
+2022-10-09 01:53:28,804 | INFO | Driver [/Users/hippodouche/.wdm/drivers/chromedriver/mac64/106.0.5249/chromedriver] found in cache
+2022-10-09 01:56:48,526 | INFO | ====== WebDriver manager ======
+2022-10-09 01:56:49,261 | INFO | Get LATEST chromedriver version for google-chrome 106.0.5249
+2022-10-09 01:56:49,605 | INFO | Driver [/Users/hippodouche/.wdm/drivers/chromedriver/mac64/106.0.5249/chromedriver] found in cache
+2022-10-09 01:57:45,710 | INFO | ====== WebDriver manager ======
+2022-10-09 01:57:46,726 | INFO | Get LATEST chromedriver version for google-chrome 106.0.5249
+2022-10-09 01:57:47,156 | INFO | Driver [/Users/hippodouche/.wdm/drivers/chromedriver/mac64/106.0.5249/chromedriver] found in cache
+2022-10-09 01:58:24,377 | INFO | ====== WebDriver manager ======
+2022-10-09 01:58:24,950 | INFO | Get LATEST chromedriver version for google-chrome 106.0.5249
+2022-10-09 01:58:25,300 | INFO | Driver [/Users/hippodouche/.wdm/drivers/chromedriver/mac64/106.0.5249/chromedriver] found in cache
+2022-10-09 02:01:30,615 | INFO | ====== WebDriver manager ======
+2022-10-09 02:01:31,357 | INFO | Get LATEST chromedriver version for google-chrome 106.0.5249
+2022-10-09 02:01:32,031 | INFO | Driver [/Users/hippodouche/.wdm/drivers/chromedriver/mac64/106.0.5249/chromedriver] found in cache
+2022-10-09 02:03:24,463 | INFO | ====== WebDriver manager ======
+2022-10-09 02:03:25,292 | INFO | Get LATEST chromedriver version for google-chrome 106.0.5249
+2022-10-09 02:03:25,822 | INFO | Driver [/Users/hippodouche/.wdm/drivers/chromedriver/mac64/106.0.5249/chromedriver] found in cache
+2022-10-09 02:05:11,200 | INFO | ====== WebDriver manager ======
+2022-10-09 02:05:12,137 | INFO | Get LATEST chromedriver version for google-chrome 106.0.5249
+2022-10-09 02:05:12,438 | INFO | Driver [/Users/hippodouche/.wdm/drivers/chromedriver/mac64/106.0.5249/chromedriver] found in cache
+2022-10-09 03:04:13,190 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-09 03:05:59,451 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-09 03:07:34,937 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-09 03:09:48,141 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-09 03:11:23,325 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-09 03:12:41,801 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-09 03:12:42,216 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-09 03:13:51,577 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-09 03:13:52,064 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-09 03:14:52,032 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-09 03:14:52,481 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-09 03:14:53,045 | INFO | La recherche n'a pas aboutie
+2022-10-09 03:16:41,750 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-09 03:16:42,258 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-09 03:16:42,900 | INFO | La recherche n'a pas aboutie
+2022-10-09 03:19:19,118 | INFO | ====== WebDriver manager ======
+2022-10-09 03:19:19,845 | INFO | Get LATEST chromedriver version for google-chrome 106.0.5249
+2022-10-09 03:19:20,177 | INFO | Driver [/Users/hippodouche/.wdm/drivers/chromedriver/mac64/106.0.5249/chromedriver] found in cache
+2022-10-09 03:19:29,459 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-09 03:19:29,459 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-09 03:19:29,523 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-09 03:19:29,523 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-09 03:19:30,076 | INFO | La recherche n'a pas aboutie
+2022-10-09 03:19:30,076 | INFO | La recherche n'a pas aboutie
+2022-10-09 03:20:28,645 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-09 03:20:28,730 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-09 03:20:29,837 | INFO | La recherche a bien aboutie
+2022-10-09 03:21:56,617 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-09 03:21:56,692 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-09 03:21:57,772 | INFO | La recherche a bien aboutie
+2022-10-09 03:23:03,136 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-09 03:23:03,290 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-09 03:23:08,734 | INFO | La recherche a bien aboutie
+2022-10-09 03:27:07,008 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-09 03:27:07,082 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-09 03:27:12,782 | INFO | La recherche a bien aboutie
+2022-10-09 03:27:16,221 | WARNING | L'utilisateur a choisi les régions: 'Lyon', 'Paris'
+2022-10-09 03:27:28,453 | INFO | Le filtrage opéré sur les régions de 'Lyon', 'Paris' a bien fonctionné, il y a 29 136 résultats
+2022-10-09 03:27:44,169 | WARNING | L'utilisateur a choisi les régions: 'Lyon', 'Paris', 'Marseille'
+2022-10-09 03:29:32,497 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-09 03:29:32,550 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-09 03:29:38,065 | INFO | La recherche a bien aboutie
+2022-10-09 03:29:41,738 | WARNING | L'utilisateur a choisi les régions: 'Lyon', 'Paris', 'Marseille'
+2022-10-09 03:29:57,483 | INFO | Le filtrage opéré sur les régions de 'Lyon', 'Paris', 'Marseille' a bien fonctionné, il y a 29 136 résultats
+2022-10-09 03:32:07,205 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-09 03:32:07,283 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-09 03:32:12,763 | INFO | La recherche a bien aboutie
+2022-10-09 03:32:16,129 | WARNING | L'utilisateur a choisi les régions: 'Lyon', 'Paris', 'Marseille'
+2022-10-09 03:33:11,684 | WARNING | L'utilisateur a choisi la région Lyon
+2022-10-09 03:33:55,917 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-09 03:33:56,067 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-09 03:34:01,579 | INFO | La recherche a bien aboutie
+2022-10-09 03:34:05,116 | WARNING | L'utilisateur a choisi la région Paris
+2022-10-09 03:42:22,103 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-09 03:42:22,152 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-09 03:42:27,746 | INFO | La recherche a bien aboutie
+2022-10-09 03:42:31,378 | WARNING | L'utilisateur a choisi la région Paris
+2022-10-09 03:42:45,336 | INFO | Le filtrage opéré sur la région de Paris a bien fonctionné, il y a 2 604 résultats
+2022-10-09 03:42:52,708 | INFO | L'utilisateur a filtré les prix entre 0€ et 2000€
+2022-10-09 03:45:02,910 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-09 03:45:02,969 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-09 03:45:08,187 | INFO | La recherche a bien aboutie
+2022-10-09 03:45:11,679 | WARNING | L'utilisateur a choisi la région Paris
+2022-10-09 03:45:25,362 | INFO | Le filtrage opéré sur la région de Paris a bien fonctionné, il y a 2 604 résultats
+2022-10-09 03:45:32,860 | INFO | L'utilisateur a filtré les prix entre 0€ et 2000€, il y a 1 368 annonces
+2022-10-09 03:51:04,319 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-09 03:51:04,384 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-09 03:51:09,822 | INFO | La recherche a bien aboutie
+2022-10-09 03:51:13,327 | WARNING | L'utilisateur a choisi la région Paris
+2022-10-09 03:51:26,991 | INFO | Le filtrage opéré sur la région de Paris a bien fonctionné, il y a 2 604 résultats
+2022-10-09 03:51:34,778 | INFO | L'utilisateur a filtré les prix entre 0€ et 2000€, il y a 1 368 annonces
+2022-10-09 03:51:43,076 | INFO | L'utilisateur a filtré les prix entre 50€ et 500€, il y a 214 annonces
+2022-10-09 03:52:34,174 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-09 03:52:34,227 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-09 03:52:39,681 | INFO | La recherche a bien aboutie
+2022-10-09 03:52:43,085 | WARNING | L'utilisateur a choisi la région Paris
+2022-10-09 03:52:56,790 | INFO | Le filtrage opéré sur la région de Paris a bien fonctionné, il y a 2 604 résultats
+2022-10-09 03:53:03,960 | INFO | L'utilisateur a filtré les prix entre 0€ et 2000€, il y a 1 368 annonces
+2022-10-09 03:53:11,732 | INFO | L'utilisateur a filtré les prix entre 50€ et 500€, il y a 214 annonces
+2022-10-09 03:53:59,181 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-09 03:53:59,226 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-09 03:54:04,647 | INFO | La recherche a bien aboutie
+2022-10-09 03:54:08,174 | WARNING | L'utilisateur a choisi la région Paris
+2022-10-09 03:54:29,840 | INFO | L'utilisateur a filtré les prix entre 0€ et 2000€, il y a 779 annonces
+2022-10-09 03:54:38,210 | INFO | L'utilisateur a filtré les prix entre 50m2 et 500m2, il y a 328 annonces
