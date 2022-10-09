@@ -357,3 +357,35 @@
 2022-10-09 03:23:03,136 | INFO | La connexion à la page d'acceuil a bien réussie
 2022-10-09 03:23:03,290 | WARNING | L'utilisateur a choisi l'otion louer
 2022-10-09 03:23:08,734 | INFO | La recherche a bien aboutie
+2022-10-09 03:27:07,008 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-09 03:27:07,082 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-09 03:27:12,782 | INFO | La recherche a bien aboutie
+2022-10-09 03:27:16,221 | WARNING | L'utilisateur a choisi les régions: 'Lyon', 'Paris'
+2022-10-09 03:27:28,453 | INFO | Le filtrage opéré sur les régions de 'Lyon', 'Paris' a bien fonctionné, il y a 29 136 résultats
+2022-10-09 03:27:44,169 | WARNING | L'utilisateur a choisi les régions: 'Lyon', 'Paris', 'Marseille'
+2022-10-09 03:29:32,497 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-09 03:29:32,550 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-09 03:29:38,065 | INFO | La recherche a bien aboutie
+2022-10-09 03:29:41,738 | WARNING | L'utilisateur a choisi les régions: 'Lyon', 'Paris', 'Marseille'
+2022-10-09 03:29:57,483 | INFO | Le filtrage opéré sur les régions de 'Lyon', 'Paris', 'Marseille' a bien fonctionné, il y a 29 136 résultats
+2022-10-09 03:32:07,205 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-09 03:32:07,283 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-09 03:32:12,763 | INFO | La recherche a bien aboutie
+2022-10-09 03:32:16,129 | WARNING | L'utilisateur a choisi les régions: 'Lyon', 'Paris', 'Marseille'
+2022-10-09 03:33:11,684 | WARNING | L'utilisateur a choisi la région Lyon
+2022-10-09 03:33:55,917 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-09 03:33:56,067 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-09 03:34:01,579 | INFO | La recherche a bien aboutie
+2022-10-09 03:34:05,116 | WARNING | L'utilisateur a choisi la région Paris
+2022-10-09 03:42:22,103 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-09 03:42:22,152 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-09 03:42:27,746 | INFO | La recherche a bien aboutie
+2022-10-09 03:42:31,378 | WARNING | L'utilisateur a choisi la région Paris
+2022-10-09 03:42:45,336 | INFO | Le filtrage opéré sur la région de Paris a bien fonctionné, il y a 2 604 résultats
+2022-10-09 03:42:52,708 | INFO | L'utilisateur a filtré les prix entre 0€ et 2000€
+2022-10-09 03:45:02,910 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-09 03:45:02,969 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-09 03:45:08,187 | INFO | La recherche a bien aboutie
+2022-10-09 03:45:11,679 | WARNING | L'utilisateur a choisi la région Paris
+2022-10-09 03:45:25,362 | INFO | Le filtrage opéré sur la région de Paris a bien fonctionné, il y a 2 604 résultats
+2022-10-09 03:45:32,860 | INFO | L'utilisateur a filtré les prix entre 0€ et 2000€, il y a 1 368 annonces
