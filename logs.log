@@ -389,3 +389,23 @@
 2022-10-09 03:45:11,679 | WARNING | L'utilisateur a choisi la région Paris
 2022-10-09 03:45:25,362 | INFO | Le filtrage opéré sur la région de Paris a bien fonctionné, il y a 2 604 résultats
 2022-10-09 03:45:32,860 | INFO | L'utilisateur a filtré les prix entre 0€ et 2000€, il y a 1 368 annonces
+2022-10-09 03:51:04,319 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-09 03:51:04,384 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-09 03:51:09,822 | INFO | La recherche a bien aboutie
+2022-10-09 03:51:13,327 | WARNING | L'utilisateur a choisi la région Paris
+2022-10-09 03:51:26,991 | INFO | Le filtrage opéré sur la région de Paris a bien fonctionné, il y a 2 604 résultats
+2022-10-09 03:51:34,778 | INFO | L'utilisateur a filtré les prix entre 0€ et 2000€, il y a 1 368 annonces
+2022-10-09 03:51:43,076 | INFO | L'utilisateur a filtré les prix entre 50€ et 500€, il y a 214 annonces
+2022-10-09 03:52:34,174 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-09 03:52:34,227 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-09 03:52:39,681 | INFO | La recherche a bien aboutie
+2022-10-09 03:52:43,085 | WARNING | L'utilisateur a choisi la région Paris
+2022-10-09 03:52:56,790 | INFO | Le filtrage opéré sur la région de Paris a bien fonctionné, il y a 2 604 résultats
+2022-10-09 03:53:03,960 | INFO | L'utilisateur a filtré les prix entre 0€ et 2000€, il y a 1 368 annonces
+2022-10-09 03:53:11,732 | INFO | L'utilisateur a filtré les prix entre 50€ et 500€, il y a 214 annonces
+2022-10-09 03:53:59,181 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-09 03:53:59,226 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-09 03:54:04,647 | INFO | La recherche a bien aboutie
+2022-10-09 03:54:08,174 | WARNING | L'utilisateur a choisi la région Paris
+2022-10-09 03:54:29,840 | INFO | L'utilisateur a filtré les prix entre 0€ et 2000€, il y a 779 annonces
+2022-10-09 03:54:38,210 | INFO | L'utilisateur a filtré les prix entre 50m2 et 500m2, il y a 328 annonces

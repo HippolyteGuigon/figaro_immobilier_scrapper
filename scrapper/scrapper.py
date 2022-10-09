@@ -171,3 +171,18 @@ class Scrapper:
         sleep(3)
         number_result=driver.find_element("xpath",'//*[@id="bloc-list-classifieds"]/span').text
         logging.info(f"L'utilisateur a filtré les prix entre {price_min}€ et {price_max}€, il y a {number_result} annonces")
+    
+    def filter_surface(self, surface_min:int,surface_max:int):
+        criterion_button = driver.find_element("xpath",'//*[@id="search-engine"]/div/div[2]/div[3]/div[1]')
+        driver.execute_script("arguments[0].click();", criterion_button)
+        sleep(2)
+
+        driver.find_element("xpath",'//*[@id="search-engine"]/div/div[2]/div[3]/div[2]/div[2]/div/div[1]/div[3]/div/div[1]/div[1]/input').send_keys(surface_min)
+        driver.find_element("xpath",'//*[@id="search-engine"]/div/div[2]/div[3]/div[2]/div[2]/div/div[1]/div[3]/div/div[1]/div[2]/input').send_keys(surface_max)
+
+        validation_button=driver.find_element("xpath",'//*[@id="search-engine"]/div/div[2]/div[3]/div[2]/div[3]/button[2]')
+        driver.execute_script("arguments[0].click();", validation_button)
+        sleep(3)
+        number_result=driver.find_element("xpath",'//*[@id="bloc-list-classifieds"]/span').text
+        logging.info(f"L'utilisateur a filtré les prix entre {surface_min}m2 et {surface_max}m2, il y a {number_result} annonces")
+        driver.save_screenshot("save_surface.png")
