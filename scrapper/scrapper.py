@@ -121,7 +121,6 @@ class Scrapper:
             sleep(3)
             search_engine_button.send_keys(" ")
             sleep(2)
-            driver.save_screenshot(f"test{choice_region}.png")
             first_choice = driver.find_element(
                 "xpath",
                 "//*[@id='search-engine']/div/div[1]/div[2]/div[2]/div[2]/div/div[2]/div/div/div[1]/div/div[1]",
@@ -173,10 +172,7 @@ class Scrapper:
         sleep(3)
         number_result=driver.find_element("xpath",'//*[@id="bloc-list-classifieds"]/span').text
         logging.info(f"L'utilisateur a filtré les prix entre {surface_min}m2 et {surface_max}m2, il y a {number_result} annonces")
-        driver.save_screenshot("save_surface.png")
 
-
-    #Coder une fonction de filtre global qui reprend toutes les fonctions précédemments codées
 
     def global_filtering(self,ville: List,price_min:int,price_max:int,surface_min:int,surface_max:int):
         self.filter_search(ville)
