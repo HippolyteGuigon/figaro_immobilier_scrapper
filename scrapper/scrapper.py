@@ -112,50 +112,38 @@ class Scrapper:
                 ).replace("]", "")
             )
 
-
-        for choice_region in ville:
-            driver.find_element(
+        search_engine_button=driver.find_element(
                 "xpath",
                 "//*[@id='search-engine']/div/div[1]/div[2]/div[2]/div[2]/div/div/input",
-            ).send_keys(choice_region)
+            )
+        for choice_region in ville:
+            search_engine_button.send_keys(choice_region)
             sleep(3)
+            search_engine_button.send_keys(" ")
+            sleep(2)
+            driver.save_screenshot(f"test{choice_region}.png")
             first_choice = driver.find_element(
                 "xpath",
                 "//*[@id='search-engine']/div/div[1]/div[2]/div[2]/div[2]/div/div[2]/div/div/div[1]/div/div[1]",
             )
             
             driver.execute_script("arguments[0].click();", first_choice)
-        sleep(5)
+        sleep(3)
         result_filter = driver.find_element(
             "xpath", '//*[@id="bloc-list-classifieds"]'
         ).text
+        filtered_cities=result_filter.split("à")[1].split(":")[0]
         validate_button = driver.find_element(
             "xpath",
             '//*[@id="search-engine"]/div/div[1]/div[2]/div[2]/div[3]/button[2]',
         )
         driver.execute_script("arguments[0].click();", validate_button)
-        sleep(5)
+        sleep(3)
         number_result = driver.find_element(
             "xpath", '//*[@id="bloc-list-classifieds"]/span'
         ).text
-        if len(ville) == 1:
-            if all([x.lower() in result_filter.lower() for x in ville]):
-                logging.info(
-                    f"Le filtrage opéré sur la région de {ville[0]} a bien fonctionné, il y a {number_result} résultats".replace(
-                        "[", ""
-                    ).replace(
-                        "]", ""
-                    )
-                )
-        else:
-            if all([x.lower() in result_filter.lower() for x in ville]):
-                logging.info(
-                    f"Le filtrage opéré sur les régions de {[x for x in ville]} a bien fonctionné, il y a {number_result} résultats".replace(
-                        "[", ""
-                    ).replace(
-                        "]", ""
-                    )
-                )
+        
+        logging.warning(f"Le filtrage a bien été opéré sur {filtered_cities}, il y a {number_result} annonces")
 
     def filter_price(self, price_min:int,price_max:int):
 
@@ -186,3 +174,11 @@ class Scrapper:
         number_result=driver.find_element("xpath",'//*[@id="bloc-list-classifieds"]/span').text
         logging.info(f"L'utilisateur a filtré les prix entre {surface_min}m2 et {surface_max}m2, il y a {number_result} annonces")
         driver.save_screenshot("save_surface.png")
+
+
+    #Coder une fonction de filtre global qui reprend toutes les fonctions précédemments codées
+
+    def global_filtering(self,ville: List,price_min:int,price_max:int,surface_min:int,surface_max:int):
+        self.filter_search(ville)
+        self.filter_surface(surface_min,surface_max)
+        self.filter_price(price_min,price_max)
