@@ -186,3 +186,6 @@ class Scrapper:
         number_result=driver.find_element("xpath",'//*[@id="bloc-list-classifieds"]/span').text
         logging.info(f"L'utilisateur a filtré les prix entre {surface_min}m2 et {surface_max}m2, il y a {number_result} annonces")
         driver.save_screenshot("save_surface.png")
+
+
+    #Coder une fonction de filtre global qui reprend toutes les fonctions précédemments codées
