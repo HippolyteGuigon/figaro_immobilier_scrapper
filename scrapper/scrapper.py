@@ -29,7 +29,7 @@ driver.maximize_window()
 driver.get(url)
 
 
-class Scrapper:
+class Filtering:
     def __init__(self):
         pass
     
@@ -174,13 +174,21 @@ class Scrapper:
         driver.execute_script("arguments[0].click();", validation_button)
         sleep(3)
         number_result=driver.find_element("xpath",'//*[@id="bloc-list-classifieds"]/span').text
-        logging.info(f"L'utilisateur a filtré les prix entre {surface_min}m2 et {surface_max}m2, il y a {number_result} annonces")
+        logging.info(f"L'utilisateur a filtré la surface entre {surface_min}m2 et {surface_max}m2, il y a {number_result} annonces")
 
 
     def global_filtering(self,ville: List,price_min:int,price_max:int,surface_min:int,surface_max:int):
         self.filter_search(ville)
         self.filter_surface(surface_min,surface_max)
         self.filter_price(price_min,price_max)
+
+    
+class Scrapper(Filtering):
+
+    def __init__(self,choix,ville,surface_min,surface_max,price_min,price_max):
+        super().check_connect()
+        super().search_type(choix)
+        super().global_filtering(ville,price_min,price_max,surface_min,surface_max)
 
     def get_links(self):
         elems=[x.get_attribute("href") for x in driver.find_elements("xpath","//a[@href]") if "/annonces/annonce" in x.get_attribute("href")]

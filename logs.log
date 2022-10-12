@@ -36,3 +36,17 @@
 2022-10-09 16:20:47,420 | WARNING | Le filtrage a bien été opéré sur  Paris 14ème (75) , il y a 141 annonces
 2022-10-09 16:20:55,288 | INFO | L'utilisateur a filtré les prix entre 0€ et 2000€, il y a 107 annonces
 2022-10-09 16:21:02,987 | INFO | L'utilisateur a filtré les prix entre 50m2 et 500m2, il y a 22 annonces
+2022-10-13 01:42:33,715 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-13 01:42:33,717 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-13 01:42:39,261 | INFO | La recherche a bien aboutie
+2022-10-13 01:42:42,953 | WARNING | L'utilisateur a choisi la région Paris
+2022-10-13 01:42:55,163 | WARNING | Le filtrage a bien été opéré sur  Paris (75) , il y a 2 608 annonces
+2022-10-13 01:43:02,763 | INFO | L'utilisateur a filtré les prix entre 30m2 et 50m2, il y a 521 annonces
+2022-10-13 01:43:11,677 | INFO | L'utilisateur a filtré les prix entre 10€ et 2000€, il y a 448 annonces
+2022-10-13 01:44:05,930 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-13 01:44:05,950 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-13 01:44:11,374 | INFO | La recherche a bien aboutie
+2022-10-13 01:44:14,931 | WARNING | L'utilisateur a choisi la région Paris
+2022-10-13 01:44:26,873 | WARNING | Le filtrage a bien été opéré sur  Paris (75) , il y a 2 608 annonces
+2022-10-13 01:44:38,212 | INFO | L'utilisateur a filtré la surface entre 30m2 et 50m2, il y a 521 annonces
+2022-10-13 01:44:46,731 | INFO | L'utilisateur a filtré les prix entre 10€ et 2000€, il y a 448 annonces
