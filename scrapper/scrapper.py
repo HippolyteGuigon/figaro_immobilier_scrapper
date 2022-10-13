@@ -245,7 +245,7 @@ class Scrapper(Filtering):
         for city in self.ville:
             if not os.path.exists(os.path.join(data_result_path,city)):
                 os.makedirs(os.path.join(data_result_path,city))
-                df_city=pd.DataFrame(columns=["price","surface","localisation","description","nombre_pieces","link"])
+                df_city=pd.DataFrame(columns=["price","surface","localisation","description","nombre_pieces","rue","link"])
                 os.chdir(os.path.join(data_result_path,city))
                 df_city.to_csv(f"df_{city}.csv")
         data_to_scrap=json.load(to_scrap)
@@ -266,8 +266,13 @@ class Scrapper(Filtering):
                         json.dump(data_scrapped, f)
                     ville=localisation.split(" ")[1]
                     df_city=pd.read_csv(ville+"/df_"+ville+".csv")
-                    df_city=df_city[["price","surface","localisation","description","nombre_pieces","link"]]
-                    df_city.loc[df_city.shape[0]+1,:]=[price,surface,localisation,description,nombre_pieces,link]
+                    df_city=df_city[["price","surface","localisation","description","nombre_pieces","rue","link"]]
+
+                    if "rue" in description.lower():
+                        rue="Rue "+description.lower().split("rue")[1].split(" ")[1]
+                    else:
+                        rue="Inconnu"
+                    df_city.loc[df_city.shape[0]+1,:]=[price,surface,localisation,description,nombre_pieces,rue,link]
                     df_city.to_csv(ville+"/df_"+ville+".csv")
                     
                     
