@@ -15,9 +15,13 @@ from selenium.common.exceptions import StaleElementReferenceException, NoSuchEle
 import sys
 from logs.logs_config import main
 import logging
+from pathlib import Path
+import pandas as pd
 from selenium.webdriver.common.by import By
 from typing import List
 from time import sleep
+import json
+import os
 
 url = "https://immobilier.lefigaro.fr/"
 s = Service(ChromeDriverManager().install())
@@ -26,7 +30,7 @@ driver.maximize_window()
 driver.get(url)
 
 
-class Scrapper:
+class Filtering:
     def __init__(self):
         pass
     
@@ -121,7 +125,6 @@ class Scrapper:
             sleep(3)
             search_engine_button.send_keys(" ")
             sleep(2)
-            driver.save_screenshot(f"test{choice_region}.png")
             first_choice = driver.find_element(
                 "xpath",
                 "//*[@id='search-engine']/div/div[1]/div[2]/div[2]/div[2]/div/div[2]/div/div/div[1]/div/div[1]",
@@ -172,13 +175,86 @@ class Scrapper:
         driver.execute_script("arguments[0].click();", validation_button)
         sleep(3)
         number_result=driver.find_element("xpath",'//*[@id="bloc-list-classifieds"]/span').text
-        logging.info(f"L'utilisateur a filtré les prix entre {surface_min}m2 et {surface_max}m2, il y a {number_result} annonces")
-        driver.save_screenshot("save_surface.png")
+        logging.info(f"L'utilisateur a filtré la surface entre {surface_min}m2 et {surface_max}m2, il y a {number_result} annonces")
 
-
-    #Coder une fonction de filtre global qui reprend toutes les fonctions précédemments codées
 
     def global_filtering(self,ville: List,price_min:int,price_max:int,surface_min:int,surface_max:int):
         self.filter_search(ville)
         self.filter_surface(surface_min,surface_max)
         self.filter_price(price_min,price_max)
+
+    
+class Scrapper(Filtering):
+
+    def __init__(self,choix,ville,surface_min,surface_max,price_min,price_max):
+        self.ville=ville
+        super().check_connect()
+        super().search_type(choix)
+        super().global_filtering(ville,price_min,price_max,surface_min,surface_max)
+
+    def get_links(self):
+        elems=[x.get_attribute("href") for x in driver.find_elements("xpath","//a[@href]") if "/annonces/annonce" in x.get_attribute("href")]
+        while True:
+            try:
+                next_button=driver.find_element("xpath",'//*[@id="listAnnoncesBloc"]/section/div[40]/a[2]/div/span')
+                driver.execute_script("arguments[0].click();", next_button)
+                sleep(5)
+                new_elems=[x.get_attribute("href") for x in driver.find_elements("xpath","//a[@href]") if "/annonces/annonce" in x.get_attribute("href")]
+                elems+=new_elems
+            except:
+                break
+        json_path="/Users/hippodouche/se_loger_scrapping/figaro_immobilier_scrapper/data"
+        json_list=json.dumps(elems) 
+
+        with open(os.path.join(json_path, 'links_to_scrap.json'), 'w') as f:
+            json.dump(elems, f)
+
+    def individual_extractor(self,link):
+                              
+        price=driver.find_element("xpath",'//*[@id="app-bis"]/main/div[1]/div/section/div[2]/div/strong').text
+        surface=driver.find_element("xpath",'//*[@id="app-bis"]/main/div[1]/div/div[1]/ul/li[1]/span').text
+        localisation=driver.find_element("xpath",'//*[@id="classified-main-infos"]/span').text.replace("à","")
+        description=driver.find_element("xpath",'//*[@id="app-bis"]/main/div[1]/div/section/div[6]/p').text
+        return price,surface,localisation,description,link
+
+    def launch_scrapping(self):
+        logging.warning("Le scrapping vient de commencer")
+        data_result_path='/Users/hippodouche/se_loger_scrapping/figaro_immobilier_scrapper/data_results'
+        path_link_to_scrap='/Users/hippodouche/se_loger_scrapping/figaro_immobilier_scrapper/data/links_to_scrap.json'
+        path_scrapped='/Users/hippodouche/se_loger_scrapping/figaro_immobilier_scrapper/data/links_scrapped.json'
+
+        to_scrap = open(path_link_to_scrap)
+        scrapped=open(path_scrapped)
+
+        for city in self.ville:
+            if not os.path.exists(os.path.join(data_result_path,city)):
+                os.makedirs(os.path.join(data_result_path,city))
+                df_city=pd.DataFrame(columns=["price","surface","localisation","description","link"])
+                os.chdir(os.path.join(data_result_path,city))
+                df_city.to_csv(f"df_{city}.csv")
+        data_to_scrap=json.load(to_scrap)
+        data_scrapped=json.load(scrapped)
+        
+        os.chdir(data_result_path)
+        for link_scrap in data_to_scrap:
+            if link_scrap not in data_scrapped:
+                driver.get(link_scrap)
+                if "Cette annonce a expiré" in driver.page_source:
+                    pass
+                else:
+                    try:
+
+                        price,surface,localisation,description,link=self.individual_extractor(link_scrap)
+                        data_scrapped.append(link_scrap)
+                        with open(path_scrapped,'w') as f:
+                            json.dump(data_scrapped, f)
+                        ville=localisation.split(" ")[1]
+                        df_city=pd.read_csv(ville+"/df_"+ville+".csv")
+                        df_city=df_city[["price","surface","localisation","description","link"]]
+                        df_city.loc[df_city.shape[0]+1,:]=[price,surface,localisation,description,link]
+                        df_city.to_csv(ville+"/df_"+ville+".csv")
+                    except NoSuchElementException:
+                        pass
+                    
+                
+        
