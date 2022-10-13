@@ -50,3 +50,135 @@
 2022-10-13 01:44:26,873 | WARNING | Le filtrage a bien été opéré sur  Paris (75) , il y a 2 608 annonces
 2022-10-13 01:44:38,212 | INFO | L'utilisateur a filtré la surface entre 30m2 et 50m2, il y a 521 annonces
 2022-10-13 01:44:46,731 | INFO | L'utilisateur a filtré les prix entre 10€ et 2000€, il y a 448 annonces
+2022-10-13 02:52:22,327 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-13 02:52:22,338 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-13 02:52:28,578 | INFO | La recherche a bien aboutie
+2022-10-13 02:52:33,314 | WARNING | L'utilisateur a choisi la région Paris
+2022-10-13 02:52:46,676 | WARNING | Le filtrage a bien été opéré sur  Paris (75) , il y a 2 608 annonces
+2022-10-13 02:52:56,057 | INFO | L'utilisateur a filtré la surface entre 30m2 et 50m2, il y a 521 annonces
+2022-10-13 02:53:05,703 | INFO | L'utilisateur a filtré les prix entre 10€ et 2000€, il y a 448 annonces
+2022-10-13 02:54:33,757 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-13 02:54:33,759 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-13 02:54:39,891 | INFO | La recherche a bien aboutie
+2022-10-13 02:54:43,980 | WARNING | L'utilisateur a choisi la région Paris
+2022-10-13 02:54:55,771 | WARNING | Le filtrage a bien été opéré sur  Paris (75) , il y a 2 608 annonces
+2022-10-13 02:55:04,839 | INFO | L'utilisateur a filtré la surface entre 30m2 et 50m2, il y a 521 annonces
+2022-10-13 02:55:13,662 | INFO | L'utilisateur a filtré les prix entre 10€ et 2000€, il y a 448 annonces
+2022-10-13 02:56:40,399 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-13 02:56:40,402 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-13 02:56:46,224 | INFO | La recherche a bien aboutie
+2022-10-13 02:56:49,770 | WARNING | L'utilisateur a choisi les régions: 'Paris', 'Lyon'
+2022-10-13 02:57:07,364 | WARNING | Le filtrage a bien été opéré sur  Paris (75), Lyon (69) , il y a 2 772 annonces
+2022-10-13 02:57:15,264 | INFO | L'utilisateur a filtré la surface entre 30m2 et 50m2, il y a 536 annonces
+2022-10-13 02:57:22,852 | INFO | L'utilisateur a filtré les prix entre 10€ et 2000€, il y a 463 annonces
+2022-10-13 02:58:44,508 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-13 02:58:44,514 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-13 02:58:50,015 | INFO | La recherche a bien aboutie
+2022-10-13 02:58:53,535 | WARNING | L'utilisateur a choisi la région Paris
+2022-10-13 02:59:05,730 | WARNING | Le filtrage a bien été opéré sur  Paris (75) , il y a 2 608 annonces
+2022-10-13 02:59:13,531 | INFO | L'utilisateur a filtré la surface entre 30m2 et 50m2, il y a 521 annonces
+2022-10-13 02:59:21,056 | INFO | L'utilisateur a filtré les prix entre 10€ et 2000€, il y a 448 annonces
+2022-10-13 03:03:02,382 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-13 03:03:02,388 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-13 03:03:09,960 | INFO | La recherche a bien aboutie
+2022-10-13 03:03:15,417 | WARNING | L'utilisateur a choisi la région Paris
+2022-10-13 03:03:27,627 | WARNING | Le filtrage a bien été opéré sur  Paris (75) , il y a 2 608 annonces
+2022-10-13 03:03:35,531 | INFO | L'utilisateur a filtré la surface entre 30m2 et 50m2, il y a 521 annonces
+2022-10-13 03:03:42,580 | INFO | L'utilisateur a filtré les prix entre 10€ et 2000€, il y a 448 annonces
+2022-10-13 03:20:44,964 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-13 03:20:44,968 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-13 03:20:50,311 | INFO | La recherche a bien aboutie
+2022-10-13 03:20:53,709 | WARNING | L'utilisateur a choisi la région Paris
+2022-10-13 03:21:05,569 | WARNING | Le filtrage a bien été opéré sur  Paris (75) , il y a 2 591 annonces
+2022-10-13 03:21:13,085 | INFO | L'utilisateur a filtré la surface entre 30m2 et 50m2, il y a 516 annonces
+2022-10-13 03:21:19,949 | INFO | L'utilisateur a filtré les prix entre 10€ et 2000€, il y a 445 annonces
+2022-10-13 03:26:41,719 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-13 03:26:41,721 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-13 03:26:47,224 | INFO | La recherche a bien aboutie
+2022-10-13 03:26:52,011 | WARNING | L'utilisateur a choisi la région Paris
+2022-10-13 03:27:05,447 | WARNING | Le filtrage a bien été opéré sur  Paris (75) , il y a 2 591 annonces
+2022-10-13 03:27:15,220 | INFO | L'utilisateur a filtré la surface entre 30m2 et 50m2, il y a 516 annonces
+2022-10-13 03:27:23,549 | INFO | L'utilisateur a filtré les prix entre 10€ et 2000€, il y a 445 annonces
+2022-10-13 03:31:23,751 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-13 03:31:23,753 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-13 03:31:29,099 | INFO | La recherche a bien aboutie
+2022-10-13 03:31:32,638 | WARNING | L'utilisateur a choisi la région Paris
+2022-10-13 03:31:45,404 | WARNING | Le filtrage a bien été opéré sur  Paris (75) , il y a 2 591 annonces
+2022-10-13 03:31:52,725 | INFO | L'utilisateur a filtré la surface entre 30m2 et 50m2, il y a 516 annonces
+2022-10-13 03:32:00,500 | INFO | L'utilisateur a filtré les prix entre 10€ et 2000€, il y a 445 annonces
+2022-10-13 03:35:12,850 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-13 03:35:12,858 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-13 03:35:18,804 | INFO | La recherche a bien aboutie
+2022-10-13 03:35:23,383 | WARNING | L'utilisateur a choisi la région Paris
+2022-10-13 03:35:35,504 | WARNING | Le filtrage a bien été opéré sur  Paris (75) , il y a 2 591 annonces
+2022-10-13 03:35:44,254 | INFO | L'utilisateur a filtré la surface entre 30m2 et 50m2, il y a 516 annonces
+2022-10-13 03:35:51,641 | INFO | L'utilisateur a filtré les prix entre 10€ et 2000€, il y a 445 annonces
+2022-10-13 03:39:02,018 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-13 03:39:02,056 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-13 03:39:07,357 | INFO | La recherche a bien aboutie
+2022-10-13 03:39:10,890 | WARNING | L'utilisateur a choisi la région Paris
+2022-10-13 03:39:22,534 | WARNING | Le filtrage a bien été opéré sur  Paris (75) , il y a 2 591 annonces
+2022-10-13 03:39:30,217 | INFO | L'utilisateur a filtré la surface entre 30m2 et 50m2, il y a 516 annonces
+2022-10-13 03:39:37,255 | INFO | L'utilisateur a filtré les prix entre 10€ et 2000€, il y a 445 annonces
+2022-10-13 03:48:48,067 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-13 03:48:48,082 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-13 03:48:53,752 | INFO | La recherche a bien aboutie
+2022-10-13 03:48:58,288 | WARNING | L'utilisateur a choisi la région Paris
+2022-10-13 03:49:10,040 | WARNING | Le filtrage a bien été opéré sur  Paris (75) , il y a 2 591 annonces
+2022-10-13 03:49:19,327 | INFO | L'utilisateur a filtré la surface entre 30m2 et 50m2, il y a 516 annonces
+2022-10-13 03:49:27,137 | INFO | L'utilisateur a filtré les prix entre 10€ et 2000€, il y a 445 annonces
+2022-10-13 03:59:10,672 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-13 03:59:10,676 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-13 03:59:15,986 | INFO | La recherche a bien aboutie
+2022-10-13 03:59:19,403 | WARNING | L'utilisateur a choisi la région Paris
+2022-10-13 03:59:32,067 | WARNING | Le filtrage a bien été opéré sur  Paris (75) , il y a 2 591 annonces
+2022-10-13 03:59:40,242 | INFO | L'utilisateur a filtré la surface entre 30m2 et 50m2, il y a 516 annonces
+2022-10-13 03:59:47,360 | INFO | L'utilisateur a filtré les prix entre 10€ et 2000€, il y a 445 annonces
+2022-10-13 04:04:47,421 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-13 04:04:47,423 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-13 04:04:52,841 | INFO | La recherche a bien aboutie
+2022-10-13 04:04:56,280 | WARNING | L'utilisateur a choisi la région Paris
+2022-10-13 04:05:08,288 | WARNING | Le filtrage a bien été opéré sur  Paris (75) , il y a 2 591 annonces
+2022-10-13 04:05:15,842 | INFO | L'utilisateur a filtré la surface entre 30m2 et 50m2, il y a 516 annonces
+2022-10-13 04:05:22,673 | INFO | L'utilisateur a filtré les prix entre 10€ et 2000€, il y a 445 annonces
+2022-10-13 04:06:55,864 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-13 04:06:55,866 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-13 04:07:01,151 | INFO | La recherche a bien aboutie
+2022-10-13 04:07:04,538 | WARNING | L'utilisateur a choisi la région Paris
+2022-10-13 04:07:16,703 | WARNING | Le filtrage a bien été opéré sur  Paris (75) , il y a 2 591 annonces
+2022-10-13 04:07:24,011 | INFO | L'utilisateur a filtré la surface entre 30m2 et 50m2, il y a 516 annonces
+2022-10-13 04:07:30,705 | INFO | L'utilisateur a filtré les prix entre 10€ et 2000€, il y a 445 annonces
+2022-10-13 04:13:21,520 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-13 04:13:21,536 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-13 04:13:27,875 | INFO | La recherche a bien aboutie
+2022-10-13 04:13:31,759 | WARNING | L'utilisateur a choisi la région Paris
+2022-10-13 04:13:44,042 | WARNING | Le filtrage a bien été opéré sur  Paris (75) , il y a 2 591 annonces
+2022-10-13 04:13:51,878 | INFO | L'utilisateur a filtré la surface entre 30m2 et 50m2, il y a 516 annonces
+2022-10-13 04:13:59,672 | INFO | L'utilisateur a filtré les prix entre 10€ et 2000€, il y a 445 annonces
+2022-10-13 04:17:16,670 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-13 04:17:16,672 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-13 04:17:22,037 | INFO | La recherche a bien aboutie
+2022-10-13 04:17:25,484 | WARNING | L'utilisateur a choisi la région Paris
+2022-10-13 04:17:37,257 | WARNING | Le filtrage a bien été opéré sur  Paris (75) , il y a 2 591 annonces
+2022-10-13 04:17:44,350 | INFO | L'utilisateur a filtré la surface entre 30m2 et 50m2, il y a 516 annonces
+2022-10-13 04:17:51,661 | INFO | L'utilisateur a filtré les prix entre 10€ et 2000€, il y a 445 annonces
+2022-10-13 04:19:24,418 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-13 04:19:24,422 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-13 04:19:29,690 | INFO | La recherche a bien aboutie
+2022-10-13 04:19:33,581 | WARNING | L'utilisateur a choisi la région Paris
+2022-10-13 04:19:45,295 | WARNING | Le filtrage a bien été opéré sur  Paris (75) , il y a 2 591 annonces
+2022-10-13 04:19:52,884 | INFO | L'utilisateur a filtré la surface entre 30m2 et 50m2, il y a 516 annonces
+2022-10-13 04:19:59,828 | INFO | L'utilisateur a filtré les prix entre 10€ et 2000€, il y a 445 annonces
+2022-10-13 04:21:42,293 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-13 04:21:42,295 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-13 04:21:47,661 | INFO | La recherche a bien aboutie
+2022-10-13 04:21:51,070 | WARNING | L'utilisateur a choisi la région Paris
+2022-10-13 04:22:02,724 | WARNING | Le filtrage a bien été opéré sur  Paris (75) , il y a 2 591 annonces
+2022-10-13 04:22:10,193 | INFO | L'utilisateur a filtré la surface entre 30m2 et 50m2, il y a 516 annonces
+2022-10-13 04:22:16,856 | INFO | L'utilisateur a filtré les prix entre 10€ et 2000€, il y a 445 annonces
+2022-10-13 04:24:20,787 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-13 04:24:20,790 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-13 04:24:26,133 | INFO | La recherche a bien aboutie
+2022-10-13 04:24:29,622 | WARNING | L'utilisateur a choisi la région Paris
+2022-10-13 04:24:41,579 | WARNING | Le filtrage a bien été opéré sur  Paris (75) , il y a 2 591 annonces
+2022-10-13 04:24:50,211 | INFO | L'utilisateur a filtré la surface entre 30m2 et 50m2, il y a 516 annonces
