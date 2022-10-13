@@ -1,5 +1,6 @@
 from selenium import webdriver
 import warnings
+from tqdm import tqdm
 
 warnings.filterwarnings("ignore")
 options = webdriver.ChromeOptions()
@@ -210,12 +211,27 @@ class Scrapper(Filtering):
             json.dump(elems, f)
 
     def individual_extractor(self,link):
-                              
-        price=driver.find_element("xpath",'//*[@id="app-bis"]/main/div[1]/div/section/div[2]/div/strong').text
-        surface=driver.find_element("xpath",'//*[@id="app-bis"]/main/div[1]/div/div[1]/ul/li[1]/span').text
-        localisation=driver.find_element("xpath",'//*[@id="classified-main-infos"]/span').text.replace("à","")
-        description=driver.find_element("xpath",'//*[@id="app-bis"]/main/div[1]/div/section/div[6]/p').text
-        return price,surface,localisation,description,link
+        try:
+            price=driver.find_element("xpath",'//*[@id="app-bis"]/main/div[1]/div/section/div[2]/div/strong').text
+        except NoSuchElementException:
+            price="Inconnu"
+        try:
+            surface=driver.find_element("xpath",'//*[@id="app-bis"]/main/div[1]/div/div[1]/ul/li[1]/span').text
+        except NoSuchElementException:
+            surface="Inconnu"
+        try:
+            localisation=driver.find_element("xpath",'//*[@id="classified-main-infos"]/span').text.replace("à","")
+        except NoSuchElementException:
+            localisation="Inconnu"
+        try:
+            description=driver.find_element("xpath",'//*[@id="app-bis"]/main/div[1]/div/section/div[6]/p').text
+        except NoSuchElementException:
+            description="Inconnu"
+        try:
+            nombre_pieces=driver.find_element("xpath",'//*[@id="app-bis"]/main/div[1]/div/div[1]/ul/li[2]/span').text
+        except NoSuchElementException:
+            nombre_pieces="Inconnu"
+        return price,surface,localisation,description,nombre_pieces,link
 
     def launch_scrapping(self):
         logging.warning("Le scrapping vient de commencer")
@@ -229,32 +245,31 @@ class Scrapper(Filtering):
         for city in self.ville:
             if not os.path.exists(os.path.join(data_result_path,city)):
                 os.makedirs(os.path.join(data_result_path,city))
-                df_city=pd.DataFrame(columns=["price","surface","localisation","description","link"])
+                df_city=pd.DataFrame(columns=["price","surface","localisation","description","nombre_pieces","link"])
                 os.chdir(os.path.join(data_result_path,city))
                 df_city.to_csv(f"df_{city}.csv")
         data_to_scrap=json.load(to_scrap)
         data_scrapped=json.load(scrapped)
         
         os.chdir(data_result_path)
-        for link_scrap in data_to_scrap:
+        for link_scrap in tqdm(data_to_scrap):
             if link_scrap not in data_scrapped:
                 driver.get(link_scrap)
                 if "Cette annonce a expiré" in driver.page_source:
                     pass
                 else:
-                    try:
+                    
 
-                        price,surface,localisation,description,link=self.individual_extractor(link_scrap)
-                        data_scrapped.append(link_scrap)
-                        with open(path_scrapped,'w') as f:
-                            json.dump(data_scrapped, f)
-                        ville=localisation.split(" ")[1]
-                        df_city=pd.read_csv(ville+"/df_"+ville+".csv")
-                        df_city=df_city[["price","surface","localisation","description","link"]]
-                        df_city.loc[df_city.shape[0]+1,:]=[price,surface,localisation,description,link]
-                        df_city.to_csv(ville+"/df_"+ville+".csv")
-                    except NoSuchElementException:
-                        pass
+                    price,surface,localisation,description,nombre_pieces,link=self.individual_extractor(link_scrap)
+                    data_scrapped.append(link_scrap)
+                    with open(path_scrapped,'w') as f:
+                        json.dump(data_scrapped, f)
+                    ville=localisation.split(" ")[1]
+                    df_city=pd.read_csv(ville+"/df_"+ville+".csv")
+                    df_city=df_city[["price","surface","localisation","description","nombre_pieces","link"]]
+                    df_city.loc[df_city.shape[0]+1,:]=[price,surface,localisation,description,nombre_pieces,link]
+                    df_city.to_csv(ville+"/df_"+ville+".csv")
+                    
                     
                 
         
