@@ -187,6 +187,7 @@ class Filtering:
 class Scrapper(Filtering):
 
     def __init__(self,choix,ville,surface_min,surface_max,price_min,price_max):
+        self.ville=ville
         super().check_connect()
         super().search_type(choix)
         super().global_filtering(ville,price_min,price_max,surface_min,surface_max)
@@ -217,13 +218,18 @@ class Scrapper(Filtering):
         return price,surface,localisation,description,link
 
     def launch_scrapping(self):
-
+        logging.warning("Le scrapping vient de commencer")
+        data_result_path='/Users/hippodouche/se_loger_scrapping/figaro_immobilier_scrapper/data_results'
         path_link_to_scrap='/Users/hippodouche/se_loger_scrapping/figaro_immobilier_scrapper/data/links_to_scrap.json'
         path_scrapped='/Users/hippodouche/se_loger_scrapping/figaro_immobilier_scrapper/data/links_scrapped.json'
-        df=pd.read_csv('/Users/hippodouche/se_loger_scrapping/figaro_immobilier_scrapper/data_results/df_search.csv')
+        df=pd.read_csv('/Users/hippodouche/se_loger_scrapping/figaro_immobilier_scrapper/data_results/df_search.csv').drop("Unnamed: 0",axis=1)
 
         to_scrap = open(path_link_to_scrap)
         scrapped=open(path_scrapped)
+
+        for city in self.ville:
+            if not os.path.exists(os.path.join(data_result_path,city)):
+                os.makedirs(os.path.join(data_result_path,city))
 
         data_to_scrap=json.load(to_scrap)
         data_scrapped=json.load(scrapped)
@@ -235,16 +241,14 @@ class Scrapper(Filtering):
                 if "Cette annonce a expiré" in driver.page_source:
                     pass
                 else:
-                    try:
 
+                    price,surface,localisation,description,link=self.individual_extractor(link_scrap)
+                    df.loc[df.shape[0]+1,:]=[price,surface,localisation,description,link]
+                    df.to_csv(f"df_search.csv")
+                    data_scrapped.append(link_scrap)
+                    with open(path_scrapped,'w') as f:
+                        json.dump(data_scrapped, f)
                     
-                        price,surface,localisation,description,link=self.individual_extractor(link_scrap)
-                        df.loc[df.shape[0]+1,:]=[price,surface,localisation,description,link]
-                        df.to_csv(f"df_search.csv")
-                        data_scrapped.append(link_scrap)
-                        with open(path_scrapped,'w') as f:
-                            json.dump(data_scrapped, f)
-                    except:
-                        pass
+                    
                 
         

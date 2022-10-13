@@ -182,3 +182,44 @@
 2022-10-13 04:24:29,622 | WARNING | L'utilisateur a choisi la région Paris
 2022-10-13 04:24:41,579 | WARNING | Le filtrage a bien été opéré sur  Paris (75) , il y a 2 591 annonces
 2022-10-13 04:24:50,211 | INFO | L'utilisateur a filtré la surface entre 30m2 et 50m2, il y a 516 annonces
+2022-10-13 04:24:57,224 | INFO | L'utilisateur a filtré les prix entre 10€ et 2000€, il y a 445 annonces
+2022-10-13 12:43:21,858 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-13 12:43:21,861 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-13 12:43:27,171 | INFO | La recherche a bien aboutie
+2022-10-13 12:43:30,880 | WARNING | L'utilisateur a choisi les régions: 'Paris', 'Lyon', 'Marseille'
+2022-10-13 12:43:53,491 | WARNING | Le filtrage a bien été opéré sur  Paris (75), Lyon (69) et Marseille (13) , il y a 3 215 annonces
+2022-10-13 12:44:01,762 | INFO | L'utilisateur a filtré la surface entre 30m2 et 50m2, il y a 642 annonces
+2022-10-13 12:44:09,502 | INFO | L'utilisateur a filtré les prix entre 10€ et 2000€, il y a 570 annonces
+2022-10-13 12:47:05,732 | WARNING | Le scrapping vient de commencer
+2022-10-13 12:51:33,575 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-13 12:51:33,577 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-13 12:51:38,894 | INFO | La recherche a bien aboutie
+2022-10-13 12:51:42,519 | WARNING | L'utilisateur a choisi les régions: 'Paris', 'Lyon', 'Marseille'
+2022-10-13 12:52:06,114 | WARNING | Le filtrage a bien été opéré sur  Paris (75), Lyon (69) et Marseille (13) , il y a 3 213 annonces
+2022-10-13 12:52:14,154 | INFO | L'utilisateur a filtré la surface entre 30m2 et 50m2, il y a 643 annonces
+2022-10-13 12:52:21,454 | INFO | L'utilisateur a filtré les prix entre 10€ et 2000€, il y a 571 annonces
+2022-10-13 12:52:21,633 | WARNING | Le scrapping vient de commencer
+2022-10-13 12:54:02,034 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-13 12:54:02,036 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-13 12:54:07,510 | INFO | La recherche a bien aboutie
+2022-10-13 12:54:10,972 | WARNING | L'utilisateur a choisi les régions: 'Paris', 'Lyon', 'Marseille'
+2022-10-13 12:54:34,530 | WARNING | Le filtrage a bien été opéré sur  Paris (75), Lyon (69) et Marseille (13) , il y a 3 213 annonces
+2022-10-13 12:54:42,431 | INFO | L'utilisateur a filtré la surface entre 30m2 et 50m2, il y a 643 annonces
+2022-10-13 12:54:50,131 | INFO | L'utilisateur a filtré les prix entre 10€ et 2000€, il y a 571 annonces
+2022-10-13 12:54:50,283 | WARNING | Le scrapping vient de commencer
+2022-10-13 12:57:16,065 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-13 12:57:16,079 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-13 12:57:21,572 | INFO | La recherche a bien aboutie
+2022-10-13 12:57:24,998 | WARNING | L'utilisateur a choisi les régions: 'Paris', 'Lyon', 'Marseille'
+2022-10-13 12:57:48,118 | WARNING | Le filtrage a bien été opéré sur  Paris (75), Lyon (69) et Marseille (13) , il y a 3 213 annonces
+2022-10-13 12:57:55,726 | INFO | L'utilisateur a filtré la surface entre 30m2 et 50m2, il y a 643 annonces
+2022-10-13 12:58:02,969 | INFO | L'utilisateur a filtré les prix entre 10€ et 2000€, il y a 571 annonces
+2022-10-13 12:58:03,274 | WARNING | Le scrapping vient de commencer
+2022-10-13 15:03:13,122 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-13 15:03:13,125 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-13 15:03:18,468 | INFO | La recherche a bien aboutie
+2022-10-13 15:03:21,896 | WARNING | L'utilisateur a choisi les régions: 'Paris', 'Lyon', 'Marseille'
+2022-10-13 15:03:44,237 | WARNING | Le filtrage a bien été opéré sur  Paris (75), Lyon (69) et Marseille (13) , il y a 3 212 annonces
+2022-10-13 15:03:52,158 | INFO | L'utilisateur a filtré la surface entre 30m2 et 50m2, il y a 643 annonces
+2022-10-13 15:03:59,928 | INFO | L'utilisateur a filtré les prix entre 10€ et 2000€, il y a 571 annonces
+2022-10-13 15:04:00,061 | WARNING | Le scrapping vient de commencer
