@@ -34,6 +34,12 @@ driver.get(url)
 class Filtering:
     def __init__(self):
         pass
+
+    def skip_error_page(self):
+        if "La page demandée n'existe pas" in driver.page_source:
+            driver.find_element('xpath', "//button[text()='Retour à l'accueil']")
+        else:
+            pass
     
     def accept_cookie(self):
 
@@ -123,26 +129,27 @@ class Filtering:
             )
         for choice_region in ville:
             search_engine_button.send_keys(choice_region)
-            sleep(3)
+            sleep(5)
             search_engine_button.send_keys(" ")
-            sleep(2)
+            sleep(5)
             first_choice = driver.find_element(
                 "xpath",
                 "//*[@id='search-engine']/div/div[1]/div[2]/div[2]/div[2]/div/div[2]/div/div/div[1]/div/div[1]",
             )
             
             driver.execute_script("arguments[0].click();", first_choice)
-        sleep(3)
+        sleep(5)
         result_filter = driver.find_element(
             "xpath", '//*[@id="bloc-list-classifieds"]'
         ).text
+        print(result_filter)
         filtered_cities=result_filter.split("à")[1].split(":")[0]
         validate_button = driver.find_element(
             "xpath",
             '//*[@id="search-engine"]/div/div[1]/div[2]/div[2]/div[3]/button[2]',
         )
         driver.execute_script("arguments[0].click();", validate_button)
-        sleep(3)
+        sleep(5)
         number_result = driver.find_element(
             "xpath", '//*[@id="bloc-list-classifieds"]/span'
         ).text
@@ -153,28 +160,28 @@ class Filtering:
 
         budget_button = driver.find_element("xpath",'//*[@id="search-engine"]/div/div[2]/div[2]/div')
         driver.execute_script("arguments[0].click();", budget_button)
-        sleep(2)
+        sleep(5)
 
         driver.find_element("xpath",'//*[@id="search-engine"]/div/div[2]/div[2]/div[2]/div[2]/div[1]/div[1]/input').send_keys(price_min)
         driver.find_element("xpath",'//*[@id="search-engine"]/div/div[2]/div[2]/div[2]/div[2]/div[1]/div[2]/input').send_keys(price_max)
 
         validation_button=driver.find_element("xpath",'//*[@id="search-engine"]/div/div[2]/div[2]/div[2]/div[3]/button[2]')
         driver.execute_script("arguments[0].click();", validation_button)
-        sleep(3)
+        sleep(5)
         number_result=driver.find_element("xpath",'//*[@id="bloc-list-classifieds"]/span').text
         logging.info(f"L'utilisateur a filtré les prix entre {price_min}€ et {price_max}€, il y a {number_result} annonces")
     
     def filter_surface(self, surface_min:int,surface_max:int):
         criterion_button = driver.find_element("xpath",'//*[@id="search-engine"]/div/div[2]/div[3]/div[1]')
         driver.execute_script("arguments[0].click();", criterion_button)
-        sleep(2)
+        sleep(5)
 
         driver.find_element("xpath",'//*[@id="search-engine"]/div/div[2]/div[3]/div[2]/div[2]/div/div[1]/div[3]/div/div[1]/div[1]/input').send_keys(surface_min)
         driver.find_element("xpath",'//*[@id="search-engine"]/div/div[2]/div[3]/div[2]/div[2]/div/div[1]/div[3]/div/div[1]/div[2]/input').send_keys(surface_max)
 
         validation_button=driver.find_element("xpath",'//*[@id="search-engine"]/div/div[2]/div[3]/div[2]/div[3]/button[2]')
         driver.execute_script("arguments[0].click();", validation_button)
-        sleep(3)
+        sleep(5)
         number_result=driver.find_element("xpath",'//*[@id="bloc-list-classifieds"]/span').text
         logging.info(f"L'utilisateur a filtré la surface entre {surface_min}m2 et {surface_max}m2, il y a {number_result} annonces")
 
@@ -189,6 +196,7 @@ class Scrapper(Filtering):
 
     def __init__(self,choix,ville,surface_min,surface_max,price_min,price_max):
         self.ville=ville
+        super().skip_error_page()
         super().check_connect()
         super().search_type(choix)
         super().global_filtering(ville,price_min,price_max,surface_min,surface_max)
