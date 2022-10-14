@@ -23,6 +23,9 @@ from typing import List
 from time import sleep
 import json
 import os
+from cleaner.cleaner import Get_adress
+
+cleaner = Get_adress()
 
 url = "https://immobilier.lefigaro.fr/"
 s = Service(ChromeDriverManager().install())
@@ -276,11 +279,9 @@ class Scrapper(Filtering):
                     df_city=pd.read_csv(ville+"/df_"+ville+".csv")
                     df_city=df_city[["price","surface","localisation","description","nombre_pieces","rue","link"]]
 
-                    if "rue" in description.lower():
-                        rue="Rue "+description.lower().split("rue")[1].split(" ")[1]
-                    else:
-                        rue="Inconnu"
-                    df_city.loc[df_city.shape[0]+1,:]=[price,surface,localisation,description,nombre_pieces,rue,link]
+                    
+                    df_city.loc[df_city.shape[0]+1,:]=[price,surface,localisation,description,nombre_pieces,"TBD",link]
+                    df_city.loc[df_city.shape[0],"rue"]=cleaner.pipeline(df_city.loc[df_city.shape[0],"localisation"],df_city.loc[df_city.shape[0],"description"])
                     df_city.to_csv(ville+"/df_"+ville+".csv")
                     
                     
