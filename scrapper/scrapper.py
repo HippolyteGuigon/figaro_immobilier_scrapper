@@ -1,5 +1,6 @@
 from selenium import webdriver
 import warnings
+from tqdm import tqdm
 
 warnings.filterwarnings("ignore")
 options = webdriver.ChromeOptions()
@@ -33,6 +34,12 @@ driver.get(url)
 class Filtering:
     def __init__(self):
         pass
+
+    def skip_error_page(self):
+        if "La page demandée n'existe pas" in driver.page_source:
+            driver.find_element('xpath', "//button[text()='Retour à l'accueil']")
+        else:
+            pass
     
     def accept_cookie(self):
 
@@ -122,26 +129,27 @@ class Filtering:
             )
         for choice_region in ville:
             search_engine_button.send_keys(choice_region)
-            sleep(3)
+            sleep(5)
             search_engine_button.send_keys(" ")
-            sleep(2)
+            sleep(5)
             first_choice = driver.find_element(
                 "xpath",
                 "//*[@id='search-engine']/div/div[1]/div[2]/div[2]/div[2]/div/div[2]/div/div/div[1]/div/div[1]",
             )
             
             driver.execute_script("arguments[0].click();", first_choice)
-        sleep(3)
+        sleep(5)
         result_filter = driver.find_element(
             "xpath", '//*[@id="bloc-list-classifieds"]'
         ).text
+        print(result_filter)
         filtered_cities=result_filter.split("à")[1].split(":")[0]
         validate_button = driver.find_element(
             "xpath",
             '//*[@id="search-engine"]/div/div[1]/div[2]/div[2]/div[3]/button[2]',
         )
         driver.execute_script("arguments[0].click();", validate_button)
-        sleep(3)
+        sleep(5)
         number_result = driver.find_element(
             "xpath", '//*[@id="bloc-list-classifieds"]/span'
         ).text
@@ -152,28 +160,28 @@ class Filtering:
 
         budget_button = driver.find_element("xpath",'//*[@id="search-engine"]/div/div[2]/div[2]/div')
         driver.execute_script("arguments[0].click();", budget_button)
-        sleep(2)
+        sleep(5)
 
         driver.find_element("xpath",'//*[@id="search-engine"]/div/div[2]/div[2]/div[2]/div[2]/div[1]/div[1]/input').send_keys(price_min)
         driver.find_element("xpath",'//*[@id="search-engine"]/div/div[2]/div[2]/div[2]/div[2]/div[1]/div[2]/input').send_keys(price_max)
 
         validation_button=driver.find_element("xpath",'//*[@id="search-engine"]/div/div[2]/div[2]/div[2]/div[3]/button[2]')
         driver.execute_script("arguments[0].click();", validation_button)
-        sleep(3)
+        sleep(5)
         number_result=driver.find_element("xpath",'//*[@id="bloc-list-classifieds"]/span').text
         logging.info(f"L'utilisateur a filtré les prix entre {price_min}€ et {price_max}€, il y a {number_result} annonces")
     
     def filter_surface(self, surface_min:int,surface_max:int):
         criterion_button = driver.find_element("xpath",'//*[@id="search-engine"]/div/div[2]/div[3]/div[1]')
         driver.execute_script("arguments[0].click();", criterion_button)
-        sleep(2)
+        sleep(5)
 
         driver.find_element("xpath",'//*[@id="search-engine"]/div/div[2]/div[3]/div[2]/div[2]/div/div[1]/div[3]/div/div[1]/div[1]/input').send_keys(surface_min)
         driver.find_element("xpath",'//*[@id="search-engine"]/div/div[2]/div[3]/div[2]/div[2]/div/div[1]/div[3]/div/div[1]/div[2]/input').send_keys(surface_max)
 
         validation_button=driver.find_element("xpath",'//*[@id="search-engine"]/div/div[2]/div[3]/div[2]/div[3]/button[2]')
         driver.execute_script("arguments[0].click();", validation_button)
-        sleep(3)
+        sleep(5)
         number_result=driver.find_element("xpath",'//*[@id="bloc-list-classifieds"]/span').text
         logging.info(f"L'utilisateur a filtré la surface entre {surface_min}m2 et {surface_max}m2, il y a {number_result} annonces")
 
@@ -188,6 +196,7 @@ class Scrapper(Filtering):
 
     def __init__(self,choix,ville,surface_min,surface_max,price_min,price_max):
         self.ville=ville
+        super().skip_error_page()
         super().check_connect()
         super().search_type(choix)
         super().global_filtering(ville,price_min,price_max,surface_min,surface_max)
@@ -210,12 +219,27 @@ class Scrapper(Filtering):
             json.dump(elems, f)
 
     def individual_extractor(self,link):
-                              
-        price=driver.find_element("xpath",'//*[@id="app-bis"]/main/div[1]/div/section/div[2]/div/strong').text
-        surface=driver.find_element("xpath",'//*[@id="app-bis"]/main/div[1]/div/div[1]/ul/li[1]/span').text
-        localisation=driver.find_element("xpath",'//*[@id="classified-main-infos"]/span').text.replace("à","")
-        description=driver.find_element("xpath",'//*[@id="app-bis"]/main/div[1]/div/section/div[6]/p').text
-        return price,surface,localisation,description,link
+        try:
+            price=driver.find_element("xpath",'//*[@id="app-bis"]/main/div[1]/div/section/div[2]/div/strong').text
+        except NoSuchElementException:
+            price="Inconnu"
+        try:
+            surface=driver.find_element("xpath",'//*[@id="app-bis"]/main/div[1]/div/div[1]/ul/li[1]/span').text
+        except NoSuchElementException:
+            surface="Inconnu"
+        try:
+            localisation=driver.find_element("xpath",'//*[@id="classified-main-infos"]/span').text.replace("à","")
+        except NoSuchElementException:
+            localisation="Inconnu"
+        try:
+            description=driver.find_element("xpath",'//*[@id="app-bis"]/main/div[1]/div/section/div[6]/p').text
+        except NoSuchElementException:
+            description="Inconnu"
+        try:
+            nombre_pieces=driver.find_element("xpath",'//*[@id="app-bis"]/main/div[1]/div/div[1]/ul/li[2]/span').text
+        except NoSuchElementException:
+            nombre_pieces="Inconnu"
+        return price,surface,localisation,description,nombre_pieces,link
 
     def launch_scrapping(self):
         logging.warning("Le scrapping vient de commencer")
@@ -229,32 +253,36 @@ class Scrapper(Filtering):
         for city in self.ville:
             if not os.path.exists(os.path.join(data_result_path,city)):
                 os.makedirs(os.path.join(data_result_path,city))
-                df_city=pd.DataFrame(columns=["price","surface","localisation","description","link"])
+                df_city=pd.DataFrame(columns=["price","surface","localisation","description","nombre_pieces","rue","link"])
                 os.chdir(os.path.join(data_result_path,city))
                 df_city.to_csv(f"df_{city}.csv")
         data_to_scrap=json.load(to_scrap)
         data_scrapped=json.load(scrapped)
         
         os.chdir(data_result_path)
-        for link_scrap in data_to_scrap:
+        for link_scrap in tqdm(data_to_scrap):
             if link_scrap not in data_scrapped:
                 driver.get(link_scrap)
                 if "Cette annonce a expiré" in driver.page_source:
                     pass
                 else:
-                    try:
+                    
 
-                        price,surface,localisation,description,link=self.individual_extractor(link_scrap)
-                        data_scrapped.append(link_scrap)
-                        with open(path_scrapped,'w') as f:
-                            json.dump(data_scrapped, f)
-                        ville=localisation.split(" ")[1]
-                        df_city=pd.read_csv(ville+"/df_"+ville+".csv")
-                        df_city=df_city[["price","surface","localisation","description","link"]]
-                        df_city.loc[df_city.shape[0]+1,:]=[price,surface,localisation,description,link]
-                        df_city.to_csv(ville+"/df_"+ville+".csv")
-                    except NoSuchElementException:
-                        pass
+                    price,surface,localisation,description,nombre_pieces,link=self.individual_extractor(link_scrap)
+                    data_scrapped.append(link_scrap)
+                    with open(path_scrapped,'w') as f:
+                        json.dump(data_scrapped, f)
+                    ville=localisation.split(" ")[1]
+                    df_city=pd.read_csv(ville+"/df_"+ville+".csv")
+                    df_city=df_city[["price","surface","localisation","description","nombre_pieces","rue","link"]]
+
+                    if "rue" in description.lower():
+                        rue="Rue "+description.lower().split("rue")[1].split(" ")[1]
+                    else:
+                        rue="Inconnu"
+                    df_city.loc[df_city.shape[0]+1,:]=[price,surface,localisation,description,nombre_pieces,rue,link]
+                    df_city.to_csv(ville+"/df_"+ville+".csv")
+                    
                     
                 
         
