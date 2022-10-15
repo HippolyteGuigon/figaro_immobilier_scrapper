@@ -23,7 +23,7 @@ from typing import List
 from time import sleep
 import json
 import os
-from cleaner.cleaner import Get_adress
+from cleaner.cleaner import Get_adress, DataFrame_cleaning
 
 cleaner = Get_adress()
 
@@ -279,11 +279,19 @@ class Scrapper(Filtering):
                     df_city=pd.read_csv(ville+"/df_"+ville+".csv")
                     df_city=df_city[["price","surface","localisation","description","nombre_pieces","rue","link"]]
 
-                    
+                    cleaner=Get_adress()
                     df_city.loc[df_city.shape[0]+1,:]=[price,surface,localisation,description,nombre_pieces,"TBD",link]
                     df_city.loc[df_city.shape[0],"rue"]=cleaner.pipeline(df_city.loc[df_city.shape[0],"localisation"],df_city.loc[df_city.shape[0],"description"])
                     df_city.to_csv(ville+"/df_"+ville+".csv")
                     
-                    
+        path_cleaning='/Users/hippodouche/se_loger_scrapping/figaro_immobilier_scrapper/data_results'
+
+        for file_ville in os.listdir(path_cleaning):
+            df_path=os.path.join(path_cleaning,file_ville,f"df_{file_ville}.csv")
+            df_to_clean=pd.read_csv(df_path)
+            cleaner_df=DataFrame_cleaning(df_to_clean)
+            df_cleaned=cleaner_df.global_cleaner(df_to_clean)
+            os.remove(df_path)
+            df_cleaned.to_csv(df_path)
                 
         

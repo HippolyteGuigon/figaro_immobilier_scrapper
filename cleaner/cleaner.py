@@ -34,7 +34,7 @@ class Get_adress:
         for length in range(2,6):
             street_name_try=re.findall(r'\w+', x)[:length]
             street_name_try=self.get_proper_street_name(" ".join(street_name_try))
-            if street_name_try and street_name_try.split(" ")[-1] not in ["De", "Du", "La", "Les", "Le", "Des", "-"]:
+            if street_name_try and street_name_try.split(" ")[-1] not in ["De", "Du", "La", "Les", "Le", "Des", "-","'"," "]:
                 result=street_name_try
                 break
         return result
@@ -43,4 +43,27 @@ class Get_adress:
         new_url=self.get_proper_url(localisation)
         driver.get(new_url)
         return self.check_correspondance(text,driver.page_source)
+
+
+class DataFrame_cleaning:
+
+    def __init__(self,df):
+        self.df=df
+
+    def clean_price(self):
+        self.df.price=self.df.price.apply(lambda x:float(x.replace("€","").replace(" ",""))).astype(float)
+        return self.df
+
+    def clean_surface(self):
+        self.df.surface=self.df.surface.apply(lambda x:float(x.replace("m² de surface","")))
+        return self.df
+
+    def global_cleaner(self):
+        self.df=self.clean_price()
+        self.df=self.clean_surface()
+
+        if "Unnamed: 0" in self.df.columns:
+            self.df.drop("Unnamed: 0",axis=1)
+        return self.df
+
         
