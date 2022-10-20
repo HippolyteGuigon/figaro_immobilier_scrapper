@@ -1,32 +1,29 @@
 from selenium import webdriver
 import warnings
 from tqdm import tqdm
-
-warnings.filterwarnings("ignore")
-options = webdriver.ChromeOptions()
-options.add_argument("headless")
-options.add_argument("start-maximized")
-options.add_argument("--log-level=3")
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
-from selenium.common.exceptions import (
-    StaleElementReferenceException,
-    NoSuchElementException,
-)
-import sys
+from selenium.common.exceptions import NoSuchElementException
+
 from logs.logs_config import main
 import logging
-from pathlib import Path
 import pandas as pd
 from selenium.webdriver.common.by import By
-from typing import List, AnyStr
+from typing import List
 from time import sleep
 import json
 import os
 from cleaner.cleaner import Get_adress, DataFrame_cleaning
+
+warnings.filterwarnings("ignore")
+
+options = webdriver.ChromeOptions()
+options.add_argument("headless")
+options.add_argument("start-maximized")
+options.add_argument("--log-level=3")
+
 
 cleaner = Get_adress()
 
@@ -41,10 +38,14 @@ class Filtering:
     """
     Class that leads to the good page according to user's choices
 
-    skip_error_page: If an announce is no longer available, bring back user to first page
-    accept_cookie: Automatically accept the cookie pop-up page for better visibility
-    check_connect: Checks that the website has well been reached and scrapping can be done
-    search_type: Ask user to define the kind of search he wants, buying or renting"""
+    skip_error_page: If an announce is no longer available, bring back user
+    to first page
+    accept_cookie: Automatically accept the cookie pop-up page for
+    better visibility
+    check_connect: Checks that the website has well been reached
+    and scrapping can be done
+    search_type: Ask user to define the kind of search he wants,
+    buying or renting"""
 
     def __init__(self):
         pass
@@ -115,7 +116,6 @@ class Filtering:
             logging.info("La recherche n'a pas aboutie")
 
     def filter_search(self, ville: List):
-        driver.save_screenshot("problem.png")
         # On commence par réinitialiser la recherche
         localisation_button = driver.find_element(
             "xpath", '//*[@id="search-engine"]/div/div[1]/div[2]/div/span/span'
@@ -151,7 +151,6 @@ class Filtering:
             sleep(5)
             search_engine_button.send_keys(" ")
             sleep(5)
-            driver.save_screenshot("problem2.png")
             first_choice = driver.find_element(
                 "xpath",
                 "//*[@id='search-engine']/div/div[1]/div[2]/div[2]/div[2]/div/div[2]/div/div/div[1]/div/div[1]",
@@ -271,7 +270,6 @@ class Scrapper(Filtering):
         super().skip_error_page()
         super().check_connect()
         super().search_type(choix)
-        driver.save_screenshot("problem_identifier.png")
         super().global_filtering(ville, price_min, price_max, surface_min, surface_max)
 
     def get_links(self):
@@ -350,7 +348,7 @@ class Scrapper(Filtering):
                         "xpath", "//*[@id='app-bis']/main/div[1]/div/section/div[6]/p"
                     ).get_attribute("innerHTML")
                 except:
-                    decription = "Inconnu"
+                    description = "Inconnu"
 
         try:
             nombre_pieces = driver.find_element(

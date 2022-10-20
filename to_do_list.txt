@@ -1,15 +1,16 @@
 Priorités:
+
+
+To do: 
+-Trouver pourquoi des fois le Filtering fonctionne et d'autres fois non
 -Ajouter de l'automatisation (if name=="main" etc)
 -Avancer dans le streamlit 
 -Regarder pour s'assurer automatiquement que les données ne soient pas push dans le git 
 -Regarder pour ajouter les impasses, squares etc à la localisation. Plus faire corriger 
 les rues (faire partir la for loop de la fin)
 -Trouver une manière plus élégante pour les try/except dans la détermination de la localisation
-
-
-To do: 
--Trouver pourquoi des fois le Filtering fonctionne et d'autres fois non
-
+-Ajouter autre chose que le black dans l'automatisation CI/CD (retrouver le lien)
+-Ajouter des tests
 
 Done:
 -Créer un environnement Conda: Done 
