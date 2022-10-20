@@ -1,32 +1,29 @@
 from selenium import webdriver
 import warnings
 from tqdm import tqdm
-
-warnings.filterwarnings("ignore")
-options = webdriver.ChromeOptions()
-options.add_argument("headless")
-options.add_argument("start-maximized")
-options.add_argument("--log-level=3")
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
-from selenium.common.exceptions import (
-    StaleElementReferenceException,
-    NoSuchElementException,
-)
-import sys
+from selenium.common.exceptions import NoSuchElementException
+
 from logs.logs_config import main
 import logging
-from pathlib import Path
 import pandas as pd
 from selenium.webdriver.common.by import By
-from typing import List, AnyStr
+from typing import List
 from time import sleep
 import json
 import os
 from cleaner.cleaner import Get_adress, DataFrame_cleaning
+
+warnings.filterwarnings("ignore")
+
+options = webdriver.ChromeOptions()
+options.add_argument("headless")
+options.add_argument("start-maximized")
+options.add_argument("--log-level=3")
+
 
 cleaner = Get_adress()
 
@@ -41,10 +38,14 @@ class Filtering:
     """
     Class that leads to the good page according to user's choices
 
-    skip_error_page: If an announce is no longer available, bring back user to first page
-    accept_cookie: Automatically accept the cookie pop-up page for better visibility
-    check_connect: Checks that the website has well been reached and scrapping can be done
-    search_type: Ask user to define the kind of search he wants, buying or renting"""
+    skip_error_page: If an announce is no longer available, bring back user
+    to first page
+    accept_cookie: Automatically accept the cookie pop-up page for
+    better visibility
+    check_connect: Checks that the website has well been reached
+    and scrapping can be done
+    search_type: Ask user to define the kind of search he wants,
+    buying or renting"""
 
     def __init__(self):
         pass
@@ -79,7 +80,7 @@ class Filtering:
         if "Saisissez une ou plusieurs villes" in driver.page_source:
             logging.info("La connexion à la page d'acceuil a bien réussie")
 
-    def search_type(self, choice):
+    def search_type(self, choice: str):
         choice = str(choice).lower()
         assert choice in [
             "acheter",
@@ -91,7 +92,6 @@ class Filtering:
             driver.get(url)
 
         if choice == "acheter":
-            driver.save_screenshot("screenshot1.png")
             element = driver.find_element(
                 "xpath", '//*[@id="homepage-v2"]/section[1]/div/div[1]/button[1]'
             )
@@ -250,7 +250,22 @@ class Filtering:
 
 
 class Scrapper(Filtering):
-    def __init__(self, choix, ville, surface_min, surface_max, price_min, price_max):
+    """
+    Class that inherits from Filtering and launchs the scrapping itslef
+    get_links: Recovers all links that will be scrapped from the filtered page provided
+    individual_extractor: Get all information (surface,price etc) from individual announce
+    launch_scrapping: Global function to launch scrapping and have all results saved under certain path
+    """
+
+    def __init__(
+        self,
+        choix: str,
+        ville: List,
+        surface_min: float,
+        surface_max: float,
+        price_min: float,
+        price_max: float,
+    ):
         self.ville = ville
         super().skip_error_page()
         super().check_connect()
@@ -286,7 +301,7 @@ class Scrapper(Filtering):
         with open(os.path.join(json_path, "links_to_scrap.json"), "w") as f:
             json.dump(elems, f)
 
-    def individual_extractor(self, link):
+    def individual_extractor(self, link: str):
         try:
             price = driver.find_element(
                 "xpath", '//*[@id="app-bis"]/main/div[1]/div/section/div[2]/div/strong'
@@ -323,7 +338,18 @@ class Scrapper(Filtering):
                 "xpath", '//*[@id="app-bis"]/main/div[1]/div/section/div[6]/p'
             ).text
         except NoSuchElementException:
-            description = "Inconnu"
+            try:
+                description = driver.find_element(
+                    "xpath", "//*[@id='app-bis']/main/div[1]/div/section/div[5]/p"
+                ).get_attribute("innerHTML")
+            except NoSuchElementException:
+                try:
+                    description = driver.find_element(
+                        "xpath", "//*[@id='app-bis']/main/div[1]/div/section/div[6]/p"
+                    ).get_attribute("innerHTML")
+                except:
+                    description = "Inconnu"
+
         try:
             nombre_pieces = driver.find_element(
                 "xpath", '//*[@id="app-bis"]/main/div[1]/div/div[1]/ul/li[2]/span'
