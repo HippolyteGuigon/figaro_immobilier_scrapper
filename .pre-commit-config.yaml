@@ -1,5 +1,3 @@
-fail_fast: true
-
 repos:
 -   repo: https://github.com/psf/black
     rev: stable
@@ -10,3 +8,5 @@ repos:
     rev: 3.7.9
     hooks:
     - id: flake8
+
+#NB: To skip a test, you need to enter in the commit SKIP=flake8 git commit -m "foo"
