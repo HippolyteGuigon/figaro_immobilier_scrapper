@@ -79,7 +79,7 @@ class Filtering:
         if "Saisissez une ou plusieurs villes" in driver.page_source:
             logging.info("La connexion à la page d'acceuil a bien réussie")
 
-    def search_type(self, choice):
+    def search_type(self, choice: str):
         choice = str(choice).lower()
         assert choice in [
             "acheter",
@@ -250,7 +250,15 @@ class Filtering:
 
 
 class Scrapper(Filtering):
-    def __init__(self, choix, ville, surface_min, surface_max, price_min, price_max):
+    def __init__(
+        self,
+        choix: str,
+        ville: List,
+        surface_min: float,
+        surface_max: float,
+        price_min: float,
+        price_max: float,
+    ):
         self.ville = ville
         super().skip_error_page()
         super().check_connect()
@@ -286,7 +294,7 @@ class Scrapper(Filtering):
         with open(os.path.join(json_path, "links_to_scrap.json"), "w") as f:
             json.dump(elems, f)
 
-    def individual_extractor(self, link):
+    def individual_extractor(self, link: str):
         try:
             price = driver.find_element(
                 "xpath", '//*[@id="app-bis"]/main/div[1]/div/section/div[2]/div/strong'
