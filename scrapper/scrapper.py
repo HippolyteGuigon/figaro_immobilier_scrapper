@@ -91,7 +91,6 @@ class Filtering:
             driver.get(url)
 
         if choice == "acheter":
-            driver.save_screenshot("screenshot1.png")
             element = driver.find_element(
                 "xpath", '//*[@id="homepage-v2"]/section[1]/div/div[1]/button[1]'
             )
@@ -116,6 +115,7 @@ class Filtering:
             logging.info("La recherche n'a pas aboutie")
 
     def filter_search(self, ville: List):
+        driver.save_screenshot("problem.png")
         # On commence par réinitialiser la recherche
         localisation_button = driver.find_element(
             "xpath", '//*[@id="search-engine"]/div/div[1]/div[2]/div/span/span'
@@ -151,6 +151,7 @@ class Filtering:
             sleep(5)
             search_engine_button.send_keys(" ")
             sleep(5)
+            driver.save_screenshot("problem2.png")
             first_choice = driver.find_element(
                 "xpath",
                 "//*[@id='search-engine']/div/div[1]/div[2]/div[2]/div[2]/div/div[2]/div/div/div[1]/div/div[1]",
@@ -270,6 +271,7 @@ class Scrapper(Filtering):
         super().skip_error_page()
         super().check_connect()
         super().search_type(choix)
+        driver.save_screenshot("problem_identifier.png")
         super().global_filtering(ville, price_min, price_max, surface_min, surface_max)
 
     def get_links(self):
@@ -338,7 +340,18 @@ class Scrapper(Filtering):
                 "xpath", '//*[@id="app-bis"]/main/div[1]/div/section/div[6]/p'
             ).text
         except NoSuchElementException:
-            description = "Inconnu"
+            try:
+                description = driver.find_element(
+                    "xpath", "//*[@id='app-bis']/main/div[1]/div/section/div[5]/p"
+                ).get_attribute("innerHTML")
+            except NoSuchElementException:
+                try:
+                    description = driver.find_element(
+                        "xpath", "//*[@id='app-bis']/main/div[1]/div/section/div[6]/p"
+                    ).get_attribute("innerHTML")
+                except:
+                    decription = "Inconnu"
+
         try:
             nombre_pieces = driver.find_element(
                 "xpath", '//*[@id="app-bis"]/main/div[1]/div/div[1]/ul/li[2]/span'
