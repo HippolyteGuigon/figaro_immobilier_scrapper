@@ -250,6 +250,13 @@ class Filtering:
 
 
 class Scrapper(Filtering):
+    """
+    Class that inherits from Filtering and launchs the scrapping itslef
+    get_links: Recovers all links that will be scrapped from the filtered page provided
+    individual_extractor: Get all information (surface,price etc) from individual announce
+    launch_scrapping: Global function to launch scrapping and have all results saved under certain path
+    """
+
     def __init__(
         self,
         choix: str,
