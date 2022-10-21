@@ -4,7 +4,10 @@ Priorités:
 To do: 
 -Trouver pourquoi des fois le Filtering fonctionne et d'autres fois non
 -Ajouter de l'automatisation (if name=="main" etc)
--Avancer dans le streamlit 
+
+-Avancer dans le streamlit. Dans la barre de recherche, contraindre les villes. 
+Faire en sorte que les colonnes de recherche soient les unes sur les autres
+
 -Regarder pour s'assurer automatiquement que les données ne soient pas push dans le git 
 -Regarder pour ajouter les impasses, squares etc à la localisation. Plus faire corriger 
 les rues (faire partir la for loop de la fin)

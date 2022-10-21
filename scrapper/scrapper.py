@@ -6,8 +6,16 @@ from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import NoSuchElementException
+import sys
 
-from logs.logs_config import main
+sys.path.append(
+    "/Users/hippodouche/se_loger_scrapping/figaro_immobilier_scrapper/logs/logs_config.py"
+)
+sys.path.append(
+    "/Users/hippodouche/se_loger_scrapping/figaro_immobilier_scrapper/cleaner"
+)
+
+from logs_config import main
 import logging
 import pandas as pd
 from selenium.webdriver.common.by import By
@@ -15,7 +23,7 @@ from typing import List
 from time import sleep
 import json
 import os
-from cleaner.cleaner import Get_adress, DataFrame_cleaning
+from cleaner import Get_adress, DataFrame_cleaning
 
 warnings.filterwarnings("ignore")
 

@@ -1,19 +1,21 @@
 import streamlit as st
 import awesome_streamlit as ast
 
-from src import analysis,differential,filter_home,home
+from src import analysis, prediction, filter_home, home
 
 st.set_page_config(
-        page_title="Figaro Immobilier scrapper",
-    )
+    page_title="Figaro Immobilier scrapper",
+)
 ast.core.services.other.set_logging_format()
 
 # List of pages available for display
-PAGES = {"Home": home,
+PAGES = {
+    "Home": home,
     "Filter": filter_home,
     "Analysis": analysis,
-    "Prediction": differential,
-    }
+    "Prediction": prediction,
+}
+
 
 def main():
     """Core of the app - switches between 'tabs' thanks to the sidebar"""
@@ -24,6 +26,7 @@ def main():
 
     with st.spinner("Loading {} ...".format(selection)):
         ast.shared.components.write_page(page)
+
 
 if __name__ == "__main__":
     main()
