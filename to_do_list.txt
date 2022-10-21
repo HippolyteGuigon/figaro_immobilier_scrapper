@@ -9,7 +9,6 @@ To do:
 -Regarder pour ajouter les impasses, squares etc à la localisation. Plus faire corriger 
 les rues (faire partir la for loop de la fin)
 -Trouver une manière plus élégante pour les try/except dans la détermination de la localisation
--Ajouter autre chose que le black dans l'automatisation CI/CD (retrouver le lien)
 -Ajouter des tests
 
 Done:
@@ -19,3 +18,4 @@ plus récupérées: Done
 -Ajouter la description et les attributs à toutes les fonctions (def fonction(a:List[])->int) 
 ainsi que les descriptions afférents à chaque fonction: Done
 -Regarder pour l'automatisation du black lorsque le git est lancé:Done 
+-Ajouter autre chose que le black dans l'automatisation CI/CD (retrouver le lien)
