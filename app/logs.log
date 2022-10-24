@@ -1,0 +1,207 @@
+2022-10-22 23:53:17,195 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-22 23:53:17,196 | WARNING | L'utilisateur a choisi l'otion acheter
+2022-10-22 23:53:22,425 | INFO | La recherche a bien aboutie
+2022-10-22 23:53:27,321 | WARNING | L'utilisateur a choisi la région 'ABAUCOURT HAUTECOURT', 'ACCOLANS'
+2022-10-22 23:53:48,860 | WARNING | Le filtrage a bien été opéré sur  Abancourt (59) , il y a aucune annonces
+2022-10-22 23:54:00,036 | INFO | L'utilisateur a filtré la surface entre 0m2 et 10m2, il y a aucune annonces
+2022-10-22 23:54:10,704 | INFO | L'utilisateur a filtré les prix entre 0€ et 10€, il y a aucune annonces
+2022-10-22 23:59:26,827 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-22 23:59:26,836 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-22 23:59:32,414 | INFO | La recherche a bien aboutie
+2022-10-22 23:59:35,955 | WARNING | L'utilisateur a choisi la région 'BOULOGNE BILLANCOURT'
+2022-10-22 23:59:56,910 | WARNING | Le filtrage a bien été opéré sur  Boulogne-Billancourt (92) , il y a 250 annonces
+2022-10-23 00:00:11,282 | INFO | L'utilisateur a filtré la surface entre 0m2 et 170m2, il y a 182 annonces
+2022-10-23 00:00:23,298 | INFO | L'utilisateur a filtré les prix entre 0€ et 6828€, il y a 174 annonces
+2022-10-23 00:04:05,433 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-23 00:04:05,438 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-23 00:04:11,577 | INFO | La recherche a bien aboutie
+2022-10-23 00:04:15,025 | WARNING | L'utilisateur a choisi la région 'BOULOGNE BILLANCOURT'
+2022-10-23 00:04:35,723 | WARNING | Le filtrage a bien été opéré sur  Boulogne-Billancourt (92) , il y a 250 annonces
+2022-10-23 00:04:47,591 | INFO | L'utilisateur a filtré la surface entre 0m2 et 242m2, il y a 189 annonces
+2022-10-23 00:04:59,291 | INFO | L'utilisateur a filtré les prix entre 0€ et 9905€, il y a 183 annonces
+2022-10-23 00:05:42,838 | WARNING | Le scrapping vient de commencer
+2022-10-23 00:09:00,367 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-23 00:09:00,402 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-23 00:09:06,616 | INFO | La recherche a bien aboutie
+2022-10-23 00:09:10,434 | WARNING | L'utilisateur a choisi la région 'BOULOGNE BILLANCOURT'
+2022-10-23 00:09:31,399 | WARNING | Le filtrage a bien été opéré sur  Boulogne-Billancourt (92) , il y a 250 annonces
+2022-10-23 00:09:43,633 | INFO | L'utilisateur a filtré la surface entre 0m2 et 119m2, il y a 169 annonces
+2022-10-23 00:09:55,751 | INFO | L'utilisateur a filtré les prix entre 0€ et 3366€, il y a 161 annonces
+2022-10-23 00:10:42,204 | WARNING | Le scrapping vient de commencer
+2022-10-23 00:17:38,092 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-23 00:17:38,093 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-23 00:17:43,284 | INFO | La recherche a bien aboutie
+2022-10-23 00:17:46,708 | WARNING | L'utilisateur a choisi la région 'BOULOGNE BILLANCOURT'
+2022-10-23 00:18:07,982 | WARNING | Le filtrage a bien été opéré sur  Boulogne-Billancourt (92) , il y a 250 annonces
+2022-10-23 00:18:13,132 | WARNING | Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x118891cf0>: Failed to establish a new connection: [Errno 61] Connection refused')': /session/b4614608508fbc61f86e29cd0f58fd52/element
+2022-10-23 00:18:13,136 | WARNING | Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10676a9e0>: Failed to establish a new connection: [Errno 61] Connection refused')': /session/b4614608508fbc61f86e29cd0f58fd52/element
+2022-10-23 00:18:13,139 | WARNING | Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10676ae30>: Failed to establish a new connection: [Errno 61] Connection refused')': /session/b4614608508fbc61f86e29cd0f58fd52/element
+2022-10-23 00:20:45,087 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-23 00:20:45,091 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-23 00:20:50,859 | INFO | La recherche a bien aboutie
+2022-10-23 00:20:55,111 | WARNING | L'utilisateur a choisi la région BOULOGNE BILLANCOURT
+2022-10-23 00:21:16,060 | WARNING | Le filtrage a bien été opéré sur  Boulogne-Billancourt (92) , il y a 250 annonces
+2022-10-23 00:21:28,132 | INFO | L'utilisateur a filtré la surface entre 0m2 et 191m2, il y a 188 annonces
+2022-10-23 00:21:39,854 | INFO | L'utilisateur a filtré les prix entre 0€ et 6443€, il y a 176 annonces
+2022-10-23 00:22:23,680 | WARNING | Le scrapping vient de commencer
+2022-10-23 00:27:08,153 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-23 00:27:08,154 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-23 00:27:13,488 | INFO | La recherche a bien aboutie
+2022-10-23 00:27:16,845 | WARNING | L'utilisateur a choisi la région BOULOGNE BILLANCOURT
+2022-10-23 00:27:37,909 | WARNING | Le filtrage a bien été opéré sur  Boulogne-Billancourt (92) , il y a 250 annonces
+2022-10-23 00:27:50,278 | INFO | L'utilisateur a filtré la surface entre 0m2 et 170m2, il y a 182 annonces
+2022-10-23 00:28:02,211 | INFO | L'utilisateur a filtré les prix entre 0€ et 5289€, il y a 173 annonces
+2022-10-23 00:28:45,551 | WARNING | Le scrapping vient de commencer
+2022-10-23 00:31:11,550 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-23 00:31:11,585 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-23 00:31:17,419 | INFO | La recherche a bien aboutie
+2022-10-23 00:31:21,008 | WARNING | L'utilisateur a choisi la région BOULOGNE BILLANCOURT
+2022-10-23 00:31:41,952 | WARNING | Le filtrage a bien été opéré sur  Boulogne-Billancourt (92) , il y a 250 annonces
+2022-10-23 00:31:54,394 | INFO | L'utilisateur a filtré la surface entre 0m2 et 272m2, il y a 194 annonces
+2022-10-23 00:32:06,576 | INFO | L'utilisateur a filtré les prix entre 0€ et 13751€, il y a 191 annonces
+2022-10-23 00:32:57,847 | WARNING | Le scrapping vient de commencer
+2022-10-24 03:33:41,377 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-24 03:33:41,378 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-24 03:33:47,894 | INFO | La recherche a bien aboutie
+2022-10-24 03:33:52,454 | WARNING | L'utilisateur a choisi la région PARIS 11
+2022-10-24 03:34:13,079 | WARNING | Le filtrage a bien été opéré sur  Paris 11ème (75) , il y a 130 annonces
+2022-10-24 03:34:25,180 | INFO | L'utilisateur a filtré la surface entre 1m2 et 2000m2, il y a 113 annonces
+2022-10-24 03:34:37,447 | INFO | L'utilisateur a filtré les prix entre 1€ et 3173€, il y a 83 annonces
+2022-10-24 03:34:57,694 | WARNING | Le scrapping vient de commencer
+2022-10-24 03:42:16,015 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-24 03:42:16,016 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-24 03:42:21,446 | INFO | La recherche a bien aboutie
+2022-10-24 03:42:24,823 | WARNING | L'utilisateur a choisi la région PARIS 12
+2022-10-24 03:42:45,544 | WARNING | Le filtrage a bien été opéré sur  Paris 12ème (75) , il y a 85 annonces
+2022-10-24 03:42:58,215 | INFO | L'utilisateur a filtré la surface entre 51m2 et 2000m2, il y a 27 annonces
+2022-10-24 03:43:09,884 | INFO | L'utilisateur a filtré les prix entre 1€ et 4135€, il y a 18 annonces
+2022-10-24 03:43:14,449 | WARNING | Le scrapping vient de commencer
+2022-10-24 03:51:53,920 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-24 03:51:53,926 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-24 03:51:59,371 | INFO | La recherche a bien aboutie
+2022-10-24 03:52:02,855 | WARNING | L'utilisateur a choisi la région MARSEILLE 12
+2022-10-24 03:52:23,572 | WARNING | Le filtrage a bien été opéré sur  Marseille 12ème (13) , il y a 24 annonces
+2022-10-24 03:52:35,178 | INFO | L'utilisateur a filtré la surface entre 1m2 et 705m2, il y a 23 annonces
+2022-10-24 03:52:46,502 | INFO | L'utilisateur a filtré les prix entre 1€ et 16250€, il y a 23 annonces
+2022-10-24 03:52:51,047 | WARNING | Le scrapping vient de commencer
+2022-10-24 04:03:09,374 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-24 04:03:09,377 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-24 04:03:14,618 | INFO | La recherche a bien aboutie
+2022-10-24 04:04:22,020 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-24 04:04:22,023 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-24 04:04:27,643 | INFO | La recherche a bien aboutie
+2022-10-24 04:04:31,101 | WARNING | L'utilisateur a choisi la région MARSEILLE 12
+2022-10-24 04:04:51,850 | WARNING | Le filtrage a bien été opéré sur  Marseille 12ème (13) , il y a 24 annonces
+2022-10-24 04:05:04,068 | INFO | L'utilisateur a filtré la surface entre 1m2 et 2000m2, il y a 23 annonces
+2022-10-24 04:05:16,086 | INFO | L'utilisateur a filtré les prix entre 1€ et 30000€, il y a 23 annonces
+2022-10-24 04:05:21,198 | WARNING | Le scrapping vient de commencer
+2022-10-24 04:11:11,307 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-24 04:11:11,496 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-24 04:11:18,552 | INFO | La recherche a bien aboutie
+2022-10-24 04:11:23,841 | WARNING | L'utilisateur a choisi la région NEUILLY SUR SEINE
+2022-10-24 04:11:44,731 | WARNING | Le filtrage a bien été opéré sur  Neuilly-sur-Seine (92) , il y a 155 annonces
+2022-10-24 04:11:57,287 | INFO | L'utilisateur a filtré la surface entre 1m2 et 2000m2, il y a 147 annonces
+2022-10-24 04:12:09,620 | INFO | L'utilisateur a filtré les prix entre 1€ et 30000€, il y a 146 annonces
+2022-10-24 04:12:46,263 | WARNING | Le scrapping vient de commencer
+2022-10-24 21:51:37,170 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-24 21:51:37,172 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-24 21:51:42,709 | INFO | La recherche a bien aboutie
+2022-10-24 21:51:46,163 | WARNING | L'utilisateur a choisi la région VARENGEVILLE SUR MER
+2022-10-24 21:52:07,118 | WARNING | Le filtrage a bien été opéré sur  Varengeville-sur-Mer (76) , il y a aucune annonces
+2022-10-24 21:52:18,312 | INFO | L'utilisateur a filtré la surface entre 1m2 et 2000m2, il y a aucune annonces
+2022-10-24 21:52:29,123 | INFO | L'utilisateur a filtré les prix entre 1€ et 30000€, il y a aucune annonces
+2022-10-24 21:55:00,262 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-24 21:55:00,264 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-24 21:55:05,897 | INFO | La recherche a bien aboutie
+2022-10-24 21:55:10,077 | WARNING | L'utilisateur a choisi la région METZ
+2022-10-24 21:55:30,962 | WARNING | Le filtrage a bien été opéré sur  Metz (57) , il y a 48 annonces
+2022-10-24 21:55:47,049 | INFO | L'utilisateur a filtré la surface entre 103m2 et 2000m2, il y a 6 annonces
+2022-10-24 21:55:58,749 | INFO | L'utilisateur a filtré les prix entre 1€ et 30000€, il y a 6 annonces
+2022-10-24 21:57:55,769 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-24 21:57:55,770 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-24 21:58:00,905 | INFO | La recherche a bien aboutie
+2022-10-24 21:58:04,413 | WARNING | L'utilisateur a choisi la région METZ
+2022-10-24 21:58:25,075 | WARNING | Le filtrage a bien été opéré sur  Metz (57) , il y a 48 annonces
+2022-10-24 21:58:37,891 | INFO | L'utilisateur a filtré la surface entre 103m2 et 2000m2, il y a 6 annonces
+2022-10-24 21:58:49,038 | INFO | L'utilisateur a filtré les prix entre 1€ et 30000€, il y a 6 annonces
+2022-10-24 21:58:49,091 | WARNING | Le scrapping vient de commencer
+2022-10-24 21:59:55,162 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-24 21:59:55,165 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-24 22:00:00,424 | INFO | La recherche a bien aboutie
+2022-10-24 22:00:03,924 | WARNING | L'utilisateur a choisi la région METZ
+2022-10-24 22:00:24,530 | WARNING | Le filtrage a bien été opéré sur  Metz (57) , il y a 48 annonces
+2022-10-24 22:00:37,535 | INFO | L'utilisateur a filtré la surface entre 103m2 et 2000m2, il y a 6 annonces
+2022-10-24 22:00:48,624 | INFO | L'utilisateur a filtré les prix entre 1€ et 30000€, il y a 6 annonces
+2022-10-24 22:00:48,708 | WARNING | Le scrapping vient de commencer
+2022-10-24 22:03:49,643 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-24 22:03:49,645 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-24 22:03:55,188 | INFO | La recherche a bien aboutie
+2022-10-24 22:03:58,806 | WARNING | L'utilisateur a choisi la région METZ
+2022-10-24 22:04:19,415 | WARNING | Le filtrage a bien été opéré sur  Metz (57) , il y a 48 annonces
+2022-10-24 22:04:32,448 | INFO | L'utilisateur a filtré la surface entre 103m2 et 2000m2, il y a 6 annonces
+2022-10-24 22:04:43,494 | INFO | L'utilisateur a filtré les prix entre 1€ et 30000€, il y a 6 annonces
+2022-10-24 22:04:43,548 | WARNING | Le scrapping vient de commencer
+2022-10-24 22:09:22,646 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-24 22:09:22,650 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-24 22:09:28,674 | INFO | La recherche a bien aboutie
+2022-10-24 22:09:32,100 | WARNING | L'utilisateur a choisi la région METZ
+2022-10-24 22:09:52,778 | WARNING | Le filtrage a bien été opéré sur  Metz (57) , il y a 48 annonces
+2022-10-24 22:10:04,924 | INFO | L'utilisateur a filtré la surface entre 1m2 et 2000m2, il y a 48 annonces
+2022-10-24 22:10:16,880 | INFO | L'utilisateur a filtré les prix entre 1€ et 30000€, il y a 48 annonces
+2022-10-24 22:10:16,927 | WARNING | Le scrapping vient de commencer
+2022-10-24 22:12:22,101 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-24 22:12:22,103 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-24 22:12:27,418 | INFO | La recherche a bien aboutie
+2022-10-24 22:12:30,761 | WARNING | L'utilisateur a choisi la région METZ
+2022-10-24 22:12:51,325 | WARNING | Le filtrage a bien été opéré sur  Metz (57) , il y a 48 annonces
+2022-10-24 22:13:03,598 | INFO | L'utilisateur a filtré la surface entre 1m2 et 2000m2, il y a 48 annonces
+2022-10-24 22:13:15,328 | INFO | L'utilisateur a filtré les prix entre 1€ et 30000€, il y a 48 annonces
+2022-10-24 22:13:15,376 | WARNING | Le scrapping vient de commencer
+2022-10-24 22:14:37,629 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-24 22:14:37,632 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-24 22:14:42,806 | INFO | La recherche a bien aboutie
+2022-10-24 22:14:46,242 | WARNING | L'utilisateur a choisi la région METZ
+2022-10-24 22:15:06,868 | WARNING | Le filtrage a bien été opéré sur  Metz (57) , il y a 48 annonces
+2022-10-24 22:15:18,921 | INFO | L'utilisateur a filtré la surface entre 1m2 et 2000m2, il y a 48 annonces
+2022-10-24 22:15:30,779 | INFO | L'utilisateur a filtré les prix entre 1€ et 30000€, il y a 48 annonces
+2022-10-24 22:15:30,837 | WARNING | Le scrapping vient de commencer
+2022-10-24 22:16:21,330 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-24 22:16:21,336 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-24 22:16:26,663 | INFO | La recherche a bien aboutie
+2022-10-24 22:16:30,159 | WARNING | L'utilisateur a choisi la région METZ
+2022-10-24 22:16:50,714 | WARNING | Le filtrage a bien été opéré sur  Metz (57) , il y a 48 annonces
+2022-10-24 22:17:02,646 | INFO | L'utilisateur a filtré la surface entre 1m2 et 2000m2, il y a 48 annonces
+2022-10-24 22:17:14,295 | INFO | L'utilisateur a filtré les prix entre 1€ et 30000€, il y a 48 annonces
+2022-10-24 22:17:14,446 | WARNING | Le scrapping vient de commencer
+2022-10-24 22:19:13,997 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-24 22:19:13,998 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-24 22:19:19,217 | INFO | La recherche a bien aboutie
+2022-10-24 22:19:22,594 | WARNING | L'utilisateur a choisi la région METZ
+2022-10-24 22:19:43,210 | WARNING | Le filtrage a bien été opéré sur  Metz (57) , il y a 48 annonces
+2022-10-24 22:19:55,519 | INFO | L'utilisateur a filtré la surface entre 1m2 et 2000m2, il y a 48 annonces
+2022-10-24 22:20:07,310 | INFO | L'utilisateur a filtré les prix entre 1€ et 30000€, il y a 48 annonces
+2022-10-24 22:20:09,542 | WARNING | Le scrapping vient de commencer
+2022-10-24 22:21:53,379 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-24 22:21:53,382 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-24 22:21:58,798 | INFO | La recherche a bien aboutie
+2022-10-24 22:22:02,551 | WARNING | L'utilisateur a choisi la région METZ
+2022-10-24 22:22:23,378 | WARNING | Le filtrage a bien été opéré sur  Metz (57) , il y a 48 annonces
+2022-10-24 22:22:35,565 | INFO | L'utilisateur a filtré la surface entre 1m2 et 2000m2, il y a 48 annonces
+2022-10-24 22:22:47,340 | INFO | L'utilisateur a filtré les prix entre 1€ et 30000€, il y a 48 annonces
+2022-10-24 22:22:49,836 | WARNING | Le scrapping vient de commencer
+2022-10-24 22:31:56,503 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-24 22:31:56,505 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-24 22:32:01,887 | INFO | La recherche a bien aboutie
+2022-10-24 22:32:05,308 | WARNING | L'utilisateur a choisi la région METZ
+2022-10-24 22:32:25,881 | WARNING | Le filtrage a bien été opéré sur  Metz (57) , il y a 48 annonces
+2022-10-24 22:32:38,077 | INFO | L'utilisateur a filtré la surface entre 1m2 et 2000m2, il y a 48 annonces
+2022-10-24 22:32:49,785 | INFO | L'utilisateur a filtré les prix entre 1€ et 30000€, il y a 48 annonces
+2022-10-24 22:33:01,355 | WARNING | Le scrapping vient de commencer
+2022-10-24 22:42:11,610 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-24 22:42:11,612 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-24 22:42:16,875 | INFO | La recherche a bien aboutie
+2022-10-24 22:42:20,248 | WARNING | L'utilisateur a choisi la région METZ
+2022-10-24 22:42:40,821 | WARNING | Le filtrage a bien été opéré sur  Metz (57) , il y a 48 annonces
+2022-10-24 22:42:53,118 | INFO | L'utilisateur a filtré la surface entre 1m2 et 2000m2, il y a 48 annonces
+2022-10-24 22:43:05,147 | INFO | L'utilisateur a filtré les prix entre 1€ et 30000€, il y a 48 annonces
+2022-10-24 22:43:16,765 | WARNING | Le scrapping vient de commencer

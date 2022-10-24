@@ -81,15 +81,22 @@ class DataFrame_cleaning:
         self.df = df
 
     def clean_price(self):
-        self.df.price = self.df.price.apply(
-            lambda x: float(x.replace("€", "").replace(" ", ""))
-        ).astype(float)
+        try:
+            self.df.price = self.df.price.apply(
+                lambda x: float(x.replace("€", "").replace(" ", ""))
+            ).astype(float)
+        except:
+            pass
         return self.df
 
     def clean_surface(self):
-        self.df.surface = self.df.surface.apply(
+        try:
+
+            self.df.surface = self.df.surface.apply(
             lambda x: float(x.replace("m² de surface", ""))
         )
+        except:
+            pass
         return self.df
 
     def global_cleaner(self):
