@@ -12,7 +12,7 @@ sys.path.append(
     "/Users/hippodouche/se_loger_scrapping/figaro_immobilier_scrapper/logs"
 )
 sys.path.append(
-    "/Users/hippodouche/se_loger_scrapping/figaro_immobilier_scrapper/cleaner"
+    "/Users/hippodouche/se_loger_scrapping/figaro_immobilier_scrapper/src/cleaner"
 )
 
 from logs_config import main
@@ -45,7 +45,6 @@ driver.get(url)
 class Filtering:
     """
     Class that leads to the good page according to user's choices
-
     skip_error_page: If an announce is no longer available, bring back user
     to first page
     accept_cookie: Automatically accept the cookie pop-up page for
@@ -453,6 +452,7 @@ class Scrapper(Filtering):
 
         path_cleaning = "/Users/hippodouche/se_loger_scrapping/figaro_immobilier_scrapper/data_results"
 
+        #Faire en sorte que le nettoyage ne s'applique que sur les nouvelles villes scrappées
         for file_ville in os.listdir(path_cleaning):
             df_path = os.path.join(path_cleaning, file_ville, f"df_{file_ville}.csv")
             df_to_clean = pd.read_csv(df_path)

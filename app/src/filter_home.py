@@ -3,7 +3,7 @@ import sys
 import pandas as pd 
 
 sys.path.append(
-    "/Users/hippodouche/se_loger_scrapping/figaro_immobilier_scrapper/scrapper"
+    "/Users/hippodouche/se_loger_scrapping/figaro_immobilier_scrapper/src/scrapper"
 )
 
 from scrapper import *
