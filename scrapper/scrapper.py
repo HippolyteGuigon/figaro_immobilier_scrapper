@@ -6,8 +6,16 @@ from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import NoSuchElementException
+import sys
 
-from logs.logs_config import main
+sys.path.append(
+    "/Users/hippodouche/se_loger_scrapping/figaro_immobilier_scrapper/logs"
+)
+sys.path.append(
+    "/Users/hippodouche/se_loger_scrapping/figaro_immobilier_scrapper/cleaner"
+)
+
+from logs_config import main
 import logging
 import pandas as pd
 from selenium.webdriver.common.by import By
@@ -15,7 +23,7 @@ from typing import List
 from time import sleep
 import json
 import os
-from cleaner.cleaner import Get_adress, DataFrame_cleaning
+from cleaner import Get_adress, DataFrame_cleaning
 
 warnings.filterwarnings("ignore")
 
@@ -369,6 +377,8 @@ class Scrapper(Filtering):
         scrapped = open(path_scrapped)
 
         for city in self.ville:
+            city=city.replace(" ","_").lower().capitalize()
+            print("city",city)
             if not os.path.exists(os.path.join(data_result_path, city)):
                 os.makedirs(os.path.join(data_result_path, city))
                 df_city = pd.DataFrame(
@@ -408,7 +418,7 @@ class Scrapper(Filtering):
                     data_scrapped.append(link_scrap)
                     with open(path_scrapped, "w") as f:
                         json.dump(data_scrapped, f)
-                    ville = localisation.split(" ")[1]
+                    ville = localisation.split(" ")[1].replace(" ","_").replace("-","_").lower().capitalize()
                     df_city = pd.read_csv(ville + "/df_" + ville + ".csv")
                     df_city = df_city[
                         [
@@ -432,10 +442,14 @@ class Scrapper(Filtering):
                         "TBD",
                         link,
                     ]
-                    df_city.loc[df_city.shape[0], "rue"] = cleaner.pipeline(
-                        df_city.loc[df_city.shape[0], "localisation"],
-                        df_city.loc[df_city.shape[0], "description"],
-                    )
+                    if "Paris" in ville:
+
+                        df_city.loc[df_city.shape[0], "rue"] = cleaner.pipeline(
+                            df_city.loc[df_city.shape[0], "localisation"],
+                            df_city.loc[df_city.shape[0], "description"],
+                        )
+                    else:
+                        df_city.loc[df_city.shape[0], "rue"] = "Inconnu"
                     df_city.to_csv(ville + "/df_" + ville + ".csv")
 
         path_cleaning = "/Users/hippodouche/se_loger_scrapping/figaro_immobilier_scrapper/data_results"
