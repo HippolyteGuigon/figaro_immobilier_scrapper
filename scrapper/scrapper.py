@@ -377,8 +377,7 @@ class Scrapper(Filtering):
         scrapped = open(path_scrapped)
 
         for city in self.ville:
-            city=city.replace(" ","_").lower().capitalize()
-            print("city",city)
+            city=city.rstrip('0123456789').strip().replace(" ","_").lower().capitalize()
             if not os.path.exists(os.path.join(data_result_path, city)):
                 os.makedirs(os.path.join(data_result_path, city))
                 df_city = pd.DataFrame(
@@ -458,6 +457,6 @@ class Scrapper(Filtering):
             df_path = os.path.join(path_cleaning, file_ville, f"df_{file_ville}.csv")
             df_to_clean = pd.read_csv(df_path)
             cleaner_df = DataFrame_cleaning(df_to_clean)
-            df_cleaned = cleaner_df.global_cleaner(df_to_clean)
+            df_cleaned = cleaner_df.global_cleaner()
             os.remove(df_path)
             df_cleaned.to_csv(df_path)
