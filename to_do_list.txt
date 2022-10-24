@@ -3,9 +3,6 @@ Priorités:
 
 To do: 
 -Ajouter de l'automatisation (if name=="main" etc)
-
--Faire en sorte que les colonnes de recherche soient les unes sur les autres
-
 -Regarder pour s'assurer automatiquement que les données ne soient pas push dans le git 
 -Regarder pour ajouter les impasses, squares etc à la localisation. Plus faire corriger 
 les rues (faire partir la for loop de la fin)
@@ -21,3 +18,4 @@ ainsi que les descriptions afférents à chaque fonction: Done
 -Regarder pour l'automatisation du black lorsque le git est lancé:Done 
 -Ajouter autre chose que le black dans l'automatisation CI/CD (retrouver le lien)
 -Avancer dans le streamlit. Dans la barre de recherche, contraindre les villes:Done 
+-Faire en sorte que les colonnes de recherche soient les unes sur les autres: Done

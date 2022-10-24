@@ -223,3 +223,298 @@
 2022-10-13 15:03:52,158 | INFO | L'utilisateur a filtré la surface entre 30m2 et 50m2, il y a 643 annonces
 2022-10-13 15:03:59,928 | INFO | L'utilisateur a filtré les prix entre 10€ et 2000€, il y a 571 annonces
 2022-10-13 15:04:00,061 | WARNING | Le scrapping vient de commencer
+2022-10-13 19:29:29,202 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-13 19:29:29,204 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-13 19:29:34,892 | INFO | La recherche a bien aboutie
+2022-10-13 19:29:38,478 | WARNING | L'utilisateur a choisi la région Paris
+2022-10-13 19:29:50,729 | WARNING | Le filtrage a bien été opéré sur  Paris (75) , il y a 2 608 annonces
+2022-10-13 19:29:58,650 | INFO | L'utilisateur a filtré la surface entre 35m2 et 200m2, il y a 1 528 annonces
+2022-10-13 19:30:06,059 | INFO | L'utilisateur a filtré les prix entre 10€ et 3000€, il y a 965 annonces
+2022-10-13 19:35:32,215 | WARNING | Le scrapping vient de commencer
+2022-10-13 19:45:44,050 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-13 19:45:44,052 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-13 19:45:49,969 | INFO | La recherche a bien aboutie
+2022-10-13 19:45:53,450 | WARNING | L'utilisateur a choisi la région Paris
+2022-10-13 19:46:05,217 | WARNING | Le filtrage a bien été opéré sur  Paris (75) , il y a 2 610 annonces
+2022-10-13 19:46:13,063 | INFO | L'utilisateur a filtré la surface entre 35m2 et 200m2, il y a 1 530 annonces
+2022-10-13 19:46:20,065 | INFO | L'utilisateur a filtré les prix entre 10€ et 3000€, il y a 967 annonces
+2022-10-13 19:46:20,250 | WARNING | Le scrapping vient de commencer
+2022-10-13 19:46:48,298 | WARNING | Le scrapping vient de commencer
+2022-10-13 19:58:22,562 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-13 19:58:22,564 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-13 19:58:27,756 | INFO | La recherche a bien aboutie
+2022-10-13 19:58:31,449 | WARNING | L'utilisateur a choisi la région Paris
+2022-10-13 19:58:43,291 | WARNING | Le filtrage a bien été opéré sur  Paris (75) , il y a 2 610 annonces
+2022-10-13 19:58:51,984 | INFO | L'utilisateur a filtré la surface entre 35m2 et 200m2, il y a 1 530 annonces
+2022-10-13 19:58:59,164 | INFO | L'utilisateur a filtré les prix entre 10€ et 3000€, il y a 967 annonces
+2022-10-13 19:58:59,521 | WARNING | Le scrapping vient de commencer
+2022-10-13 19:59:53,812 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-13 19:59:53,815 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-13 19:59:59,235 | INFO | La recherche a bien aboutie
+2022-10-13 20:00:02,610 | WARNING | L'utilisateur a choisi la région Paris
+2022-10-13 20:00:14,204 | WARNING | Le filtrage a bien été opéré sur  Paris (75) , il y a 2 610 annonces
+2022-10-13 20:00:21,713 | INFO | L'utilisateur a filtré la surface entre 35m2 et 200m2, il y a 1 530 annonces
+2022-10-13 20:00:29,408 | INFO | L'utilisateur a filtré les prix entre 10€ et 3000€, il y a 967 annonces
+2022-10-13 20:00:29,481 | WARNING | Le scrapping vient de commencer
+2022-10-13 20:09:36,333 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-13 20:09:36,335 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-13 20:09:41,592 | INFO | La recherche a bien aboutie
+2022-10-13 20:09:45,079 | WARNING | L'utilisateur a choisi la région Paris
+2022-10-13 20:09:56,956 | WARNING | Le filtrage a bien été opéré sur  Paris (75) , il y a 2 610 annonces
+2022-10-13 20:10:05,623 | INFO | L'utilisateur a filtré la surface entre 35m2 et 200m2, il y a 1 530 annonces
+2022-10-13 20:10:13,212 | INFO | L'utilisateur a filtré les prix entre 10€ et 3000€, il y a 967 annonces
+2022-10-13 20:10:13,387 | WARNING | Le scrapping vient de commencer
+2022-10-13 20:11:30,494 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-13 20:11:30,497 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-13 20:11:35,938 | INFO | La recherche a bien aboutie
+2022-10-13 20:11:39,280 | WARNING | L'utilisateur a choisi la région Paris
+2022-10-13 20:11:52,033 | WARNING | Le filtrage a bien été opéré sur  Paris (75) , il y a 2 610 annonces
+2022-10-13 20:12:00,171 | INFO | L'utilisateur a filtré la surface entre 35m2 et 200m2, il y a 1 530 annonces
+2022-10-13 20:12:07,123 | INFO | L'utilisateur a filtré les prix entre 10€ et 3000€, il y a 967 annonces
+2022-10-13 20:12:07,313 | WARNING | Le scrapping vient de commencer
+2022-10-13 20:18:40,714 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-13 20:18:40,718 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-13 20:18:46,474 | INFO | La recherche a bien aboutie
+2022-10-13 20:18:49,920 | WARNING | L'utilisateur a choisi la région Paris
+2022-10-13 20:19:01,739 | WARNING | Le filtrage a bien été opéré sur  Paris (75) , il y a 2 610 annonces
+2022-10-13 20:19:11,072 | INFO | L'utilisateur a filtré la surface entre 35m2 et 10000m2, il y a 1 746 annonces
+2022-10-13 20:19:18,029 | INFO | L'utilisateur a filtré les prix entre 10€ et 3500€, il y a 1 088 annonces
+2022-10-13 20:19:32,389 | WARNING | Le scrapping vient de commencer
+2022-10-13 20:29:20,589 | WARNING | Le scrapping vient de commencer
+2022-10-13 20:30:03,808 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-13 20:30:03,811 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-13 20:30:09,742 | INFO | La recherche a bien aboutie
+2022-10-13 20:30:13,227 | WARNING | L'utilisateur a choisi la région Paris
+2022-10-13 20:30:25,099 | WARNING | Le filtrage a bien été opéré sur  Paris (75) , il y a 2 610 annonces
+2022-10-13 20:30:33,789 | INFO | L'utilisateur a filtré la surface entre 35m2 et 10000m2, il y a 1 746 annonces
+2022-10-13 20:30:41,742 | INFO | L'utilisateur a filtré les prix entre 10€ et 3500€, il y a 1 088 annonces
+2022-10-13 20:30:41,864 | WARNING | Le scrapping vient de commencer
+2022-10-13 20:40:02,316 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-13 20:40:02,318 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-13 20:40:07,741 | INFO | La recherche a bien aboutie
+2022-10-13 20:40:11,318 | WARNING | L'utilisateur a choisi la région Paris
+2022-10-13 20:40:23,099 | WARNING | Le filtrage a bien été opéré sur  Paris (75) , il y a 2 610 annonces
+2022-10-13 20:40:32,536 | INFO | L'utilisateur a filtré la surface entre 35m2 et 10000m2, il y a 1 746 annonces
+2022-10-13 20:40:39,534 | INFO | L'utilisateur a filtré les prix entre 10€ et 3500€, il y a 1 088 annonces
+2022-10-13 20:40:39,720 | WARNING | Le scrapping vient de commencer
+2022-10-13 20:44:19,780 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-13 20:44:19,782 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-13 20:44:25,350 | INFO | La recherche a bien aboutie
+2022-10-13 20:44:29,262 | WARNING | L'utilisateur a choisi la région Paris
+2022-10-13 20:44:41,265 | WARNING | Le filtrage a bien été opéré sur  Paris (75) , il y a 2 610 annonces
+2022-10-13 20:44:49,758 | INFO | L'utilisateur a filtré la surface entre 35m2 et 10000m2, il y a 1 746 annonces
+2022-10-13 20:44:56,908 | INFO | L'utilisateur a filtré les prix entre 10€ et 3500€, il y a 1 088 annonces
+2022-10-13 20:44:56,989 | WARNING | Le scrapping vient de commencer
+2022-10-14 17:51:36,825 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-14 17:51:36,828 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-14 17:51:41,969 | INFO | La recherche a bien aboutie
+2022-10-14 17:51:46,020 | WARNING | L'utilisateur a choisi la région Paris
+2022-10-14 17:56:45,241 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-14 17:56:45,244 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-14 17:56:50,807 | INFO | La recherche a bien aboutie
+2022-10-14 17:56:54,271 | WARNING | L'utilisateur a choisi la région Paris
+2022-10-14 17:57:06,264 | WARNING | Le filtrage a bien été opéré sur  Paris (75) , il y a 29 207 annonces
+2022-10-14 17:58:46,653 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-14 17:58:46,655 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-14 17:58:49,920 | INFO | La recherche a bien aboutie
+2022-10-14 18:00:32,659 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-14 18:00:32,665 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-14 18:00:37,851 | INFO | La recherche a bien aboutie
+2022-10-14 18:02:33,460 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-14 18:02:33,463 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-14 18:02:39,714 | INFO | La recherche a bien aboutie
+2022-10-14 18:05:34,192 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-14 18:05:34,194 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-14 18:05:39,561 | INFO | La recherche a bien aboutie
+2022-10-14 18:06:35,005 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-14 18:06:35,159 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-14 18:06:40,671 | INFO | La recherche a bien aboutie
+2022-10-14 18:45:59,701 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-14 18:46:00,226 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-14 18:46:05,873 | INFO | La recherche a bien aboutie
+2022-10-14 18:46:09,783 | WARNING | L'utilisateur a choisi la région Paris
+2022-10-14 18:46:30,588 | WARNING | Le filtrage a bien été opéré sur  Paris (75) , il y a 2 609 annonces
+2022-10-14 18:46:45,522 | INFO | L'utilisateur a filtré la surface entre 35m2 et 10000m2, il y a 1 744 annonces
+2022-10-14 18:46:57,597 | INFO | L'utilisateur a filtré les prix entre 10€ et 3500€, il y a 1 078 annonces
+2022-10-14 18:46:57,687 | WARNING | Le scrapping vient de commencer
+2022-10-14 22:22:07,420 | WARNING | Le scrapping vient de commencer
+2022-10-14 22:24:15,035 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-14 22:24:15,177 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-14 22:24:20,589 | INFO | La recherche a bien aboutie
+2022-10-14 22:24:25,675 | WARNING | L'utilisateur a choisi la région Paris
+2022-10-14 22:24:46,562 | WARNING | Le filtrage a bien été opéré sur  Paris (75) , il y a 2 603 annonces
+2022-10-14 22:25:02,919 | INFO | L'utilisateur a filtré la surface entre 35m2 et 10000m2, il y a 1 740 annonces
+2022-10-14 22:25:15,532 | INFO | L'utilisateur a filtré les prix entre 10€ et 3500€, il y a 1 075 annonces
+2022-10-14 22:25:15,756 | WARNING | Le scrapping vient de commencer
+2022-10-15 00:18:44,090 | WARNING | Le scrapping vient de commencer
+2022-10-15 01:03:47,224 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-15 01:03:47,226 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-15 01:03:52,433 | INFO | La recherche a bien aboutie
+2022-10-15 01:03:55,973 | WARNING | L'utilisateur a choisi la région Paris
+2022-10-15 01:04:16,735 | WARNING | Le filtrage a bien été opéré sur  Paris (75) , il y a 2 604 annonces
+2022-10-15 01:04:31,285 | INFO | L'utilisateur a filtré la surface entre 35m2 et 10000m2, il y a 1 741 annonces
+2022-10-15 01:04:43,303 | INFO | L'utilisateur a filtré les prix entre 10€ et 3500€, il y a 1 076 annonces
+2022-10-15 01:04:43,414 | WARNING | Le scrapping vient de commencer
+2022-10-15 01:12:15,367 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-15 01:12:15,370 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-15 01:12:20,810 | INFO | La recherche a bien aboutie
+2022-10-15 01:12:24,479 | WARNING | L'utilisateur a choisi la région Paris
+2022-10-15 01:12:45,307 | WARNING | Le filtrage a bien été opéré sur  Paris (75) , il y a 2 604 annonces
+2022-10-15 01:12:59,015 | INFO | L'utilisateur a filtré la surface entre 35m2 et 10000m2, il y a 1 741 annonces
+2022-10-15 01:13:11,225 | INFO | L'utilisateur a filtré les prix entre 10€ et 3500€, il y a 1 076 annonces
+2022-10-15 01:13:11,318 | WARNING | Le scrapping vient de commencer
+2022-10-15 01:20:14,438 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-15 01:20:14,441 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-15 01:20:20,005 | INFO | La recherche a bien aboutie
+2022-10-15 01:20:23,577 | WARNING | L'utilisateur a choisi la région Paris
+2022-10-15 01:20:44,435 | WARNING | Le filtrage a bien été opéré sur  Paris (75) , il y a 2 604 annonces
+2022-10-15 01:20:58,883 | INFO | L'utilisateur a filtré la surface entre 35m2 et 10000m2, il y a 1 741 annonces
+2022-10-15 01:21:10,835 | INFO | L'utilisateur a filtré les prix entre 10€ et 3500€, il y a 1 076 annonces
+2022-10-15 01:21:11,082 | WARNING | Le scrapping vient de commencer
+2022-10-15 01:52:13,430 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-15 01:52:13,432 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-15 01:52:18,761 | INFO | La recherche a bien aboutie
+2022-10-15 01:52:22,422 | WARNING | L'utilisateur a choisi la région Paris
+2022-10-15 01:52:43,282 | WARNING | Le filtrage a bien été opéré sur  Paris (75) , il y a 2 604 annonces
+2022-10-15 01:52:56,980 | INFO | L'utilisateur a filtré la surface entre 35m2 et 10000m2, il y a 1 741 annonces
+2022-10-15 01:53:09,443 | INFO | L'utilisateur a filtré les prix entre 10€ et 3500€, il y a 1 076 annonces
+2022-10-15 01:53:09,587 | WARNING | Le scrapping vient de commencer
+2022-10-15 12:15:15,529 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-15 12:15:15,532 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-15 12:15:20,915 | INFO | La recherche a bien aboutie
+2022-10-15 12:15:25,229 | WARNING | L'utilisateur a choisi la région Paris
+2022-10-15 12:15:46,302 | WARNING | Le filtrage a bien été opéré sur  Paris (75) , il y a 2 614 annonces
+2022-10-15 12:16:00,086 | INFO | L'utilisateur a filtré la surface entre 35m2 et 10000m2, il y a 1 750 annonces
+2022-10-15 12:16:12,098 | INFO | L'utilisateur a filtré les prix entre 10€ et 3500€, il y a 1 090 annonces
+2022-10-15 12:16:12,223 | WARNING | Le scrapping vient de commencer
+2022-10-15 22:35:27,188 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-15 22:35:27,198 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-15 22:35:32,454 | INFO | La recherche a bien aboutie
+2022-10-15 22:38:12,080 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-15 22:38:12,085 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-15 22:38:17,954 | INFO | La recherche a bien aboutie
+2022-10-15 22:38:25,238 | WARNING | L'utilisateur a choisi la région Paris
+2022-10-15 22:38:46,293 | WARNING | Le filtrage a bien été opéré sur  Paris (75) , il y a 2 613 annonces
+2022-10-15 22:39:00,463 | INFO | L'utilisateur a filtré la surface entre 35m2 et 10000m2, il y a 1 751 annonces
+2022-10-15 22:39:13,036 | INFO | L'utilisateur a filtré les prix entre 10€ et 3500€, il y a 1 092 annonces
+2022-10-15 22:39:13,188 | WARNING | Le scrapping vient de commencer
+2022-10-16 01:46:27,526 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-16 01:46:27,529 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-16 01:46:32,676 | INFO | La recherche a bien aboutie
+2022-10-16 01:46:36,183 | WARNING | L'utilisateur a choisi la région Paris
+2022-10-16 01:46:57,108 | WARNING | Le filtrage a bien été opéré sur  Paris (75) , il y a 2 612 annonces
+2022-10-16 01:47:11,958 | INFO | L'utilisateur a filtré la surface entre 35m2 et 10000m2, il y a 1 750 annonces
+2022-10-16 01:47:24,023 | INFO | L'utilisateur a filtré les prix entre 10€ et 3500€, il y a 1 091 annonces
+2022-10-16 01:47:24,308 | WARNING | Le scrapping vient de commencer
+2022-10-16 01:49:00,236 | WARNING | Le scrapping vient de commencer
+2022-10-16 12:23:46,741 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-16 12:23:46,757 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-16 12:23:52,345 | INFO | La recherche a bien aboutie
+2022-10-16 12:23:57,039 | WARNING | L'utilisateur a choisi la région Paris
+2022-10-16 12:24:18,049 | WARNING | Le filtrage a bien été opéré sur  Paris (75) , il y a 2 602 annonces
+2022-10-16 12:24:32,911 | INFO | L'utilisateur a filtré la surface entre 35m2 et 10000m2, il y a 1 745 annonces
+2022-10-16 12:24:45,159 | INFO | L'utilisateur a filtré les prix entre 10€ et 3500€, il y a 1 084 annonces
+2022-10-16 12:24:45,801 | WARNING | Le scrapping vient de commencer
+2022-10-16 12:30:14,252 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-16 12:30:14,254 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-16 12:30:20,433 | INFO | La recherche a bien aboutie
+2022-10-16 12:30:24,539 | WARNING | L'utilisateur a choisi la région Paris
+2022-10-16 12:30:45,514 | WARNING | Le filtrage a bien été opéré sur  Paris (75) , il y a 2 602 annonces
+2022-10-16 12:30:59,191 | INFO | L'utilisateur a filtré la surface entre 35m2 et 10000m2, il y a 1 745 annonces
+2022-10-16 12:31:11,270 | INFO | L'utilisateur a filtré les prix entre 10€ et 3500€, il y a 1 084 annonces
+2022-10-16 12:31:11,421 | WARNING | Le scrapping vient de commencer
+2022-10-16 12:34:28,108 | WARNING | Le scrapping vient de commencer
+2022-10-16 12:38:46,031 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-16 12:38:46,034 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-16 12:38:51,503 | INFO | La recherche a bien aboutie
+2022-10-16 12:38:54,928 | WARNING | L'utilisateur a choisi la région Paris
+2022-10-16 12:39:15,598 | WARNING | Le filtrage a bien été opéré sur  Paris (75) , il y a 2 602 annonces
+2022-10-16 12:39:29,718 | INFO | L'utilisateur a filtré la surface entre 35m2 et 10000m2, il y a 1 745 annonces
+2022-10-16 12:39:41,668 | INFO | L'utilisateur a filtré les prix entre 10€ et 3500€, il y a 1 084 annonces
+2022-10-16 12:39:41,813 | WARNING | Le scrapping vient de commencer
+2022-10-16 13:01:40,653 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-16 13:01:40,655 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-16 13:01:46,019 | INFO | La recherche a bien aboutie
+2022-10-16 13:01:49,867 | WARNING | L'utilisateur a choisi la région Paris
+2022-10-16 13:02:11,278 | WARNING | Le filtrage a bien été opéré sur  Paris (75) , il y a 2 602 annonces
+2022-10-16 13:02:24,764 | INFO | L'utilisateur a filtré la surface entre 35m2 et 10000m2, il y a 1 745 annonces
+2022-10-16 13:02:36,871 | INFO | L'utilisateur a filtré les prix entre 10€ et 3500€, il y a 1 084 annonces
+2022-10-16 13:04:16,635 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-16 13:04:16,637 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-16 13:04:22,101 | INFO | La recherche a bien aboutie
+2022-10-16 13:04:25,636 | WARNING | L'utilisateur a choisi la région Paris
+2022-10-16 13:04:46,372 | WARNING | Le filtrage a bien été opéré sur  Paris (75) , il y a 2 602 annonces
+2022-10-16 13:05:00,082 | INFO | L'utilisateur a filtré la surface entre 35m2 et 10000m2, il y a 1 745 annonces
+2022-10-16 13:05:12,152 | INFO | L'utilisateur a filtré les prix entre 10€ et 3500€, il y a 1 084 annonces
+2022-10-16 13:10:49,233 | WARNING | Le scrapping vient de commencer
+2022-10-16 13:21:24,771 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-16 13:21:24,776 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-16 13:21:30,339 | INFO | La recherche a bien aboutie
+2022-10-16 13:21:33,724 | WARNING | L'utilisateur a choisi la région Paris
+2022-10-16 13:21:54,878 | WARNING | Le filtrage a bien été opéré sur  Paris (75) , il y a 2 602 annonces
+2022-10-16 13:22:08,618 | INFO | L'utilisateur a filtré la surface entre 35m2 et 10000m2, il y a 1 745 annonces
+2022-10-16 13:22:20,344 | INFO | L'utilisateur a filtré les prix entre 10€ et 3500€, il y a 1 084 annonces
+2022-10-16 13:22:20,610 | WARNING | Le scrapping vient de commencer
+2022-10-17 01:19:48,040 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-17 01:19:48,043 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-17 01:19:53,689 | INFO | La recherche a bien aboutie
+2022-10-17 01:19:57,360 | WARNING | L'utilisateur a choisi la région Paris
+2022-10-17 01:20:18,353 | WARNING | Le filtrage a bien été opéré sur  Paris (75) , il y a 2 603 annonces
+2022-10-17 01:20:32,312 | INFO | L'utilisateur a filtré la surface entre 35m2 et 10000m2, il y a 1 746 annonces
+2022-10-17 01:20:44,692 | INFO | L'utilisateur a filtré les prix entre 10€ et 3500€, il y a 1 085 annonces
+2022-10-17 01:20:44,800 | WARNING | Le scrapping vient de commencer
+2022-10-20 23:00:31,493 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-20 23:00:31,496 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-20 23:00:36,741 | INFO | La recherche a bien aboutie
+2022-10-20 23:01:40,405 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-20 23:01:40,407 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-20 23:01:45,614 | INFO | La recherche a bien aboutie
+2022-10-20 23:04:28,250 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-20 23:04:28,260 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-20 23:04:33,733 | INFO | La recherche n'a pas aboutie
+2022-10-20 23:04:37,805 | WARNING | L'utilisateur a choisi la région Paris
+2022-10-20 23:06:47,699 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-20 23:06:47,701 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-20 23:06:52,938 | INFO | La recherche a bien aboutie
+2022-10-20 23:06:56,444 | WARNING | L'utilisateur a choisi la région Paris
+2022-10-20 23:07:17,179 | WARNING | Le filtrage a bien été opéré sur  Paris (75) , il y a 2 584 annonces
+2022-10-20 23:07:31,987 | INFO | L'utilisateur a filtré la surface entre 35m2 et 10000m2, il y a 1 736 annonces
+2022-10-20 23:07:43,762 | INFO | L'utilisateur a filtré les prix entre 10€ et 3500€, il y a 1 076 annonces
+2022-10-20 23:08:04,273 | WARNING | Le scrapping vient de commencer
+2022-10-20 23:16:50,492 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-20 23:16:50,494 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-20 23:16:55,633 | INFO | La recherche n'a pas aboutie
+2022-10-20 23:24:45,886 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-20 23:24:45,914 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-20 23:24:51,047 | INFO | La recherche a bien aboutie
+2022-10-20 23:26:57,412 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-20 23:26:57,414 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-20 23:27:02,553 | INFO | La recherche n'a pas aboutie
+2022-10-20 23:31:44,872 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-20 23:31:44,877 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-20 23:31:50,747 | INFO | La recherche n'a pas aboutie
+2022-10-20 23:34:40,067 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-20 23:34:40,069 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-20 23:34:45,469 | INFO | La recherche a bien aboutie
+2022-10-20 23:34:49,889 | WARNING | L'utilisateur a choisi la région Paris
+2022-10-20 23:35:10,841 | WARNING | Le filtrage a bien été opéré sur  Paris (75) , il y a 2 583 annonces
+2022-10-20 23:35:27,678 | INFO | L'utilisateur a filtré la surface entre 35m2 et 10000m2, il y a 1 735 annonces
+2022-10-20 23:35:40,441 | INFO | L'utilisateur a filtré les prix entre 10€ et 3500€, il y a 1 075 annonces
+2022-10-20 23:35:40,666 | WARNING | Le scrapping vient de commencer
+2022-10-21 02:08:26,199 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-21 02:08:26,201 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-21 02:08:31,457 | INFO | La recherche a bien aboutie
+2022-10-21 02:08:35,328 | WARNING | L'utilisateur a choisi la région Paris
+2022-10-21 02:08:56,048 | WARNING | Le filtrage a bien été opéré sur  Paris (75) , il y a 2 583 annonces
+2022-10-21 02:09:09,655 | INFO | L'utilisateur a filtré la surface entre 35m2 et 10000m2, il y a 1 735 annonces
+2022-10-21 02:09:22,066 | INFO | L'utilisateur a filtré les prix entre 10€ et 3500€, il y a 1 075 annonces
+2022-10-21 02:09:22,160 | WARNING | Le scrapping vient de commencer
+2022-10-24 21:47:45,411 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-24 21:47:45,413 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-24 21:48:39,292 | INFO | La connexion à la page d'acceuil a bien réussie
+2022-10-24 21:48:39,295 | WARNING | L'utilisateur a choisi l'otion louer
+2022-10-24 21:48:44,933 | INFO | La recherche a bien aboutie
+2022-10-24 21:48:48,936 | WARNING | L'utilisateur a choisi la région Paris
+2022-10-24 21:49:09,587 | WARNING | Le filtrage a bien été opéré sur  Paris (75) , il y a 2 611 annonces
+2022-10-24 21:49:22,715 | INFO | L'utilisateur a filtré la surface entre 35m2 et 10000m2, il y a 1 731 annonces
+2022-10-24 21:49:34,900 | INFO | L'utilisateur a filtré les prix entre 10€ et 3500€, il y a 1 065 annonces
