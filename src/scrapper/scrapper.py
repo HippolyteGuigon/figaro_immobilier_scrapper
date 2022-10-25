@@ -9,9 +9,7 @@ from selenium.common.exceptions import NoSuchElementException
 import sys
 
 sys.path.append("/Users/hippodouche/se_loger_scrapping/figaro_immobilier_scrapper/logs")
-sys.path.append(
-    "/Users/hippodouche/se_loger_scrapping/figaro_immobilier_scrapper/src/cleaner"
-)
+sys.path.append("/Users/hippodouche/se_loger_scrapping/figaro_immobilier_scrapper/src/cleaner")
 
 from logs_config import main
 import logging

@@ -8,7 +8,7 @@ sys.path.append(
 
 from scrapper import *
 
-df_ville = pd.read_csv("Liste_commune.csv")
+df_ville = pd.read_csv("/Users/hippodouche/se_loger_scrapping/figaro_immobilier_scrapper/app/Liste_commune.csv")
 liste_ville = df_ville["Nom_commune"].unique()
 
 
