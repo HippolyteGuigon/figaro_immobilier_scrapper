@@ -1,16 +1,16 @@
 Priorités:
 
-
 To do: 
 -Ajouter de l'automatisation (if name=="main" etc)
-
--Faire en sorte que les colonnes de recherche soient les unes sur les autres
-
--Regarder pour s'assurer automatiquement que les données ne soient pas push dans le git 
 -Regarder pour ajouter les impasses, squares etc à la localisation. Plus faire corriger 
 les rues (faire partir la for loop de la fin)
 -Trouver une manière plus élégante pour les try/except dans la détermination de la localisation
 -Ajouter des tests
+-Trouver un moyen plus élégant d'écrire les paths (regarder repos et les options de la librairie sys)
+-Trouver un moyen de séparer le Filtering et le Scrapper dans scrapper.py
+-Comprendre les différents types de fichiers dans le gitignore
+-Ajouter une barre de chargement et le nombre de recherches sur la page Filter 
+-Updater le readme de manière plus claire et plus exhaustive 
 
 Done:
 -Créer un environnement Conda: Done 
@@ -21,3 +21,7 @@ ainsi que les descriptions afférents à chaque fonction: Done
 -Regarder pour l'automatisation du black lorsque le git est lancé:Done 
 -Ajouter autre chose que le black dans l'automatisation CI/CD (retrouver le lien)
 -Avancer dans le streamlit. Dans la barre de recherche, contraindre les villes:Done 
+-Faire en sorte que les colonnes de recherche soient les unes sur les autres: Done
+-Regarder pour s'assurer automatiquement que les données ne soient pas push dans le git: Done 
+-Corriger le problème des logs: Done
+-Aller plus loin pour l'environnement Conda (regarder cette histoire de fichier yaml): Done 

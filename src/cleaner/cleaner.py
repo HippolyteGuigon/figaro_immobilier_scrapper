@@ -93,8 +93,8 @@ class DataFrame_cleaning:
         try:
 
             self.df.surface = self.df.surface.apply(
-            lambda x: float(x.replace("m² de surface", ""))
-        )
+                lambda x: float(x.replace("m² de surface", ""))
+            )
         except:
             pass
         return self.df

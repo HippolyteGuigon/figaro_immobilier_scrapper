@@ -14,7 +14,7 @@ def main():
     stdout_handler.setLevel(logging.DEBUG)
     stdout_handler.setFormatter(formatter)
 
-    log_path = os.path.join(os.getcwd(), "logs.log")
+    log_path = "/Users/hippodouche/se_loger_scrapping/figaro_immobilier_scrapper/logs/logs.log"
     file_handler = logging.FileHandler(log_path)
     file_handler.setLevel(logging.DEBUG)
     file_handler.setFormatter(formatter)

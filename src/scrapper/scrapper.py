@@ -6,14 +6,14 @@ from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import NoSuchElementException
+import os
 import sys
+from stqdm import stqdm
+import streamlit as st
 
-sys.path.append(
-    "/Users/hippodouche/se_loger_scrapping/figaro_immobilier_scrapper/logs"
-)
-sys.path.append(
-    "/Users/hippodouche/se_loger_scrapping/figaro_immobilier_scrapper/src/cleaner"
-)
+current_path = os.getcwd()
+sys.path.insert(0, os.path.join(current_path, "logs"))
+sys.path.insert(0, os.path.join("src/cleaner"))
 
 from logs_config import main
 import logging
@@ -376,7 +376,9 @@ class Scrapper(Filtering):
         scrapped = open(path_scrapped)
 
         for city in self.ville:
-            city=city.rstrip('0123456789').strip().replace(" ","_").lower().capitalize()
+            city = (
+                city.rstrip("0123456789").strip().replace(" ", "_").lower().capitalize()
+            )
             if not os.path.exists(os.path.join(data_result_path, city)):
                 os.makedirs(os.path.join(data_result_path, city))
                 df_city = pd.DataFrame(
@@ -397,7 +399,10 @@ class Scrapper(Filtering):
 
         os.chdir(data_result_path)
 
-        for link_scrap in tqdm(data_to_scrap):
+        st.write(
+            f"Il y a {len(data_to_scrap)} annonces correspondant à vos critères de recherche"
+        )
+        for link_scrap in stqdm(data_to_scrap):
             if link_scrap not in data_scrapped:
                 driver.get(link_scrap)
 
@@ -416,7 +421,13 @@ class Scrapper(Filtering):
                     data_scrapped.append(link_scrap)
                     with open(path_scrapped, "w") as f:
                         json.dump(data_scrapped, f)
-                    ville = localisation.split(" ")[1].replace(" ","_").replace("-","_").lower().capitalize()
+                    ville = (
+                        localisation.split(" ")[1]
+                        .replace(" ", "_")
+                        .replace("-", "_")
+                        .lower()
+                        .capitalize()
+                    )
                     df_city = pd.read_csv(ville + "/df_" + ville + ".csv")
                     df_city = df_city[
                         [
@@ -452,7 +463,7 @@ class Scrapper(Filtering):
 
         path_cleaning = "/Users/hippodouche/se_loger_scrapping/figaro_immobilier_scrapper/data_results"
 
-        #Faire en sorte que le nettoyage ne s'applique que sur les nouvelles villes scrappées
+        # Faire en sorte que le nettoyage ne s'applique que sur les nouvelles villes scrappées
         for file_ville in os.listdir(path_cleaning):
             df_path = os.path.join(path_cleaning, file_ville, f"df_{file_ville}.csv")
             df_to_clean = pd.read_csv(df_path)
@@ -460,3 +471,5 @@ class Scrapper(Filtering):
             df_cleaned = cleaner_df.global_cleaner()
             os.remove(df_path)
             df_cleaned.to_csv(df_path)
+
+        st.write("Le scrapping est terminé !")
