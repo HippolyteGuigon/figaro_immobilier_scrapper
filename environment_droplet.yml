@@ -1,0 +1,4 @@
+name: scrapper_env
+channels:
+  - defaults
+prefix: /Users/hippodouche/opt/anaconda3/envs/scrapper_env

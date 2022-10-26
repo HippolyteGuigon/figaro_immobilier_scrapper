@@ -6,10 +6,14 @@ from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import NoSuchElementException
+import os
 import sys
+from stqdm import stqdm
+import streamlit as st
 
-sys.path.append("/Users/hippodouche/se_loger_scrapping/figaro_immobilier_scrapper/logs")
-sys.path.append("/Users/hippodouche/se_loger_scrapping/figaro_immobilier_scrapper/src/cleaner")
+current_path = os.getcwd()
+sys.path.insert(0, os.path.join(current_path, "logs"))
+sys.path.insert(0, os.path.join("src/cleaner"))
 
 from logs_config import main
 import logging
@@ -395,7 +399,10 @@ class Scrapper(Filtering):
 
         os.chdir(data_result_path)
 
-        for link_scrap in tqdm(data_to_scrap):
+        st.write(
+            f"Il y a {len(data_to_scrap)} annonces correspondant à vos critères de recherche"
+        )
+        for link_scrap in stqdm(data_to_scrap):
             if link_scrap not in data_scrapped:
                 driver.get(link_scrap)
 
@@ -464,3 +471,5 @@ class Scrapper(Filtering):
             df_cleaned = cleaner_df.global_cleaner()
             os.remove(df_path)
             df_cleaned.to_csv(df_path)
+
+        st.write("Le scrapping est terminé !")

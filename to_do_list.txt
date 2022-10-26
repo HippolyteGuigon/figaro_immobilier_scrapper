@@ -6,9 +6,11 @@ To do:
 les rues (faire partir la for loop de la fin)
 -Trouver une manière plus élégante pour les try/except dans la détermination de la localisation
 -Ajouter des tests
--Aller plus loin pour l'environnement Conda (regarder cette histoire de fichier yaml)
 -Trouver un moyen plus élégant d'écrire les paths (regarder repos et les options de la librairie sys)
 -Trouver un moyen de séparer le Filtering et le Scrapper dans scrapper.py
+-Comprendre les différents types de fichiers dans le gitignore
+-Ajouter une barre de chargement et le nombre de recherches sur la page Filter 
+-Updater le readme de manière plus claire et plus exhaustive 
 
 Done:
 -Créer un environnement Conda: Done 
@@ -22,3 +24,4 @@ ainsi que les descriptions afférents à chaque fonction: Done
 -Faire en sorte que les colonnes de recherche soient les unes sur les autres: Done
 -Regarder pour s'assurer automatiquement que les données ne soient pas push dans le git: Done 
 -Corriger le problème des logs: Done
+-Aller plus loin pour l'environnement Conda (regarder cette histoire de fichier yaml): Done 
