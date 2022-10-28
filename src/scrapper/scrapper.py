@@ -459,7 +459,18 @@ class Scrapper(Filtering):
                         )
                     else:
                         df_city.loc[df_city.shape[0], "rue"] = "Inconnu"
-                    df_city.to_csv(ville + "/df_" + ville + ".csv")
+                    df_city = df_city[
+                        [
+                            "price",
+                            "surface",
+                            "localisation",
+                            "description",
+                            "nombre_pieces",
+                            "rue",
+                            "link",
+                        ]
+                    ]
+                    df_city.to_csv(ville + "/df_" + ville + ".csv", index=False)
 
         path_cleaning = "/Users/hippodouche/se_loger_scrapping/figaro_immobilier_scrapper/data_results"
 

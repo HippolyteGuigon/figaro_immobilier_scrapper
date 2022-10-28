@@ -8,3 +8,9 @@ def write():
         Analysis Page.
         """
     )
+
+
+if "df" not in st.session_state:
+    st.session_state["df"] = "value"
+
+df = st.session_state["df"]

@@ -1,12 +1,19 @@
 import streamlit as st
 import sys
 import pandas as pd
+import awesome_streamlit as ast
+import sys
+import os
 
+sys.path.append(
+    "/Users/hippodouche/se_loger_scrapping/figaro_immobilier_scrapper/app/src"
+)
 sys.path.append(
     "/Users/hippodouche/se_loger_scrapping/figaro_immobilier_scrapper/src/scrapper"
 )
 
 from scrapper import *
+from analysis import *
 
 df_ville = pd.read_csv(
     "/Users/hippodouche/se_loger_scrapping/figaro_immobilier_scrapper/app/Liste_commune.csv"
@@ -60,3 +67,32 @@ def write():
         )
         scr.get_links()
         scr.launch_scrapping()
+
+    if st.button("Begin Analysis of scrapped data"):
+        ville = (
+            ville_filtre[0]
+            .rstrip("0123456789")
+            .strip()
+            .replace(" ", "_")
+            .replace("-", "_")
+            .lower()
+            .capitalize()
+        )
+        path_search = os.path.join(
+            "/Users/hippodouche/se_loger_scrapping/figaro_immobilier_scrapper/data_results",
+            ville,
+            "df_" + str(ville) + ".csv",
+        )
+        df = pd.read_csv(path_search)
+        df = df[
+            (df.surface >= filter_surface[0])
+            & (df.surface <= filter_surface[1])
+            & (df.price >= price_range[0])
+            & (df.price <= price_range[1])
+        ]
+        os.chdir(
+            "/Users/hippodouche/se_loger_scrapping/figaro_immobilier_scrapper/app/src"
+        )
+        df.to_csv("checking.csv", index=False)
+        if "df" not in st.session_state:
+            st.session_state["df"] = df
