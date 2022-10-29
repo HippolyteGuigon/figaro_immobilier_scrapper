@@ -1,6 +1,6 @@
 #data_stored
 data_results/
-checking_df.ipynb
+*.ipynb
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
