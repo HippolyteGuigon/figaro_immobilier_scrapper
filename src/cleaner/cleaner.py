@@ -95,8 +95,20 @@ class DataFrame_cleaning:
             self.df.surface = self.df.surface.apply(
                 lambda x: float(x.replace("m² de surface", ""))
             )
+
         except:
             pass
+
+        def clean_piece(x):
+            if "pièces" in x:
+                x = x.replace("pièces", "")
+            if "pièce" in x:
+                x = x.replace("pièce", "")
+            if x == "Inconnu":
+                x = -1
+            return x
+
+        self.df.nombre_pieces = self.df.nombre_pieces.apply(lambda x: clean_piece(x))
         return self.df
 
     def global_cleaner(self):

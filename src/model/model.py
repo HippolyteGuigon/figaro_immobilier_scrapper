@@ -3,8 +3,12 @@
 # As a user, I want to be able to choose between multiple clustering algorithms
 # As a user, I want to be able to cluster my DataFrame
 # As a user, I want to be able to retrieve my results
+import sys
 
-from cleaner import cleaner
+sys.path.append(
+    "/Users/hippodouche/se_loger_scrapping/figaro_immobilier_scrapper/src/cleaner"
+)
+from cleaner import *
 from sklearn.decomposition import PCA
 
 
@@ -40,10 +44,10 @@ class Clustering_Pipeline:
         return self.df
 
     def reduction_dimension(self) -> pd.DataFrame:
-        dict_dr = {"PCA": PCA(n_components)}
+        dict_dr = {"PCA": PCA(n_components=self.dn)}
         if self.dr == "None":
             pass
         else:
             model = dict_dr[self.dr]
-            self.df = pd.DataFrame(model.fit_transform(df))
+            self.df = pd.DataFrame(model.fit_transform(self.df))
         return self.df
