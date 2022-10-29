@@ -10,7 +10,8 @@ def write():
     )
 
 
-if "df" not in st.session_state:
-    st.session_state["df"] = "value"
-
-df = st.session_state["df"]
+if "df_result" not in st.session_state:
+    st.session_state[
+        "df_result"
+    ] = "Lancer le scrapping pour avoir un résultat de DataFrame"
+df = st.session_state["df_result"]

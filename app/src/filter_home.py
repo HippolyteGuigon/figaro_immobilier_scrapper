@@ -69,30 +69,43 @@ def write():
         scr.launch_scrapping()
 
     if st.button("Begin Analysis of scrapped data"):
-        ville = (
-            ville_filtre[0]
-            .rstrip("0123456789")
-            .strip()
-            .replace(" ", "_")
-            .replace("-", "_")
-            .lower()
-            .capitalize()
+        df_result = pd.DataFrame(
+            columns=[
+                "price",
+                "surface",
+                "localisation",
+                "description",
+                "nombre_pieces",
+                "rue",
+                "link",
+            ]
         )
-        path_search = os.path.join(
-            "/Users/hippodouche/se_loger_scrapping/figaro_immobilier_scrapper/data_results",
-            ville,
-            "df_" + str(ville) + ".csv",
-        )
-        df = pd.read_csv(path_search)
-        df = df[
-            (df.surface >= filter_surface[0])
-            & (df.surface <= filter_surface[1])
-            & (df.price >= price_range[0])
-            & (df.price <= price_range[1])
-        ]
-        os.chdir(
-            "/Users/hippodouche/se_loger_scrapping/figaro_immobilier_scrapper/app/src"
-        )
-        df.to_csv("checking.csv", index=False)
-        if "df" not in st.session_state:
-            st.session_state["df"] = df
+        for ville in ville_filtre:
+            ville_path = (
+                ville_filtre[0]
+                .rstrip("0123456789")
+                .strip()
+                .replace(" ", "_")
+                .replace("-", "_")
+                .lower()
+                .capitalize()
+            )
+            path_search = os.path.join(
+                "/Users/hippodouche/se_loger_scrapping/figaro_immobilier_scrapper/data_results",
+                ville_path,
+                "df_" + str(ville_path) + ".csv",
+            )
+            df = pd.read_csv(path_search)
+            df = df[
+                (df.surface >= filter_surface[0])
+                & (df.surface <= filter_surface[1])
+                & (df.price >= price_range[0])
+                & (df.price <= price_range[1])
+            ]
+            os.chdir(
+                "/Users/hippodouche/se_loger_scrapping/figaro_immobilier_scrapper/app/src"
+            )
+            df_result = pd.concat([df_result, df], axis=1)
+            df.to_csv("checking.csv", index=False)
+        if "df_result" not in st.session_state:
+            st.session_state["df_result"] = df_result
