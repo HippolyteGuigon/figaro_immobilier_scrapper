@@ -7,17 +7,17 @@ import sys
 import yaml
 from yaml.loader import SafeLoader
 import os
-current_path=os.getcwd()
-with open(os.path.join(current_path,'src/model/model_params.yaml'), 'r') as f:
+
+current_path = os.getcwd()
+with open(os.path.join(current_path, "src/model/model_params.yaml"), "r") as f:
     data = list(yaml.load_all(f, Loader=SafeLoader))[0]
 
-sys.path.append(
-    os.path.join(current_path,"src/cleaner")
-)
+sys.path.append(os.path.join(current_path, "src/cleaner"))
 
 from cleaner import *
 from sklearn.decomposition import PCA
 from sklearn.cluster import KMeans
+
 
 class Clustering_Pipeline:
     """
@@ -28,7 +28,7 @@ class Clustering_Pipeline:
         df: pd.DataFrame,
     ):
         self.df = df
-        self.df_original=df
+        self.df_original = df
         self.dr = data["dimension_reduction_method"]
         self.ca = data["cluster_model"]
         self.dn = data["nb_dimension"]
@@ -56,11 +56,11 @@ class Clustering_Pipeline:
             self.df = pd.DataFrame(model.fit_transform(self.df))
         return self.df
 
-    def clustering(self)-> pd.DataFrame:
-        dict_cl={"KMeans":KMeans(n_clusters=self.cn)}
-        model=dict_cl[self.ca]
+    def clustering(self) -> pd.DataFrame:
+        dict_cl = {"KMeans": KMeans(n_clusters=self.cn)}
+        model = dict_cl[self.ca]
         model.fit(self.df)
-        self.df_original["labels_predicted"]=model.labels_
+        self.df_original["labels_predicted"] = model.labels_
         if "Unnamed: 0" in self.df_original.columns:
-            self.df_original.drop("Unnamed: 0",axis=1,inplace=True)
+            self.df_original.drop("Unnamed: 0", axis=1, inplace=True)
         return self.df_original
