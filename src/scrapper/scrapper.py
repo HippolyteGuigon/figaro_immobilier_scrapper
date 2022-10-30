@@ -67,15 +67,19 @@ class Filtering:
 
         # On accepte les cookies s'il y en a
         wait = WebDriverWait(driver, 2)
-        wait.until(
-            EC.frame_to_be_available_and_switch_to_it(
-                (By.XPATH, '//*[@id="appconsent"]/iframe')
+        try:
+
+            wait.until(
+                EC.frame_to_be_available_and_switch_to_it(
+                    (By.XPATH, '//*[@id="appconsent"]/iframe')
+                )
             )
-        )
-        accept = driver.find_element(
-            "xpath", "/html/body/div/div/div/div/div/div/div[2]/aside/section/button[1]"
-        )
-        driver.execute_script("arguments[0].click();", accept)
+            accept = driver.find_element(
+                "xpath", "/html/body/div/div/div/div/div/div/div[2]/aside/section/button[1]"
+            )
+            driver.execute_script("arguments[0].click();", accept)
+        except:
+            pass
         driver.implicitly_wait(2)
         driver.switch_to.parent_frame()
         driver.implicitly_wait(2)
@@ -110,11 +114,13 @@ class Filtering:
                 "xpath", '//*[@id="homepage-v2"]/section[1]/div/div[1]/button[2]'
             )
             driver.execute_script("arguments[0].click();", element)
+        try:        
+            search_button = WebDriverWait(driver, 20).until(
+    EC.element_to_be_clickable((By.XPATH, '//*[@id="homepage-v2"]/section[1]/div/button[2]')))
 
-        search_button = driver.find_element(
-            "xpath", '//*[@id="homepage-v2"]/section[1]/div/button[2]'
-        )
-        driver.execute_script("arguments[0].click();", search_button)
+            driver.execute_script("arguments[0].click();", search_button)
+        except:
+            driver.save_screenshot("Failed_117.png")
         sleep(5)
 
         if "annonces" in driver.current_url:
@@ -124,16 +130,23 @@ class Filtering:
 
     def filter_search(self, ville: List):
         # On commence par réinitialiser la recherche
-        localisation_button = driver.find_element(
-            "xpath", '//*[@id="search-engine"]/div/div[1]/div[2]/div/span/span'
-        )
-        driver.execute_script("arguments[0].click();", localisation_button)
+        try:
+
+            localisation_button = WebDriverWait(driver, 20).until(
+    EC.element_to_be_clickable((By.XPATH, '//*[@id="search-engine"]/div/div[1]/div[2]/div/span/span')))
+
+            driver.execute_script("arguments[0].click();", localisation_button)
+        except:
+            driver.save_screenshot("Failed_131.png")
         sleep(3)
-        reinitialise_button = driver.find_element(
-            "xpath",
-            '//*[@id="search-engine"]/div/div[1]/div[2]/div[2]/div[3]/button[1]',
-        )
-        driver.execute_script("arguments[0].click();", reinitialise_button)
+        try:
+
+            reinitialise_button = WebDriverWait(driver, 20).until(
+    EC.element_to_be_clickable((By.XPATH, '//*[@id="search-engine"]/div/div[1]/div[2]/div[2]/div[3]/button[1]')))
+
+            driver.execute_script("arguments[0].click();", reinitialise_button)
+        except:
+            driver.save_screenshot("Failed_137.png")
 
         # Faire en sorte que l'utilisateur puisse entrer une liste de ville
         if len(ville) == 1:
@@ -158,24 +171,34 @@ class Filtering:
             sleep(5)
             search_engine_button.send_keys(" ")
             sleep(5)
-            first_choice = driver.find_element(
-                "xpath",
-                "//*[@id='search-engine']/div/div[1]/div[2]/div[2]/div[2]/div/div[2]/div/div/div[1]/div/div[1]",
-            )
+            
+            try:
 
-            driver.execute_script("arguments[0].click();", first_choice)
+                first_choice=WebDriverWait(driver, 20).until(
+                    EC.element_to_be_clickable((By.XPATH, '//*[@id="search-engine"]/div/div[1]/div[2]/div[2]/div[2]/div/div[2]/div/div/div[1]/div/div[1]')))
+                
+
+                driver.execute_script("arguments[0].click();", first_choice)
+            except:
+                driver.save_screenshot("Failed_165.png")
+
         sleep(5)
         result_filter = driver.find_element(
             "xpath", '//*[@id="bloc-list-classifieds"]'
         ).text
         print(result_filter)
         filtered_cities = result_filter.split("à")[1].split(":")[0]
-        validate_button = driver.find_element(
-            "xpath",
-            '//*[@id="search-engine"]/div/div[1]/div[2]/div[2]/div[3]/button[2]',
-        )
-        driver.execute_script("arguments[0].click();", validate_button)
+        
+        try:
+
+            validate_button=WebDriverWait(driver, 20).until(
+                    EC.element_to_be_clickable((By.XPATH, '//*[@id="search-engine"]/div/div[1]/div[2]/div[2]/div[3]/button[2]')))
+                
+            driver.execute_script("arguments[0].click();", validate_button)
+        except:
+            driver.save_screenshot("Failed_178.png")
         sleep(5)
+        driver.save_screenshot("fait_chier.png")
         number_result = driver.find_element(
             "xpath", '//*[@id="bloc-list-classifieds"]/span'
         ).text
@@ -185,11 +208,14 @@ class Filtering:
         )
 
     def filter_price(self, price_min: int, price_max: int):
+        try:
 
-        budget_button = driver.find_element(
-            "xpath", '//*[@id="search-engine"]/div/div[2]/div[2]/div'
-        )
-        driver.execute_script("arguments[0].click();", budget_button)
+            budget_button = WebDriverWait(driver, 20).until(
+                    EC.element_to_be_clickable((By.XPATH,  '//*[@id="search-engine"]/div/div[2]/div[2]/div')))
+                
+            driver.execute_script("arguments[0].click();", budget_button)
+        except:
+            driver.save_screenshot("Failed_194.png")
         sleep(5)
 
         driver.find_element(
@@ -200,11 +226,9 @@ class Filtering:
             "xpath",
             '//*[@id="search-engine"]/div/div[2]/div[2]/div[2]/div[2]/div[1]/div[2]/input',
         ).send_keys(price_max)
-
-        validation_button = driver.find_element(
-            "xpath",
-            '//*[@id="search-engine"]/div/div[2]/div[2]/div[2]/div[3]/button[2]',
-        )
+        validation_button = WebDriverWait(driver, 20).until(
+                EC.element_to_be_clickable((By.XPATH,  '//*[@id="search-engine"]/div/div[2]/div[2]/div[2]/div[3]/button[2]')))
+            
         driver.execute_script("arguments[0].click();", validation_button)
         sleep(5)
         number_result = driver.find_element(
@@ -215,9 +239,9 @@ class Filtering:
         )
 
     def filter_surface(self, surface_min: int, surface_max: int):
-        criterion_button = driver.find_element(
-            "xpath", '//*[@id="search-engine"]/div/div[2]/div[3]/div[1]'
-        )
+        criterion_button = WebDriverWait(driver, 20).until(
+                EC.element_to_be_clickable((By.XPATH,  '//*[@id="search-engine"]/div/div[2]/div[3]/div[1]')))
+            
         driver.execute_script("arguments[0].click();", criterion_button)
         sleep(5)
 
@@ -229,12 +253,14 @@ class Filtering:
             "xpath",
             '//*[@id="search-engine"]/div/div[2]/div[3]/div[2]/div[2]/div/div[1]/div[3]/div/div[1]/div[2]/input',
         ).send_keys(surface_max)
+        try:
 
-        validation_button = driver.find_element(
-            "xpath",
-            '//*[@id="search-engine"]/div/div[2]/div[3]/div[2]/div[3]/button[2]',
-        )
-        driver.execute_script("arguments[0].click();", validation_button)
+            validation_button = WebDriverWait(driver, 20).until(
+                    EC.element_to_be_clickable((By.XPATH,  '//*[@id="search-engine"]/div/div[2]/div[3]/div[2]/div[3]/button[2]')))
+                
+            driver.execute_script("arguments[0].click();", validation_button)
+        except:
+            driver.save_screenshot("Failed_263.png")
         sleep(5)
         number_result = driver.find_element(
             "xpath", '//*[@id="bloc-list-classifieds"]/span'

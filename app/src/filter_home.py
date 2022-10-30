@@ -54,7 +54,7 @@ def write():
                 price_range = st.slider(
                     "Champs de prix (en €)", value=[1, 30000], step=1
                 )
-
+    print("VIIIIIILE FILTRE",ville_filtre)
     if st.button("Launch scrapping"):
         # Mettre un bouton pour lancer le scrapping, et ensuite balancer la recherche
         scr = Scrapper(
@@ -68,8 +68,7 @@ def write():
         scr.get_links()
         scr.launch_scrapping()
 
-    if st.button("Begin Analysis of scrapped data"):
-        df_result = pd.DataFrame(
+    df_result = pd.DataFrame(
             columns=[
                 "price",
                 "surface",
@@ -80,9 +79,13 @@ def write():
                 "link",
             ]
         )
+
+    if st.button("Begin Analysis of scrapped data"):
+        
         for ville in ville_filtre:
+            
             ville_path = (
-                ville_filtre[0]
+                ville
                 .rstrip("0123456789")
                 .strip()
                 .replace(" ", "_")
@@ -90,6 +93,7 @@ def write():
                 .lower()
                 .capitalize()
             )
+            print("PAAAAAATH",ville_path)
             path_search = os.path.join(
                 "/Users/hippodouche/se_loger_scrapping/figaro_immobilier_scrapper/data_results",
                 ville_path,
@@ -102,10 +106,10 @@ def write():
                 & (df.price >= price_range[0])
                 & (df.price <= price_range[1])
             ]
-            os.chdir(
-                "/Users/hippodouche/se_loger_scrapping/figaro_immobilier_scrapper/app/src"
-            )
-            df_result = pd.concat([df_result, df], axis=1)
-            df.to_csv("checking.csv", index=False)
+            
+            df=df[[x for x in df.columns if "Unnamed" not in x]]
+            print(df)
+            df_result=pd.concat([df_result,df])
+        df_result.to_csv("/Users/hippodouche/se_loger_scrapping/figaro_immobilier_scrapper/app/src/checking.csv", index=False)
         if "df_result" not in st.session_state:
             st.session_state["df_result"] = df_result

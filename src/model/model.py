@@ -1,8 +1,3 @@
-# As a user, I want to clean my DataFrame such that it is ready for clustering
-# As a user, I want to be able to choose wheter or not applying a dimension reduction algorithm
-# As a user, I want to be able to choose between multiple clustering algorithms
-# As a user, I want to be able to cluster my DataFrame
-# As a user, I want to be able to retrieve my results
 import sys
 import yaml
 from yaml.loader import SafeLoader

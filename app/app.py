@@ -5,7 +5,8 @@ import sys
 sys.path.append(
     "/Users/hippodouche/se_loger_scrapping/figaro_immobilier_scrapper/app/src"
 )
-from src import analysis, prediction, filter_home, home
+
+from src import analysis, prediction, home, filter_home
 
 st.set_page_config(
     page_title="Figaro Immobilier scrapper",

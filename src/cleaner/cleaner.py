@@ -107,14 +107,15 @@ class DataFrame_cleaning:
             if x == "Inconnu":
                 x = -1
             return x
-
-        self.df.nombre_pieces = self.df.nombre_pieces.apply(lambda x: clean_piece(x))
+        try:
+            self.df.nombre_pieces = self.df.nombre_pieces.apply(lambda x: clean_piece(x))
+        except:
+            pass
         return self.df
 
     def global_cleaner(self):
         self.df = self.clean_price()
         self.df = self.clean_surface()
-
-        if "Unnamed: 0" in self.df.columns:
-            self.df.drop("Unnamed: 0", axis=1)
+        self.df = self.df[[x for x in self.df.columns if "Unnamed" not in x]]
+        
         return self.df

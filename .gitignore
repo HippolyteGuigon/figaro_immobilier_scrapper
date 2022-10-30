@@ -1,6 +1,7 @@
 #data_stored
 data_results/
 *.ipynb
+*.png
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
