@@ -12,6 +12,10 @@ sys.path.append(
     "/Users/hippodouche/se_loger_scrapping/figaro_immobilier_scrapper/src/scrapper"
 )
 
+sys.path.append("/Users/hippodouche/se_loger_scrapping/figaro_immobilier_scrapper/src/model")
+
+from model import *
+
 from scrapper import *
 from analysis import *
 
@@ -54,7 +58,6 @@ def write():
                 price_range = st.slider(
                     "Champs de prix (en €)", value=[1, 30000], step=1
                 )
-    print("VIIIIIILE FILTRE", ville_filtre)
     if st.button("Launch scrapping"):
         # Mettre un bouton pour lancer le scrapping, et ensuite balancer la recherche
         scr = Scrapper(
@@ -92,7 +95,6 @@ def write():
                 .lower()
                 .capitalize()
             )
-            print("PAAAAAATH", ville_path)
             path_search = os.path.join(
                 "/Users/hippodouche/se_loger_scrapping/figaro_immobilier_scrapper/data_results",
                 ville_path,
@@ -107,8 +109,11 @@ def write():
             ]
 
             df = df[[x for x in df.columns if "Unnamed" not in x]]
-            print(df)
             df_result = pd.concat([df_result, df])
+        
+        pipeline=Clustering_Pipeline(df_result)
+        df_result=pipeline.full_pipeline()
+
         df_result.to_csv(
             "/Users/hippodouche/se_loger_scrapping/figaro_immobilier_scrapper/app/src/checking.csv",
             index=False,
