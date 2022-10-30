@@ -107,8 +107,11 @@ class DataFrame_cleaning:
             if x == "Inconnu":
                 x = -1
             return x
+
         try:
-            self.df.nombre_pieces = self.df.nombre_pieces.apply(lambda x: clean_piece(x))
+            self.df.nombre_pieces = self.df.nombre_pieces.apply(
+                lambda x: clean_piece(x)
+            )
         except:
             pass
         return self.df
@@ -117,5 +120,5 @@ class DataFrame_cleaning:
         self.df = self.clean_price()
         self.df = self.clean_surface()
         self.df = self.df[[x for x in self.df.columns if "Unnamed" not in x]]
-        
+
         return self.df

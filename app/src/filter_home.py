@@ -54,7 +54,7 @@ def write():
                 price_range = st.slider(
                     "Champs de prix (en €)", value=[1, 30000], step=1
                 )
-    print("VIIIIIILE FILTRE",ville_filtre)
+    print("VIIIIIILE FILTRE", ville_filtre)
     if st.button("Launch scrapping"):
         # Mettre un bouton pour lancer le scrapping, et ensuite balancer la recherche
         scr = Scrapper(
@@ -69,31 +69,30 @@ def write():
         scr.launch_scrapping()
 
     df_result = pd.DataFrame(
-            columns=[
-                "price",
-                "surface",
-                "localisation",
-                "description",
-                "nombre_pieces",
-                "rue",
-                "link",
-            ]
-        )
+        columns=[
+            "price",
+            "surface",
+            "localisation",
+            "description",
+            "nombre_pieces",
+            "rue",
+            "link",
+        ]
+    )
 
     if st.button("Begin Analysis of scrapped data"):
-        
+
         for ville in ville_filtre:
-            
+
             ville_path = (
-                ville
-                .rstrip("0123456789")
+                ville.rstrip("0123456789")
                 .strip()
                 .replace(" ", "_")
                 .replace("-", "_")
                 .lower()
                 .capitalize()
             )
-            print("PAAAAAATH",ville_path)
+            print("PAAAAAATH", ville_path)
             path_search = os.path.join(
                 "/Users/hippodouche/se_loger_scrapping/figaro_immobilier_scrapper/data_results",
                 ville_path,
@@ -106,10 +105,13 @@ def write():
                 & (df.price >= price_range[0])
                 & (df.price <= price_range[1])
             ]
-            
-            df=df[[x for x in df.columns if "Unnamed" not in x]]
+
+            df = df[[x for x in df.columns if "Unnamed" not in x]]
             print(df)
-            df_result=pd.concat([df_result,df])
-        df_result.to_csv("/Users/hippodouche/se_loger_scrapping/figaro_immobilier_scrapper/app/src/checking.csv", index=False)
+            df_result = pd.concat([df_result, df])
+        df_result.to_csv(
+            "/Users/hippodouche/se_loger_scrapping/figaro_immobilier_scrapper/app/src/checking.csv",
+            index=False,
+        )
         if "df_result" not in st.session_state:
             st.session_state["df_result"] = df_result
