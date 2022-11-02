@@ -2,10 +2,6 @@ import streamlit as st
 import awesome_streamlit as ast
 import sys
 
-sys.path.append(
-    "/Users/hippodouche/se_loger_scrapping/figaro_immobilier_scrapper/app/src"
-)
-
 from src import analysis, prediction, home, filter_home
 
 st.set_page_config(

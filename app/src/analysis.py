@@ -1,4 +1,9 @@
 import streamlit as st
+import pandas as pd
+
+df_result = pd.read_csv(
+    "/Users/hippodouche/se_loger_scrapping/figaro_immobilier_scrapper/app/src/data_analysis/data_analysis_result.csv"
+)
 
 
 def write():
@@ -8,10 +13,3 @@ def write():
         Analysis Page.
         """
     )
-
-
-if "df_result" not in st.session_state:
-    st.session_state[
-        "df_result"
-    ] = "Lancer le scrapping pour avoir un résultat de DataFrame"
-df = st.session_state["df_result"]

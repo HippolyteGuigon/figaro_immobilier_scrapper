@@ -106,6 +106,12 @@ class DataFrame_cleaning:
                 x = x.replace("pièce", "")
             if x == "Inconnu":
                 x = -1
+
+            try:
+                x = int(x)
+            except:
+                x = -1
+
             return x
 
         try:

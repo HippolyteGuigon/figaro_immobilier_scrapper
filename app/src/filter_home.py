@@ -5,23 +5,16 @@ import awesome_streamlit as ast
 import sys
 import os
 
-sys.path.append(
-    "/Users/hippodouche/se_loger_scrapping/figaro_immobilier_scrapper/app/src"
-)
-sys.path.append(
-    "/Users/hippodouche/se_loger_scrapping/figaro_immobilier_scrapper/src/scrapper"
-)
-
-sys.path.append("/Users/hippodouche/se_loger_scrapping/figaro_immobilier_scrapper/src/model")
+current_path = os.getcwd()
+sys.path.append(os.path.join(current_path, "app/src"))
+sys.path.append(os.path.join(current_path, "src/scrapper"))
+sys.path.append(os.path.join(current_path, "src/model"))
 
 from model import *
-
 from scrapper import *
 from analysis import *
 
-df_ville = pd.read_csv(
-    "/Users/hippodouche/se_loger_scrapping/figaro_immobilier_scrapper/app/Liste_commune.csv"
-)
+df_ville = pd.read_csv(os.path.join(current_path, "app/Liste_commune.csv"))
 liste_ville = df_ville["Nom_commune"].unique()
 
 
@@ -96,7 +89,8 @@ def write():
                 .capitalize()
             )
             path_search = os.path.join(
-                "/Users/hippodouche/se_loger_scrapping/figaro_immobilier_scrapper/data_results",
+                current_path,
+                "data_results",
                 ville_path,
                 "df_" + str(ville_path) + ".csv",
             )
@@ -110,13 +104,26 @@ def write():
 
             df = df[[x for x in df.columns if "Unnamed" not in x]]
             df_result = pd.concat([df_result, df])
-        
-        pipeline=Clustering_Pipeline(df_result)
-        df_result=pipeline.full_pipeline()
+
+        pipeline = Clustering_Pipeline(df_result)
+        df_result = pipeline.full_pipeline()
+        pipeline_reduced = Clustering_Pipeline(df_result)
+        df_reduced = pipeline_reduced.cleaning_df()
+        df_reduced = pipeline_reduced.reduction_dimension()
 
         df_result.to_csv(
-            "/Users/hippodouche/se_loger_scrapping/figaro_immobilier_scrapper/app/src/checking.csv",
+            os.path.join(
+                current_path, "app/src/data_analysis/data_analysis_result.csv"
+            ),
             index=False,
+        )
+
+        df_reduced.to_csv(
+            os.path.join(current_path, "app/src/data_analysis/df_reduced.csv")
+        )
+
+        st.write(
+            "Passez maintenant à la page d'analyse en cliquant sur le bouton en haut à gauche !"
         )
         if "df_result" not in st.session_state:
             st.session_state["df_result"] = df_result

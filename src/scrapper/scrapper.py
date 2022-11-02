@@ -41,6 +41,8 @@ driver = webdriver.Chrome(service=s, options=options)
 driver.maximize_window()
 driver.get(url)
 
+current_path = os.getcwd()
+
 
 class Filtering:
     """
@@ -115,16 +117,15 @@ class Filtering:
                 "xpath", '//*[@id="homepage-v2"]/section[1]/div/div[1]/button[2]'
             )
             driver.execute_script("arguments[0].click();", element)
-        try:
-            search_button = WebDriverWait(driver, 20).until(
-                EC.element_to_be_clickable(
-                    (By.XPATH, '//*[@id="homepage-v2"]/section[1]/div/button[2]')
-                )
-            )
 
-            driver.execute_script("arguments[0].click();", search_button)
-        except:
-            driver.save_screenshot("Failed_117.png")
+        search_button = WebDriverWait(driver, 20).until(
+            EC.element_to_be_clickable(
+                (By.XPATH, '//*[@id="homepage-v2"]/section[1]/div/button[2]')
+            )
+        )
+
+        driver.execute_script("arguments[0].click();", search_button)
+
         sleep(5)
 
         if "annonces" in driver.current_url:
@@ -134,35 +135,27 @@ class Filtering:
 
     def filter_search(self, ville: List):
         # On commence par réinitialiser la recherche
-        try:
-
-            localisation_button = WebDriverWait(driver, 20).until(
-                EC.element_to_be_clickable(
-                    (
-                        By.XPATH,
-                        '//*[@id="search-engine"]/div/div[1]/div[2]/div/span/span',
-                    )
-                )
+        driver.save_screenshot("failed_ville.png")
+        localisation_button = WebDriverWait(driver, 20).until(
+            EC.element_to_be_clickable(
+                (By.XPATH, '//*[@id="search-engine"]/div/div[1]/div[2]/div/span/span')
             )
+        )
 
-            driver.execute_script("arguments[0].click();", localisation_button)
-        except:
-            driver.save_screenshot("Failed_131.png")
+        driver.execute_script("arguments[0].click();", localisation_button)
+
         sleep(3)
-        try:
 
-            reinitialise_button = WebDriverWait(driver, 20).until(
-                EC.element_to_be_clickable(
-                    (
-                        By.XPATH,
-                        '//*[@id="search-engine"]/div/div[1]/div[2]/div[2]/div[3]/button[1]',
-                    )
+        reinitialise_button = WebDriverWait(driver, 20).until(
+            EC.element_to_be_clickable(
+                (
+                    By.XPATH,
+                    '//*[@id="search-engine"]/div/div[1]/div[2]/div[2]/div[3]/button[1]',
                 )
             )
+        )
 
-            driver.execute_script("arguments[0].click();", reinitialise_button)
-        except:
-            driver.save_screenshot("Failed_137.png")
+        driver.execute_script("arguments[0].click();", reinitialise_button)
 
         # Faire en sorte que l'utilisateur puisse entrer une liste de ville
         if len(ville) == 1:
@@ -177,55 +170,48 @@ class Filtering:
                     "[", ""
                 ).replace("]", "")
             )
-
+        driver.save_screenshot("Milvius.png")
         search_engine_button = driver.find_element(
             "xpath",
             "//*[@id='search-engine']/div/div[1]/div[2]/div[2]/div[2]/div/div/input",
         )
+
         for choice_region in ville:
             search_engine_button.send_keys(choice_region)
-            sleep(5)
+            sleep(3)
             search_engine_button.send_keys(" ")
-            sleep(5)
+            sleep(3)
 
-            try:
-
-                first_choice = WebDriverWait(driver, 20).until(
-                    EC.element_to_be_clickable(
-                        (
-                            By.XPATH,
-                            '//*[@id="search-engine"]/div/div[1]/div[2]/div[2]/div[2]/div/div[2]/div/div/div[1]/div/div[1]',
-                        )
+            first_choice = WebDriverWait(driver, 20).until(
+                EC.element_to_be_clickable(
+                    (
+                        By.XPATH,
+                        '//*[@id="search-engine"]/div/div[1]/div[2]/div[2]/div[2]/div/div[2]/div/div/div[1]/div/div[1]',
                     )
                 )
+            )
 
-                driver.execute_script("arguments[0].click();", first_choice)
-            except:
-                driver.save_screenshot("Failed_165.png")
+            driver.execute_script("arguments[0].click();", first_choice)
 
         sleep(5)
         result_filter = driver.find_element(
             "xpath", '//*[@id="bloc-list-classifieds"]'
         ).text
-        print(result_filter)
         filtered_cities = result_filter.split("à")[1].split(":")[0]
 
-        try:
-
-            validate_button = WebDriverWait(driver, 20).until(
-                EC.element_to_be_clickable(
-                    (
-                        By.XPATH,
-                        '//*[@id="search-engine"]/div/div[1]/div[2]/div[2]/div[3]/button[2]',
-                    )
+        validate_button = WebDriverWait(driver, 20).until(
+            EC.element_to_be_clickable(
+                (
+                    By.XPATH,
+                    '//*[@id="search-engine"]/div/div[1]/div[2]/div[2]/div[3]/button[2]',
                 )
             )
+        )
 
-            driver.execute_script("arguments[0].click();", validate_button)
-        except:
-            driver.save_screenshot("Failed_178.png")
+        driver.execute_script("arguments[0].click();", validate_button)
+
         sleep(5)
-        driver.save_screenshot("fait_chier.png")
+
         number_result = driver.find_element(
             "xpath", '//*[@id="bloc-list-classifieds"]/span'
         ).text
@@ -235,17 +221,15 @@ class Filtering:
         )
 
     def filter_price(self, price_min: int, price_max: int):
-        try:
 
-            budget_button = WebDriverWait(driver, 20).until(
-                EC.element_to_be_clickable(
-                    (By.XPATH, '//*[@id="search-engine"]/div/div[2]/div[2]/div')
-                )
+        budget_button = WebDriverWait(driver, 20).until(
+            EC.element_to_be_clickable(
+                (By.XPATH, '//*[@id="search-engine"]/div/div[2]/div[2]/div')
             )
+        )
 
-            driver.execute_script("arguments[0].click();", budget_button)
-        except:
-            driver.save_screenshot("Failed_194.png")
+        driver.execute_script("arguments[0].click();", budget_button)
+
         sleep(5)
 
         driver.find_element(
@@ -292,20 +276,18 @@ class Filtering:
             "xpath",
             '//*[@id="search-engine"]/div/div[2]/div[3]/div[2]/div[2]/div/div[1]/div[3]/div/div[1]/div[2]/input',
         ).send_keys(surface_max)
-        try:
 
-            validation_button = WebDriverWait(driver, 20).until(
-                EC.element_to_be_clickable(
-                    (
-                        By.XPATH,
-                        '//*[@id="search-engine"]/div/div[2]/div[3]/div[2]/div[3]/button[2]',
-                    )
+        validation_button = WebDriverWait(driver, 20).until(
+            EC.element_to_be_clickable(
+                (
+                    By.XPATH,
+                    '//*[@id="search-engine"]/div/div[2]/div[3]/div[2]/div[3]/button[2]',
                 )
             )
+        )
 
-            driver.execute_script("arguments[0].click();", validation_button)
-        except:
-            driver.save_screenshot("Failed_263.png")
+        driver.execute_script("arguments[0].click();", validation_button)
+
         sleep(5)
         number_result = driver.find_element(
             "xpath", '//*[@id="bloc-list-classifieds"]/span'
@@ -359,10 +341,11 @@ class Scrapper(Filtering):
         while True:
             try:
                 next_button = driver.find_element(
-                    "xpath", '//*[@id="listAnnoncesBloc"]/section/div[40]/a[2]/div/span'
+                    By.XPATH, "//a[@title='Aller à la page suivante']"
                 )
+
                 driver.execute_script("arguments[0].click();", next_button)
-                sleep(5)
+                sleep(6)
                 new_elems = [
                     x.get_attribute("href")
                     for x in driver.find_elements("xpath", "//a[@href]")
@@ -371,9 +354,7 @@ class Scrapper(Filtering):
                 elems += new_elems
             except:
                 break
-        json_path = (
-            "/Users/hippodouche/se_loger_scrapping/figaro_immobilier_scrapper/data"
-        )
+        json_path = os.path.join(current_path, "data")
         json_list = json.dumps(elems)
 
         with open(os.path.join(json_path, "links_to_scrap.json"), "w") as f:
@@ -439,9 +420,9 @@ class Scrapper(Filtering):
     def launch_scrapping(self):
 
         logging.warning("Le scrapping vient de commencer")
-        data_result_path = "/Users/hippodouche/se_loger_scrapping/figaro_immobilier_scrapper/data_results"
-        path_link_to_scrap = "/Users/hippodouche/se_loger_scrapping/figaro_immobilier_scrapper/data/links_to_scrap.json"
-        path_scrapped = "/Users/hippodouche/se_loger_scrapping/figaro_immobilier_scrapper/data/links_scrapped.json"
+        data_result_path = os.path.join(current_path, "data_results")
+        path_link_to_scrap = os.path.join(current_path, "data/links_to_scrap.json")
+        path_scrapped = os.path.join(current_path, "data/links_scrapped.json")
 
         to_scrap = open(path_link_to_scrap)
         scrapped = open(path_scrapped)
@@ -543,9 +524,8 @@ class Scrapper(Filtering):
                     ]
                     df_city.to_csv(ville + "/df_" + ville + ".csv", index=False)
 
-        path_cleaning = "/Users/hippodouche/se_loger_scrapping/figaro_immobilier_scrapper/data_results"
+        path_cleaning = os.path.join(current_path, "data_results")
 
-        # Faire en sorte que le nettoyage ne s'applique que sur les nouvelles villes scrappées
         for file_ville in os.listdir(path_cleaning):
             df_path = os.path.join(path_cleaning, file_ville, f"df_{file_ville}.csv")
             df_to_clean = pd.read_csv(df_path)
