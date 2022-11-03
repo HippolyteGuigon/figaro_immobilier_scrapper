@@ -331,13 +331,13 @@ class Scrapper(Filtering):
         super().global_filtering(ville, price_min, price_max, surface_min, surface_max)
 
     def get_links(self):
-        df_save=pd.DataFrame(columns=["check"])
+        df_save = pd.DataFrame(columns=["check"])
         elems = [
             x.get_attribute("href")
             for x in driver.find_elements("xpath", "//a[@href]")
             if "/annonces/annonce" in x.get_attribute("href")
         ]
-        
+
         while True:
             try:
                 next_button = driver.find_element(
@@ -353,7 +353,7 @@ class Scrapper(Filtering):
                 ]
                 elems += new_elems
                 if len(list(set(elems))) != len(elems):
-                    elems=list(set(elems))
+                    elems = list(set(elems))
                     break
             except:
                 break
@@ -465,7 +465,6 @@ class Scrapper(Filtering):
                     pass
                 else:
                     try:
-                            
 
                         (
                             price,
