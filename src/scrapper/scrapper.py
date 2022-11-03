@@ -135,7 +135,6 @@ class Filtering:
 
     def filter_search(self, ville: List):
         # On commence par réinitialiser la recherche
-        driver.save_screenshot("failed_ville.png")
         localisation_button = WebDriverWait(driver, 20).until(
             EC.element_to_be_clickable(
                 (By.XPATH, '//*[@id="search-engine"]/div/div[1]/div[2]/div/span/span')
@@ -170,7 +169,6 @@ class Filtering:
                     "[", ""
                 ).replace("]", "")
             )
-        driver.save_screenshot("Milvius.png")
         search_engine_button = driver.find_element(
             "xpath",
             "//*[@id='search-engine']/div/div[1]/div[2]/div[2]/div[2]/div/div/input",
@@ -333,11 +331,13 @@ class Scrapper(Filtering):
         super().global_filtering(ville, price_min, price_max, surface_min, surface_max)
 
     def get_links(self):
+        df_save=pd.DataFrame(columns=["check"])
         elems = [
             x.get_attribute("href")
             for x in driver.find_elements("xpath", "//a[@href]")
             if "/annonces/annonce" in x.get_attribute("href")
         ]
+        
         while True:
             try:
                 next_button = driver.find_element(
@@ -352,6 +352,9 @@ class Scrapper(Filtering):
                     if "/annonces/annonce" in x.get_attribute("href")
                 ]
                 elems += new_elems
+                if len(list(set(elems))) != len(elems):
+                    elems=list(set(elems))
+                    break
             except:
                 break
         json_path = os.path.join(current_path, "data")
@@ -461,68 +464,72 @@ class Scrapper(Filtering):
                 if "Cette annonce a expiré" in driver.page_source:
                     pass
                 else:
+                    try:
+                            
 
-                    (
-                        price,
-                        surface,
-                        localisation,
-                        description,
-                        nombre_pieces,
-                        link,
-                    ) = self.individual_extractor(link_scrap)
-                    data_scrapped.append(link_scrap)
-                    with open(path_scrapped, "w") as f:
-                        json.dump(data_scrapped, f)
-                    ville = (
-                        localisation.split(" ")[1]
-                        .replace(" ", "_")
-                        .replace("-", "_")
-                        .lower()
-                        .capitalize()
-                    )
-                    df_city = pd.read_csv(ville + "/df_" + ville + ".csv")
-                    df_city = df_city[
-                        [
-                            "price",
-                            "surface",
-                            "localisation",
-                            "description",
-                            "nombre_pieces",
-                            "rue",
-                            "link",
-                        ]
-                    ]
-
-                    cleaner = Get_adress()
-                    df_city.loc[df_city.shape[0] + 1, :] = [
-                        price,
-                        surface,
-                        localisation,
-                        description,
-                        nombre_pieces,
-                        "TBD",
-                        link,
-                    ]
-                    if "Paris" in ville:
-
-                        df_city.loc[df_city.shape[0], "rue"] = cleaner.pipeline(
-                            df_city.loc[df_city.shape[0], "localisation"],
-                            df_city.loc[df_city.shape[0], "description"],
+                        (
+                            price,
+                            surface,
+                            localisation,
+                            description,
+                            nombre_pieces,
+                            link,
+                        ) = self.individual_extractor(link_scrap)
+                        data_scrapped.append(link_scrap)
+                        with open(path_scrapped, "w") as f:
+                            json.dump(data_scrapped, f)
+                        ville = (
+                            localisation.split(" ")[1]
+                            .replace(" ", "_")
+                            .replace("-", "_")
+                            .lower()
+                            .capitalize()
                         )
-                    else:
-                        df_city.loc[df_city.shape[0], "rue"] = "Inconnu"
-                    df_city = df_city[
-                        [
-                            "price",
-                            "surface",
-                            "localisation",
-                            "description",
-                            "nombre_pieces",
-                            "rue",
-                            "link",
+                        df_city = pd.read_csv(ville + "/df_" + ville + ".csv")
+                        df_city = df_city[
+                            [
+                                "price",
+                                "surface",
+                                "localisation",
+                                "description",
+                                "nombre_pieces",
+                                "rue",
+                                "link",
+                            ]
                         ]
-                    ]
-                    df_city.to_csv(ville + "/df_" + ville + ".csv", index=False)
+
+                        cleaner = Get_adress()
+                        df_city.loc[df_city.shape[0] + 1, :] = [
+                            price,
+                            surface,
+                            localisation,
+                            description,
+                            nombre_pieces,
+                            "TBD",
+                            link,
+                        ]
+                        if "Paris" in ville:
+
+                            df_city.loc[df_city.shape[0], "rue"] = cleaner.pipeline(
+                                df_city.loc[df_city.shape[0], "localisation"],
+                                df_city.loc[df_city.shape[0], "description"],
+                            )
+                        else:
+                            df_city.loc[df_city.shape[0], "rue"] = "Inconnu"
+                        df_city = df_city[
+                            [
+                                "price",
+                                "surface",
+                                "localisation",
+                                "description",
+                                "nombre_pieces",
+                                "rue",
+                                "link",
+                            ]
+                        ]
+                        df_city.to_csv(ville + "/df_" + ville + ".csv", index=False)
+                    except:
+                        pass
 
         path_cleaning = os.path.join(current_path, "data_results")
 
