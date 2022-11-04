@@ -2,7 +2,7 @@ import streamlit as st
 import awesome_streamlit as ast
 import sys
 
-from src import analysis, prediction, home, filter_home
+from src import analysis, home, filter_home
 
 st.set_page_config(
     page_title="Figaro Immobilier scrapper",
@@ -14,7 +14,6 @@ PAGES = {
     "Home": home,
     "Filter": filter_home,
     "Analysis": analysis,
-    "Prediction": prediction,
 }
 
 
