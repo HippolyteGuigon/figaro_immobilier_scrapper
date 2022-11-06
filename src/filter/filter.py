@@ -13,7 +13,7 @@ import streamlit as st
 
 current_path = os.getcwd()
 sys.path.insert(0, os.path.join(current_path, "logs"))
-sys.path.insert(0, os.path.join(current_path,"src/cleaner"))
+sys.path.insert(0, os.path.join(current_path, "src/cleaner"))
 
 from logs_config import main
 import logging
@@ -37,6 +37,7 @@ s = Service(ChromeDriverManager().install())
 driver = webdriver.Chrome(service=s, options=options)
 driver.maximize_window()
 driver.get(url)
+
 
 class Filtering:
     """
@@ -289,7 +290,7 @@ class Filtering:
         )
 
     def url_recovering(self):
-        current_url=driver.current_url
+        current_url = driver.current_url
         json_path = os.path.join(current_path, "data")
         json_list = json.dumps(current_url)
 

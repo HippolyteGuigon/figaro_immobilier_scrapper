@@ -13,8 +13,8 @@ import streamlit as st
 
 current_path = os.getcwd()
 sys.path.insert(0, os.path.join(current_path, "logs"))
-sys.path.insert(0, os.path.join(current_path,"src/cleaner"))
-sys.path.insert(0,os.path.join(current_path,"src/filter"))
+sys.path.insert(0, os.path.join(current_path, "src/cleaner"))
+sys.path.insert(0, os.path.join(current_path, "src/filter"))
 
 from logs_config import main
 from filter import *
@@ -42,6 +42,7 @@ url = "https://immobilier.lefigaro.fr/"
 driver = webdriver.Chrome(service=s, options=options)
 driver.maximize_window()
 
+
 class Scrapper(Filtering):
     """
     Class that inherits from Filtering and launchs the scrapping itslef
@@ -65,9 +66,10 @@ class Scrapper(Filtering):
         super().search_type(choix)
         super().global_filtering(ville, price_min, price_max, surface_min, surface_max)
 
-        url_path = open(os.path.join(current_path,"data/current_url.json"))
+        url_path = open(os.path.join(current_path, "data/current_url.json"))
         current_url = json.load(url_path)
         driver.get(current_url)
+
     def get_links(self):
         df_save = pd.DataFrame(columns=["check"])
         elems = [
@@ -103,9 +105,7 @@ class Scrapper(Filtering):
 
     def individual_extractor(self, link: str):
         try:
-            price = driver.find_element(
-                "xpath", '//*[@id="app-bis"]/main/div[1]/div/section/div[2]/div/strong'
-            ).text
+            price = driver.find_element(By.XPATH,"//strong").get_attribute("textContent")
         except NoSuchElementException:
             price = "Inconnu"
         try:
