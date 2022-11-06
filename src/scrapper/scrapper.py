@@ -105,13 +105,11 @@ class Scrapper(Filtering):
 
     def individual_extractor(self, link: str):
         try:
-            price = driver.find_element(By.XPATH,"//strong").get_attribute("textContent")
+            price = driver.find_element(By.CLASS_NAME,"//strong").get_attribute("textContent")
         except NoSuchElementException:
             price = "Inconnu"
         try:
-            surface = driver.find_element(
-                "xpath", '//*[@id="app-bis"]/main/div[1]/div/div[1]/ul/li[1]/span'
-            ).text
+            surface = driver.find_element(By.CLASS_NAME,"feature").get_attribute("textContent")
         except NoSuchElementException:
             surface = "Inconnu"
 
