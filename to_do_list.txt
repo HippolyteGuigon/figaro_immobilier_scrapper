@@ -13,7 +13,6 @@ les rues (faire partir la for loop de la fin)
 -Réduire les time.sleep pour optimiser le temps d'execution
 -Faire en sorte que ça ne bug plus quand on relance une recherche 
 -Trouver comment on change de page à partir d'un bouton 
--Corriger l'erreur (actualiser automatiquement la page streamlit) pour résoudre ImportError: cannot import name 'filter_home' from 'src' (unknown location)
 
 Done:
 -Créer un environnement Conda: Done 
@@ -29,3 +28,5 @@ ainsi que les descriptions afférents à chaque fonction: Done
 -Corriger le problème des logs: Done
 -Aller plus loin pour l'environnement Conda (regarder cette histoire de fichier yaml): Done 
 -Ajouter une barre de chargement et le nombre de recherches sur la page Filter: Done
+-Corriger l'erreur (actualiser automatiquement la page streamlit) pour résoudre ImportError: cannot import name 'filter_home' from 'src' (unknown location): Done 
+
