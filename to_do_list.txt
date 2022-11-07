@@ -7,7 +7,6 @@ les rues (faire partir la for loop de la fin)
 -Trouver une manière plus élégante pour les try/except dans la détermination de la localisation
 -Ajouter des tests
 -Trouver un moyen plus élégant d'écrire les paths (regarder repos et les options de la librairie sys)
--Trouver un moyen de séparer le Filtering et le Scrapper dans scrapper.py
 -Comprendre les différents types de fichiers dans le gitignore
 -Updater le readme de manière plus claire et plus exhaustive 
 -Réduire les time.sleep pour optimiser le temps d'execution
@@ -29,4 +28,5 @@ ainsi que les descriptions afférents à chaque fonction: Done
 -Aller plus loin pour l'environnement Conda (regarder cette histoire de fichier yaml): Done 
 -Ajouter une barre de chargement et le nombre de recherches sur la page Filter: Done
 -Corriger l'erreur (actualiser automatiquement la page streamlit) pour résoudre ImportError: cannot import name 'filter_home' from 'src' (unknown location): Done 
+-Trouver un moyen de séparer le Filtering et le Scrapper dans scrapper.py:Done 
 

@@ -105,11 +105,15 @@ class Scrapper(Filtering):
 
     def individual_extractor(self, link: str):
         try:
-            price = driver.find_element(By.XPATH,'.//span[@class = "price"]').get_attribute("innerHTML")
+            price = driver.find_element(
+                By.XPATH, './/span[@class = "price"]'
+            ).get_attribute("innerHTML")
         except NoSuchElementException:
             price = "Inconnu"
         try:
-            surface = driver.find_element(By.CLASS_NAME,"feature").get_attribute("textContent")
+            surface = driver.find_element(By.CLASS_NAME, "feature").get_attribute(
+                "textContent"
+            )
         except NoSuchElementException:
             surface = "Inconnu"
 
@@ -201,8 +205,6 @@ class Scrapper(Filtering):
                     pass
                 else:
                     try:
-                            
-                        
 
                         (
                             price,
