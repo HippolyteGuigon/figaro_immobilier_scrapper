@@ -83,7 +83,7 @@ class DataFrame_cleaning:
     def clean_price(self):
         try:
             self.df.price = self.df.price.apply(
-                lambda x: float(x.replace("€", "").replace(" ", ""))
+                lambda x: float(x.split("€")[0].strip().replace(" ",""))
             ).astype(float)
         except:
             pass
