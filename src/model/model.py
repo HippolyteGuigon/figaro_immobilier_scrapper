@@ -63,6 +63,7 @@ class Clustering_Pipeline:
 
     def full_pipeline(self):
         self.df=self.cleaning_df()
+        self.df.to_csv("quemierda.csv",index=False)
         self.df=self.reduction_dimension()
         self.df=self.clustering()
 

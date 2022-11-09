@@ -4,9 +4,13 @@ import os
 
 current_dir = os.getcwd()
 sys.path.append(os.path.join(current_dir, "src/filter"))
+sys.path.append(os.path.join(current_dir,"src/model"))
 from filter import *
 from src.scrapper.scrapper import *
+from model import *
 
+df_test=pd.read_csv(os.path.join(current_path,"data_results/Paris/df_Paris.csv"))
+model=Clustering_Pipeline(df_test)
 filter = Filtering()
 
 
@@ -53,6 +57,12 @@ class Test(unittest.TestCase):
         self.assertTrue(
             all([bool_result_ville, bool_result_price, bool_result_surface])
         )
+
+    def test_filter_model(self):
+        try:
+            model.full_pipeline()
+        except:
+            self.assertTrue(False)
 
 
 if __name__ == "__main__":
