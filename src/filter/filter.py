@@ -217,6 +217,8 @@ class Filtering:
             f"Le filtrage a bien été opéré sur {filtered_cities}, il y a {number_result} annonces"
         )
 
+        return f"Le filtrage a bien été opéré sur {filtered_cities}, il y a {number_result} annonces"
+
     def filter_price(self, price_min: int, price_max: int):
 
         budget_button = WebDriverWait(driver, 20).until(
@@ -255,6 +257,8 @@ class Filtering:
             f"L'utilisateur a filtré les prix entre {price_min}€ et {price_max}€, il y a {number_result} annonces"
         )
 
+        return f"L'utilisateur a filtré les prix entre {price_min}€ et {price_max}€, il y a {number_result} annonces"
+
     def filter_surface(self, surface_min: int, surface_max: int):
         criterion_button = WebDriverWait(driver, 20).until(
             EC.element_to_be_clickable(
@@ -292,7 +296,8 @@ class Filtering:
         logging.info(
             f"L'utilisateur a filtré la surface entre {surface_min}m2 et {surface_max}m2, il y a {number_result} annonces"
         )
-
+        return f"L'utilisateur a filtré la surface entre {surface_min}m2 et {surface_max}m2, il y a {number_result} annonces"
+        
     def url_recovering(self):
         current_url = driver.current_url
         json_path = os.path.join(current_path, "data")
