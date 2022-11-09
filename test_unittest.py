@@ -4,13 +4,13 @@ import os
 
 current_dir = os.getcwd()
 sys.path.append(os.path.join(current_dir, "src/filter"))
-sys.path.append(os.path.join(current_dir,"src/model"))
+sys.path.append(os.path.join(current_dir, "src/model"))
 from filter import *
 from src.scrapper.scrapper import *
 from model import *
 
-df_test=pd.read_csv(os.path.join(current_path,"data_results/Paris/df_Paris.csv"))
-model=Clustering_Pipeline(df_test)
+df_test = pd.read_csv(os.path.join(current_path, "data_results/Paris/df_Paris.csv"))
+model = Clustering_Pipeline(df_test)
 filter = Filtering()
 
 

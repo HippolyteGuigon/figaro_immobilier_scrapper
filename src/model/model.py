@@ -21,9 +21,9 @@ class Clustering_Pipeline:
     def __init__(
         self,
         df: pd.DataFrame,
-    ):  
+    ):
         self.df = df
-        self.df_original=df
+        self.df_original = df
         self.df_original = df
         self.dr = data["dimension_reduction_method"]
         self.ca = data["cluster_model"]
@@ -62,9 +62,9 @@ class Clustering_Pipeline:
         return self.df_original
 
     def full_pipeline(self):
-        self.df=self.cleaning_df()
-        self.df.to_csv("quemierda.csv",index=False)
-        self.df=self.reduction_dimension()
-        self.df=self.clustering()
+        self.df = self.cleaning_df()
+        self.df.to_csv("quemierda.csv", index=False)
+        self.df = self.reduction_dimension()
+        self.df = self.clustering()
 
         return self.df

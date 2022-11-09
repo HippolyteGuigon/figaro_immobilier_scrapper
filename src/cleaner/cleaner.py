@@ -106,7 +106,7 @@ class DataFrame_cleaning:
                 x = x.replace("pièce", "")
             if x == "Inconnu":
                 x = -1
-            
+
             try:
                 x = int(x)
             except:
@@ -119,11 +119,11 @@ class DataFrame_cleaning:
                 lambda x: clean_piece(x)
             )
         except:
-            self.df.drop("nombre_pieces",axis=1,inplace=True)
+            self.df.drop("nombre_pieces", axis=1, inplace=True)
         return self.df
 
     def global_cleaner(self):
-        self.df.nombre_pieces.fillna("Inconnu",inplace=True)
+        self.df.nombre_pieces.fillna("Inconnu", inplace=True)
         self.df = self.clean_price()
         self.df = self.clean_surface()
         self.df = self.df[[x for x in self.df.columns if "Unnamed" not in x]]
