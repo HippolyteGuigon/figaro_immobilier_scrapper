@@ -90,7 +90,7 @@ class Filtering:
             return "La connexion à la page d'acceuil a bien réussie"
         else:
             return "La connexion à la page d'acceuil a echoué"
-        
+
     def search_type(self, choice):
         choice = str(choice).lower()
         assert choice in [
@@ -131,7 +131,7 @@ class Filtering:
         else:
             logging.info("La recherche n'a pas aboutie")
             return "La recherche n'a pas aboutie"
-    
+
     def filter_search(self, ville: List):
         # On commence par réinitialiser la recherche
         localisation_button = WebDriverWait(driver, 20).until(
