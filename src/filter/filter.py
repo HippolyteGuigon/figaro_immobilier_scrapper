@@ -65,7 +65,6 @@ class Filtering:
         # On accepte les cookies s'il y en a
         wait = WebDriverWait(driver, 2)
         try:
-
             wait.until(
                 EC.frame_to_be_available_and_switch_to_it(
                     (By.XPATH, '//*[@id="appconsent"]/iframe')
@@ -82,7 +81,7 @@ class Filtering:
         driver.switch_to.parent_frame()
         driver.implicitly_wait(2)
 
-    def check_connect(self):
+    def check_connect(self, choice: str):
         self.accept_cookie()
         main()
         # Trouver un moyen plus élégant de vérifier la connexion
@@ -92,7 +91,7 @@ class Filtering:
         else:
             return "La connexion à la page d'acceuil a echoué"
         
-    def search_type(self, choice: str):
+    def search_type(self, choice):
         choice = str(choice).lower()
         assert choice in [
             "acheter",
