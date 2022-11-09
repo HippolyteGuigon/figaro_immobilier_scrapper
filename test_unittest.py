@@ -28,7 +28,7 @@ class Test(unittest.TestCase):
         driver.get(url)
         filter.skip_error_page()
         filter.accept_cookie()
-        filter.check_connect()
+        filter.check_connect("louer")
         filter.search_type("louer")
 
         result_filter_ville = filter.filter_search(["Paris", "Lyon 12"])
