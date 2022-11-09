@@ -20,7 +20,7 @@ class Test(unittest.TestCase):
     def test_search_result(self):
         self.assertEqual(filter.search_type("louer"), "La recherche a bien aboutie")
 
-    def test_filter_result_ville(self):
+    def test_filter_result_global(self):
         url = "https://immobilier.lefigaro.fr/"
         s = Service(ChromeDriverManager().install())
         driver = webdriver.Chrome(service=s, options=options)
