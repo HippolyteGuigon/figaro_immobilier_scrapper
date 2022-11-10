@@ -1,7 +1,7 @@
 import logging
 import sys
 import os
-
+current_dir=os.getcwd()
 
 def main():
     """
@@ -14,7 +14,7 @@ def main():
     stdout_handler.setLevel(logging.DEBUG)
     stdout_handler.setFormatter(formatter)
 
-    log_path = "/Users/hippodouche/se_loger_scrapping/figaro_immobilier_scrapper/logs/logs.log"
+    log_path = os.path.join(current_dir,"logs/logs.log")
     file_handler = logging.FileHandler(log_path)
     file_handler.setLevel(logging.DEBUG)
     file_handler.setFormatter(formatter)
