@@ -9,7 +9,7 @@ from filter import *
 from src.scrapper.scrapper import *
 from model import *
 
-df_test = pd.read_csv(os.path.join(current_path, "data_results/Paris/df_Paris.csv"))
+df_test = pd.read_csv(os.path.join(current_path, "unittest/df_Paris.csv"))
 model = Clustering_Pipeline(df_test)
 filter = Filtering()
 
