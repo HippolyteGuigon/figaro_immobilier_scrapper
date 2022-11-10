@@ -71,6 +71,10 @@ class Scrapper(Filtering):
         driver.get(current_url)
 
     def get_links(self):
+        """
+        The goal of this function is, after filtering has been performed, 
+        to recover all links of annonces refering to this filtering 
+        """
         df_save = pd.DataFrame(columns=["check"])
         elems = [
             x.get_attribute("href")
@@ -85,7 +89,7 @@ class Scrapper(Filtering):
                 )
 
                 driver.execute_script("arguments[0].click();", next_button)
-                sleep(6)
+                sleep(4)
                 new_elems = [
                     x.get_attribute("href")
                     for x in driver.find_elements("xpath", "//a[@href]")
@@ -102,6 +106,7 @@ class Scrapper(Filtering):
 
         with open(os.path.join(json_path, "links_to_scrap.json"), "w") as f:
             json.dump(elems, f)
+
 
     def individual_extractor(self, link: str):
         try:

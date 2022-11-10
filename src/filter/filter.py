@@ -55,13 +55,16 @@ class Filtering:
         pass
 
     def skip_error_page(self):
+        """The goal of this function is to avoid the situation
+        when the main page is not found by going back to the main page"""
         if "La page demandée n'existe pas" in driver.page_source:
             driver.find_element("xpath", "//button[text()='Retour à l'accueil']")
         else:
             pass
 
     def accept_cookie(self):
-
+        """The goal of this function is to accept cookies and make 
+        banner disappear"""
         # On accepte les cookies s'il y en a
         wait = WebDriverWait(driver, 2)
         try:
@@ -82,6 +85,10 @@ class Filtering:
         driver.implicitly_wait(2)
 
     def check_connect(self, choice: str):
+        """
+        choice : str, The user chooses between acheter or louer
+        The goal of this function is to make sure that, after the
+        user has made his choice, the right page is hitted"""
         self.accept_cookie()
         main()
         # Trouver un moyen plus élégant de vérifier la connexion
@@ -92,6 +99,9 @@ class Filtering:
             return "La connexion à la page d'acceuil a echoué"
 
     def search_type(self, choice):
+        """choice : str, The user chooses between acheter or louer.
+        The goal of this function is to make user choosing between 
+        acheter or louer and to carry on the filtering"""
         choice = str(choice).lower()
         assert choice in [
             "acheter",
@@ -123,7 +133,7 @@ class Filtering:
 
         driver.execute_script("arguments[0].click();", search_button)
 
-        sleep(5)
+        sleep(3.5)
 
         if "annonces" in driver.current_url:
             logging.info("La recherche a bien aboutie")
@@ -132,7 +142,11 @@ class Filtering:
             logging.info("La recherche n'a pas aboutie")
             return "La recherche n'a pas aboutie"
 
-    def filter_search(self, ville: List):
+
+    def filter_search(self, ville: List[str]):
+        """ville: List[str]: The cities that the user want to filter on 
+        The goal of this function is to operate a filtering on a list 
+        of cities chosen by the user"""
         # On commence par réinitialiser la recherche
         localisation_button = WebDriverWait(driver, 20).until(
             EC.element_to_be_clickable(
@@ -190,7 +204,7 @@ class Filtering:
 
             driver.execute_script("arguments[0].click();", first_choice)
 
-        sleep(5)
+        sleep(4)
         result_filter = driver.find_element(
             "xpath", '//*[@id="bloc-list-classifieds"]'
         ).text
@@ -207,7 +221,7 @@ class Filtering:
 
         driver.execute_script("arguments[0].click();", validate_button)
 
-        sleep(5)
+        sleep(4)
 
         number_result = driver.find_element(
             "xpath", '//*[@id="bloc-list-classifieds"]/span'
@@ -219,7 +233,12 @@ class Filtering:
 
         return f"Le filtrage a bien été opéré sur {filtered_cities}, il y a {number_result} annonces"
 
+
     def filter_price(self, price_min: int, price_max: int):
+        """price_min: int  The minimal price filtered on
+        price_max: int The maximal price filtered on
+        The goal of this function is to carry out the 
+        filtering based on price, between minimum and maximum"""
 
         budget_button = WebDriverWait(driver, 20).until(
             EC.element_to_be_clickable(
@@ -249,7 +268,7 @@ class Filtering:
         )
 
         driver.execute_script("arguments[0].click();", validation_button)
-        sleep(5)
+        sleep(4)
         number_result = driver.find_element(
             "xpath", '//*[@id="bloc-list-classifieds"]/span'
         ).text
@@ -259,7 +278,11 @@ class Filtering:
 
         return f"L'utilisateur a filtré les prix entre {price_min}€ et {price_max}€, il y a {number_result} annonces"
 
+
+
     def filter_surface(self, surface_min: int, surface_max: int):
+        """surface_min: int  The minimum surface in m2 filtered on
+           surface_max: int  The maximum surface in m2 filtered on"""
         criterion_button = WebDriverWait(driver, 20).until(
             EC.element_to_be_clickable(
                 (By.XPATH, '//*[@id="search-engine"]/div/div[2]/div[3]/div[1]')
@@ -267,7 +290,7 @@ class Filtering:
         )
 
         driver.execute_script("arguments[0].click();", criterion_button)
-        sleep(5)
+        sleep(4)
 
         driver.find_element(
             "xpath",
@@ -289,7 +312,7 @@ class Filtering:
 
         driver.execute_script("arguments[0].click();", validation_button)
 
-        sleep(5)
+        sleep(4)
         number_result = driver.find_element(
             "xpath", '//*[@id="bloc-list-classifieds"]/span'
         ).text
@@ -297,8 +320,13 @@ class Filtering:
             f"L'utilisateur a filtré la surface entre {surface_min}m2 et {surface_max}m2, il y a {number_result} annonces"
         )
         return f"L'utilisateur a filtré la surface entre {surface_min}m2 et {surface_max}m2, il y a {number_result} annonces"
-        
+
+
     def url_recovering(self):
+        """The goal of the function is, once the filtering is 
+        over, to recover the corresponding url and save it in 
+        a json named current_url.json that will then be used 
+        for scrapping"""
         current_url = driver.current_url
         json_path = os.path.join(current_path, "data")
         json_list = json.dumps(current_url)
@@ -308,12 +336,20 @@ class Filtering:
 
     def global_filtering(
         self,
-        ville: List,
+        ville: List[str],
         price_min: int,
         price_max: int,
         surface_min: int,
         surface_max: int,
     ):
+        """ville: List[str]  The list of cities the user wants to filter on
+           price_min: int    The minimum price the user wants to filter on
+           price_max: int    The maximum price the user wants to filter on
+           surface_min: int  The minimum surface the user wants to filter on
+           surface_max: int  The maximum surface the user wants to filter on
+           
+           The goal of this function is to wrap out all functions coded so 
+           far in the filtering and operate the full filtering pipeline"""
         self.filter_search(ville)
         self.filter_surface(surface_min, surface_max)
         self.filter_price(price_min, price_max)
