@@ -2,7 +2,6 @@
 data_results/
 *.ipynb
 *.png
-*.csv
 *.json
 
 # Byte-compiled / optimized / DLL files
