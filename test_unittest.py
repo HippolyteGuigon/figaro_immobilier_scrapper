@@ -1,6 +1,12 @@
 import unittest
 import sys
 import os
+import yaml
+from yaml.loader import SafeLoader
+
+current_path = os.getcwd()
+with open(os.path.join(current_path, "configs/filter_search.yml"), "r") as f:
+    data = list(yaml.load_all(f, Loader=SafeLoader))[0]
 
 current_dir = os.getcwd()
 sys.path.append(os.path.join(current_dir, "src/filter"))
@@ -8,6 +14,7 @@ sys.path.append(os.path.join(current_dir, "src/model"))
 from filter import *
 from src.scrapper.scrapper import *
 from model import *
+
 
 df_test = pd.read_csv(os.path.join(current_path, "unittest/df_Paris.csv"))
 model = Clustering_Pipeline(df_test)
@@ -33,11 +40,11 @@ class Test(unittest.TestCase):
         filter.skip_error_page()
         filter.accept_cookie()
         filter.check_connect()
-        filter.search_type("louer")
+        filter.search_type(data["choix"])
 
-        result_filter_ville = filter.filter_search(["Paris", "Lyon 12"])
-        result_filter_surface = filter.filter_surface(10, 50)
-        result_filter_price = filter.filter_price(10, 3000)
+        result_filter_ville = filter.filter_search(data["cities"])
+        result_filter_surface = filter.filter_surface(data["surface_min"], data["surface_max"])
+        result_filter_price = filter.filter_price(data["price_min"], data["price_max"])
 
         if "Le filtrage a bien été opéré" in result_filter_ville:
             bool_result_ville = True

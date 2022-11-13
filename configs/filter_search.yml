@@ -1,0 +1,18 @@
+cities:
+  ["Perpignan",
+  "Dieppe"]
+
+choix:
+  -Louer
+
+surface_min:
+  -20
+
+surface_max:
+  -200
+
+price_min:
+  -200
+
+price_max:
+  -5000

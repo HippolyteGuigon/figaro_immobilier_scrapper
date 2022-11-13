@@ -275,11 +275,14 @@ class Scrapper(Filtering):
         path_cleaning = os.path.join(current_path, "data_results")
 
         for file_ville in os.listdir(path_cleaning):
-            df_path = os.path.join(path_cleaning, file_ville, f"df_{file_ville}.csv")
-            df_to_clean = pd.read_csv(df_path)
-            cleaner_df = DataFrame_cleaning(df_to_clean)
-            df_cleaned = cleaner_df.global_cleaner()
-            os.remove(df_path)
-            df_cleaned.to_csv(df_path)
+            try:
+                df_path = os.path.join(path_cleaning, file_ville, f"df_{file_ville}.csv")
+                df_to_clean = pd.read_csv(df_path)
+                cleaner_df = DataFrame_cleaning(df_to_clean)
+                df_cleaned = cleaner_df.global_cleaner()
+                os.remove(df_path)
+                df_cleaned.to_csv(df_path)
+            except:
+                pass
 
         st.write("Le scrapping est terminé !")

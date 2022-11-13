@@ -4,7 +4,7 @@ from yaml.loader import SafeLoader
 import os
 
 current_path = os.getcwd()
-with open(os.path.join(current_path, "src/model/model_params.yaml"), "r") as f:
+with open(os.path.join(current_path, "configs/model_params.yml"), "r") as f:
     data = list(yaml.load_all(f, Loader=SafeLoader))[0]
 
 sys.path.append(os.path.join(current_path, "src/cleaner"))

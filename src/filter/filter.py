@@ -156,7 +156,6 @@ class Filtering:
         driver.execute_script("arguments[0].click();", localisation_button)
 
         sleep(3)
-
         reinitialise_button = WebDriverWait(driver, 20).until(
             EC.element_to_be_clickable(
                 (
@@ -222,9 +221,13 @@ class Filtering:
 
         sleep(4)
 
-        number_result = driver.find_element(
-            "xpath", '//*[@id="bloc-list-classifieds"]/span'
-        ).text
+        try:
+
+            number_result = driver.find_element(
+                "xpath", '//*[@id="bloc-list-classifieds"]/span'
+            ).text
+        except:
+            number_result="Inconnu"
 
         logging.warning(
             f"Le filtrage a bien été opéré sur {filtered_cities}, il y a {number_result} annonces"
@@ -247,7 +250,7 @@ class Filtering:
         driver.execute_script("arguments[0].click();", budget_button)
 
         sleep(5)
-
+        driver.save_screenshot("prix.png")
         driver.find_element(
             "xpath",
             '//*[@id="search-engine"]/div/div[2]/div[2]/div[2]/div[2]/div[1]/div[1]/input',
@@ -281,27 +284,26 @@ class Filtering:
         surface_max: int  The maximum surface in m2 filtered on"""
         criterion_button = WebDriverWait(driver, 20).until(
             EC.element_to_be_clickable(
-                (By.XPATH, '//*[@id="search-engine"]/div/div[2]/div[3]/div[1]')
+                (By.XPATH, '//*[@id="search-engine"]/div/div[2]/div[2]/div[1]/span/span')
             )
         )
 
         driver.execute_script("arguments[0].click();", criterion_button)
         sleep(4)
-
         driver.find_element(
             "xpath",
-            '//*[@id="search-engine"]/div/div[2]/div[3]/div[2]/div[2]/div/div[1]/div[3]/div/div[1]/div[1]/input',
+            '//*[@id="search-engine"]/div/div[2]/div[2]/div[2]/div[2]/div[1]/div[1]/input',
         ).send_keys(surface_min)
         driver.find_element(
             "xpath",
-            '//*[@id="search-engine"]/div/div[2]/div[3]/div[2]/div[2]/div/div[1]/div[3]/div/div[1]/div[2]/input',
+            '//*[@id="search-engine"]/div/div[2]/div[2]/div[2]/div[2]/div[1]/div[2]/input',
         ).send_keys(surface_max)
 
         validation_button = WebDriverWait(driver, 20).until(
             EC.element_to_be_clickable(
                 (
                     By.XPATH,
-                    '//*[@id="search-engine"]/div/div[2]/div[3]/div[2]/div[3]/button[2]',
+                    '//*[@id="search-engine"]/div/div[2]/div[2]/div[2]/div[3]/button[2]',
                 )
             )
         )

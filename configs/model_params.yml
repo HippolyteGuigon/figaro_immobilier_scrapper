@@ -1,0 +1,11 @@
+cluster_model: 
+  -"KMeans"
+
+nb_cluster: 
+  -3
+
+dimension_reduction_method:
+  -"PCA"
+
+nb_dimension:
+  -3 
