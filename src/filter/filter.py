@@ -84,7 +84,7 @@ class Filtering:
         driver.switch_to.parent_frame()
         driver.implicitly_wait(2)
 
-    def check_connect(self, choice: str):
+    def check_connect(self):
         """
         choice : str, The user chooses between acheter or louer
         The goal of this function is to make sure that, after the

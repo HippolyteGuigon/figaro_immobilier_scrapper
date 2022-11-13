@@ -1,6 +1,16 @@
 # le_figaro_immobilier_scrapper
 Scrapper du site Internet Le figaro immobilier (https://immobilier.lefigaro.fr) afin d'en tirer plus rapidement des informations
 
+## Lancer l'application 
+
+- Utiliser la commance ```streamlit run app/app.py``` pour lancer l'application streamlit. 
+
+## Installer les dépendances nécessaires
+
+- Pour installer les librairies nécessaires, lancer ```pip install -r requirements.txt```
+
+## Description du projet 
+
 Le but de ce projet est de construire une application Streamlit qui sera constituée de 3 pages différentes: 
 
 •	Sur une première page , on aura un filtreur avec le type de bien (maison/appartement), le loyer maximal par mois, le nombre de pièces et de chambres 

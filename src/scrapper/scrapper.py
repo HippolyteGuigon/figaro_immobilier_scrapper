@@ -72,8 +72,9 @@ class Scrapper(Filtering):
 
     def get_links(self):
         """
-        The goal of this function is, after filtering has been performed,
-        to recover all links of annonces refering to this filtering
+        The goal of this function is, after filtering has been performed, 
+        to recover all links of annonces refering to this filtering. 
+        Links are saved in a json file named links_to_scrap.json
         """
         df_save = pd.DataFrame(columns=["check"])
         elems = [
@@ -106,6 +107,7 @@ class Scrapper(Filtering):
 
         with open(os.path.join(json_path, "links_to_scrap.json"), "w") as f:
             json.dump(elems, f)
+
 
     def individual_extractor(self, link: str):
         try:
@@ -191,12 +193,9 @@ class Scrapper(Filtering):
                         "link",
                     ]
                 )
-                os.chdir(os.path.join(data_result_path, city))
-                df_city.to_csv(f"df_{city}.csv")
+                df_city.to_csv(os.path.join(data_result_path, city,f"df_{city}.csv"))
         data_to_scrap = json.load(to_scrap)
         data_scrapped = json.load(scrapped)
-
-        os.chdir(data_result_path)
 
         st.write(
             f"Il y a {len(data_to_scrap)} annonces correspondant à vos critères de recherche"
