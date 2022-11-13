@@ -17,7 +17,7 @@ filter = Filtering()
 class Test(unittest.TestCase):
     def test_connexion(self):
         self.assertEqual(
-            filter.check_connect("louer"),
+            filter.check_connect(),
             "La connexion à la page d'acceuil a bien réussie",
         )
 
