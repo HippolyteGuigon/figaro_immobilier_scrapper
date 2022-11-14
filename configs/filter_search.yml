@@ -3,16 +3,16 @@ cities:
   "Dieppe"]
 
 choix:
-  -Louer
+  Louer
 
 surface_min:
-  -20
+  20
 
 surface_max:
-  -200
+  200
 
 price_min:
-  -200
+  200
 
 price_max:
-  -5000
+  5000

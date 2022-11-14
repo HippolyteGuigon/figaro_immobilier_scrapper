@@ -1,11 +1,11 @@
 cluster_model: 
-  -"KMeans"
+  "KMeans"
 
 nb_cluster: 
-  -3
+  3
 
 dimension_reduction_method:
-  -"PCA"
+  "PCA"
 
 nb_dimension:
-  -3 
+  3 
