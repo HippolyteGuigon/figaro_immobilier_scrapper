@@ -22,6 +22,12 @@ filter = Filtering()
 
 
 class Test(unittest.TestCase):
+
+    def __init__(self):
+        with open(os.path.join(current_path, "configs/filter_search.yml"), "r") as f:
+            data_search = list(yaml.load_all(f, Loader=SafeLoader))[0]
+        self.data_search=data_search
+
     def test_connexion(self):
         self.assertEqual(
             filter.check_connect(),
@@ -40,7 +46,7 @@ class Test(unittest.TestCase):
         filter.skip_error_page()
         filter.accept_cookie()
         filter.check_connect()
-        filter.search_type(data["choix"])
+        filter.search_type(self.data_search["choix"])
 
         result_filter_ville = filter.filter_search(data["cities"])
         result_filter_surface = filter.filter_surface(data["surface_min"], data["surface_max"])
