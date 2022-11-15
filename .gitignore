@@ -1,10 +1,12 @@
 #data_stored
 data_results/
+analysis/
 *.ipynb
 *.png
 *.csv
 *.json
 *.txt
+
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
