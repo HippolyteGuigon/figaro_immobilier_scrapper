@@ -48,9 +48,9 @@ class Test(unittest.TestCase):
         filter.check_connect()
         filter.search_type(self.data_search["choix"])
 
-        result_filter_ville = filter.filter_search(data["cities"])
-        result_filter_surface = filter.filter_surface(data["surface_min"], data["surface_max"])
-        result_filter_price = filter.filter_price(data["price_min"], data["price_max"])
+        result_filter_ville = filter.filter_search(self.data_search["cities"])
+        result_filter_surface = filter.filter_surface(self.data_search["surface_min"], self.data_search["surface_max"])
+        result_filter_price = filter.filter_price(self.data_search["price_min"], self.data_search["price_max"])
 
         if "Le filtrage a bien été opéré" in result_filter_ville:
             bool_result_ville = True
