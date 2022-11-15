@@ -6,7 +6,7 @@ from yaml.loader import SafeLoader
 
 current_path = os.getcwd()
 with open(os.path.join(current_path, "configs/filter_search.yml"), "r") as f:
-    data = list(yaml.load_all(f, Loader=SafeLoader))[0]
+    data_search = list(yaml.load_all(f, Loader=SafeLoader))[0]
 
 current_dir = os.getcwd()
 sys.path.append(os.path.join(current_dir, "src/filter"))
@@ -22,11 +22,6 @@ filter = Filtering()
 
 
 class Test(unittest.TestCase):
-
-    def __init__(self):
-        with open(os.path.join(current_path, "configs/filter_search.yml"), "r") as f:
-            data_search = list(yaml.load_all(f, Loader=SafeLoader))[0]
-        self.data_search=data_search
 
     def test_connexion(self):
         self.assertEqual(
@@ -46,11 +41,11 @@ class Test(unittest.TestCase):
         filter.skip_error_page()
         filter.accept_cookie()
         filter.check_connect()
-        filter.search_type(self.data_search["choix"])
+        filter.search_type(data_search["choix"])
 
-        result_filter_ville = filter.filter_search(self.data_search["cities"])
-        result_filter_surface = filter.filter_surface(self.data_search["surface_min"], self.data_search["surface_max"])
-        result_filter_price = filter.filter_price(self.data_search["price_min"], self.data_search["price_max"])
+        result_filter_ville = filter.filter_search(data_search["cities"])
+        result_filter_surface = filter.filter_surface(data_search["surface_min"], data_search["surface_max"])
+        result_filter_price = filter.filter_price(data_search["price_min"], data_search["price_max"])
 
         if "Le filtrage a bien été opéré" in result_filter_ville:
             bool_result_ville = True
