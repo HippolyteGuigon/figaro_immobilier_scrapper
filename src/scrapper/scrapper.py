@@ -111,7 +111,7 @@ class Scrapper(Filtering):
     def individual_extractor(self, link: str):
         try:
             price = driver.find_element(
-                By.XPATH, './/span[@class = "price"]'
+                By.XPATH, '//*[@id="app-bis"]/main/div[1]/div/div[3]/ul/li[1]/span[2]'
             ).get_attribute("innerHTML")
         except NoSuchElementException:
             price = "Inconnu"
@@ -147,8 +147,8 @@ class Scrapper(Filtering):
         except NoSuchElementException:
             try:
                 description = driver.find_element(
-                    "xpath", "//*[@id='app-bis']/main/div[1]/div/section/div[5]/p"
-                ).get_attribute("innerHTML")
+                    "xpath", "//*[@id='app-bis']/main/div[1]/div/section/div[6]/p/text()"
+                )
             except NoSuchElementException:
                 try:
                     description = driver.find_element(
@@ -207,6 +207,7 @@ class Scrapper(Filtering):
                     pass
                 else:
                     try:
+                            
 
                         (
                             price,
@@ -226,7 +227,7 @@ class Scrapper(Filtering):
                             .lower()
                             .capitalize()
                         )
-                        df_city = pd.read_csv(ville + "/df_" + ville + ".csv")
+                        df_city = pd.read_csv(os.path.join(current_path,"data_results",ville + "/df_" + ville + ".csv"))
                         df_city = df_city[
                             [
                                 "price",
@@ -268,10 +269,11 @@ class Scrapper(Filtering):
                                 "link",
                             ]
                         ]
-                        df_city.to_csv(ville + "/df_" + ville + ".csv", index=False)
+                        df_city.to_csv(os.path.join(current_path,"data_results",ville + "/df_" + ville + ".csv"), index=False)
                     except:
                         pass
-
+                    
+                        
         path_cleaning = os.path.join(current_path, "data_results")
 
         for file_ville in os.listdir(path_cleaning):

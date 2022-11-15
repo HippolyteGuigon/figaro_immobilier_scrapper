@@ -250,7 +250,6 @@ class Filtering:
         driver.execute_script("arguments[0].click();", budget_button)
 
         sleep(5)
-        driver.save_screenshot("prix.png")
         driver.find_element(
             "xpath",
             '//*[@id="search-engine"]/div/div[2]/div[2]/div[2]/div[2]/div[1]/div[1]/input',

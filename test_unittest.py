@@ -1,4 +1,3 @@
-# coding=utf-8
 import unittest
 import sys
 import os
@@ -8,7 +7,7 @@ from yaml.loader import SafeLoader
 current_path = os.getcwd()
 with open(os.path.join(current_path, "configs/filter_search.yml"), "r") as f:
     data = list(yaml.load_all(f, Loader=SafeLoader))[0]
-print("DATAAAAAAAAAAA",data["choix"])
+
 current_dir = os.getcwd()
 sys.path.append(os.path.join(current_dir, "src/filter"))
 sys.path.append(os.path.join(current_dir, "src/model"))
